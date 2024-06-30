@@ -1,20 +1,15 @@
 {
     "trainer": {
-        "simu": true,
         "use_crf": false,
         "lamb": 0.01,
-        "chunk_size": 40,
-        "context_size_left": 80,
-        "context_size_right": 40,
-        "jitter_range": 5,
-        "simu_loss_weight": 0.975,
-
         "n_fft": 512,
         "win_length": 400,
         "hop_length": 160,
         "idim": 80,
         "beamforming": "mvdr",
-        "wpe": false
+        "wpe": false,
+        "ref_ch": 0,
+        "noSE": false
     },
     "encoder": {
         "type": "ConformerNet",
@@ -38,7 +33,7 @@
             "dim_model": 256,
             "warmup_step": 4720,
             "peak_factor": 1.0,
-            "n_tol": 10
+            "n_tol": 5
         },
         "optimizer": {
             "type": "Adam",

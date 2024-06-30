@@ -1,17 +1,17 @@
 {
     "data": {
         "train": [
-            "train_raw"
+            "train_raw_ori"
         ],
-        "dev": "dev_raw",
+        "dev": "dev_raw_ori",
         "test": [
-            "dev_raw",
-            "test_raw"
+            
+            "test_raw_ori"
         ],
         "filter": "10000:400000"
     },
     "env": {
-        "CUDA_VISIBLE_DEVICES": "0,1,6,7,8,9"
+        "CUDA_VISIBLE_DEVICES": "6,7,8,9"
     },
     "tokenizer": {
         "type": "SentencePieceTokenizer",
@@ -26,33 +26,35 @@
         "file": "exp/a12-ctc-e2e-chunk-simu/tokenizer.tknz"
     },
     "train": {
-        "bin": "cat.ctc.train_me2e_chunk",
+        "bin": "cat.ctc.train_me2e_kaldi_chunk",
         "option": {
             "amp": false,
-            "batch_size": 6,
+            "batch_size": 4,
             "grad_norm": 2.0,
             "check_freq": 472,
             "seed": 0,
-            "grad_accum_fold": 12,
-            
-            "batching_uneven":false
+            "grad_accum_fold": 18,
+            "unfreeze": null,
+            "bf": null,
+            "am": null,
+            "batching_uneven":true
         }
     },
     "inference": {
         "avgmodel": {
             "mode": "best",
-            "num": 10
+            "num": 5
         },
         "infer": {
             "bin": "cat.ctc.decode_me2e",
             "option": {
                 "beam_size": 32,
-                "nj": 2,
-                "built_model_by":"cat.ctc.train_me2e_chunk",
+                "nj": 48,
+                "built_model_by":"cat.ctc.train_me2e_kaldi_chunk",
                 "n_fft": 512,
                 "win_length": 400,
                 "hop_length": 160,
-                "gpu": false,
+                "gpu": true,
                 "streaming": true
             }
         },

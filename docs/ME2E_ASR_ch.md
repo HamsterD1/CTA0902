@@ -1,19 +1,21 @@
-# 多通道端到端流式语音识别
+# 流式多通道端到端语音识别 Streaming multi-channel end-to-end (ME2E) ASR
 
-**本文档介绍如何使用多通道端到端语音识别 (ME2E ASR) 框架进行多通道端到端流式语音识别任务**
+**本文档介绍如何使用多通道端到端语音识别 (ME2E ASR) 框架进行流式多通道端到端语音识别任务**
 
 *相关文献：*
 
->*1.Ochiai, Tsubasa, et al. "Multichannel end-to-end speech recognition." International conference on machine learning. PMLR, 2017.<br>
-2.Keyu An, Hongyu Xiang, Zhijian Ou:
-"CAT: A CTC-CRF Based ASR Toolkit Bridging the Hybrid and the End-to-End Approaches Towards Data Efficiency and Low Latency." INTERSPEECH 2020: 566-570 <br>
-3.Keyu An, Huahuan Zheng, Zhijian Ou, Hongyu Xiang, Ke Ding, Guanglu Wan."CUSIDE: Chunking, Simulating Future Context and Decoding for Streaming ASR."INTERSPEECH, 2022*
+1. Ochiai, Tsubasa, et al. "Multichannel end-to-end speech recognition." International conference on machine learning. PMLR, 2017.
+2. Keyu An, Hongyu Xiang, Zhijian Ou:
+"CAT: A CTC-CRF Based ASR Toolkit Bridging the Hybrid and the End-to-End Approaches Towards Data Efficiency and Low Latency." INTERSPEECH 2020: 566-570.
+3. Keyu An, Huahuan Zheng, Zhijian Ou, Hongyu Xiang, Ke Ding, Guanglu Wan."CUSIDE: Chunking, Simulating Future Context and Decoding for Streaming ASR." INTERSPEECH, 2022.
+4. Keyu An, Ji Xiao, Zhijian Ou. "Exploiting Single-Channel Speech for Multi-Channel End-to-End Speech Recognition: A Comparative Study." ISCSLP, 2022.
+5. 安柯宇，"阵列感知与低延迟语音识别一体化系统设计与实现"，清华大学硕士论文，2022.
 
 实验参考了单通道端到端语音识别中的egs/aishell/ctc-v1实验，前端网络程序位于文件夹cat/front下
 
 **本文档将从以下步骤说明前期数据准备与ME2E 流式ASR相关的参数配置**
 
-+ 多通道端到端流式语音识别
++ 流式多通道端到端语音识别
   + 框架讲解
   + 代码说明
   + 数据准备
@@ -28,15 +30,18 @@
 
 **1、多通道语音信号处理**：
 
-本实验中使用基于mask的波束形成方法进行多通道语音信号处理，该方法使用BLSTM网络来估计单通道的语音和噪声掩码，接着在通道轴上进行平均，得到单通道的掩码，用单通道的掩码计算语音和噪声的空间协方差矩阵，进而估计波束形成滤波器系数，最后进行波束形成，得到增强后的单通道语音，其流程图如下所示：
+本实验中使用基于mask的波束形成方法进行多通道语音信号处理，该方法使用BLSTM网络来估计每个通道的语音掩码与噪声掩码，接着在通道轴上进行平均，得到单通道的掩码，用单通道的掩码计算语音和噪声的空间协方差矩阵，进而估计波束形成滤波器系数，最后进行波束形成，得到增强后的单通道语音，其流程图如下所示：
 
   <div align="center">
-    <img src="MVDR.png" alt="MVDR Beamforming">
+    <img src="../assets/MVDR.png" alt="MVDR Beamforming">
   </div>
+图片来自：安柯宇，阵列感知与低延迟语音识别一体化系统设计与实现，清华大学硕士论文，2022.
+
+<br>
 
   + T-F掩码估计：
 
-    通过两个神经网络估计信号和噪声的掩码，其中Xc是(B,T,F,C)的矩阵，分别代表(batch size, time, frequency, channels)
+    通过两个神经网络估计信号和噪声的掩码，其中$\mathbf{X}(c)$是(B,T,F,C)的矩阵，分别代表(batch size, time, frequency, channels)
 
     $$\mathbf{m}_{\text{S}}(c) = \text{BLSTM}\left( \lvert \mathbf{X}(c) \rvert \right) $$
 
@@ -48,7 +53,7 @@
 
   <div align="center">
     <a href="https://latex.codecogs.com/svg.latex?\begin{aligned}\boldsymbol{\Phi}_{\mathrm{Ss}}(f) & =\frac{1}{\sum_{t=1}^T m_S(t, f)} \sum_{t=1}^T m_S(t, f) \mathbf{x}(t, f) \mathbf{x}^{\dagger}(t, f) \\\boldsymbol{\Phi}_{\mathrm{NN}}(f) & =\frac{1}{\sum_{t=1}^T m_N(t, f)} \sum_{t=1}^T m_N(t, f) \mathbf{x}(t, f) \mathbf{x}^{\dagger}(t, f)\end{aligned}">
-    <img src="PSD.png" alt="语音与噪声跨通道功率谱密度" width="400">
+    <img src="../assets/PSD.png" alt="语音与噪声跨通道功率谱密度" width="400">
     </a>
   </div>
 
@@ -72,7 +77,7 @@
     $\mathrm{tr}$ 是矩阵求迹的操作。
   <div align="center">
     <a href="https://latex.codecogs.com/svg.latex?\mathbf{h}(f)=\frac{\boldsymbol{\Phi}_{\mathrm{NN}}^{-1}(f) \boldsymbol{\Phi}_{\mathrm{SS}}(f)}{\operatorname{tr}\left\{\boldsymbol{\Phi}_{\mathrm{NN}}^{-1}(f) \boldsymbol{\Phi}_{\mathrm{SS}}(f)\right\}} \mathbf{u}">
-    <img src="h_f.png" alt="波束成形滤波器系数估计，GitHub无法显示，请点击查看" width="300">
+    <img src="../assets/h_f.png" alt="波束成形滤波器系数估计，GitHub无法显示，请点击查看" width="300">
     </a>
   </div>
 
@@ -101,7 +106,7 @@
 ```cat/ctc/train_me2e_chunk.py```主要实现的是流式的端到端语音识别框架，对于每一条样本，会分别按流式方式和非流式方式进行识别并计算对应的loss，框架结构如下所示：
 
   <div align="center">
-    <img src="ME2E.png" alt="ME2E" width="500" >
+    <img src="../assets/ME2E.png" alt="ME2E" width="500" >
   </div>
 
 多通道的语音波形首先进行STFT变换，得到语谱图特征，进行分块处理后，送入到波束形成网络，得到单通道的分块语谱图，接着将单通道的分块语谱图拼接，得到单通道的整句语谱图，分别计算Fbank特征后，得到整句的loss，在计算分块loss前，可以进行模拟未来操作，然后送入到ASR网络，计算得到分块loss，
@@ -110,6 +115,8 @@
 多通道语音增强的相关代码位于```cat/front/```下，下面进行简要的说明：
 
 + stft.py：STFT变换模块。pytorch中，torch.stft()函数无法直接对多通道的语音进行STFT变换，在此模块中，将输入(Batch, Nsample, Channels)变为(Batch * Channels, Nsample)，然后进行STFT变换，得到(Batch * Channel, Frames, Freq, 2=real_imag)，然后将其转换为 -> (Batch, Frame, Channel, Freq, 2=real_imag)
+
++ kaldifbank.py: 特征转换模块，计算kaldi风格的stft、fbank特征。改编自torchaudio.compliance.kaldi。实现了批处理、stft->fbank特征的转换。
 
 + nets_utils.py：网络相关的一些功能性函数，如to_device()、pad_list()等等
 
@@ -231,7 +238,7 @@ python egs/aishell4/local/mix_gen.py /
 
 ## 训练与测试
 
-参考cuside的训练方法，流式模型和非流式模型进行参数共享和联合训练。该代码位于```cat/ctc/train_me2e_chunk.py```下
+参考cuside的训练方法，流式模型和非流式模型进行参数共享和联合训练。该代码位于```cat/ctc/train_me2e_chunk.py```(liborsa风格特征)与```cat/ctc/train_me2e_kaldi_chunk.py```(kaldi风格特征)下
 
 配置好config.json与hyper-p.json文件后，使用指令(以/ctc-e2e-chunk为例)
 ```bash 
