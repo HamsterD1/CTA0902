@@ -1,0 +1,70 @@
+{
+    "data": {
+        "train": [
+            "train_raw"
+        ],
+        "dev": "dev_raw",
+        "test": [
+            "test_raw"
+
+        ],
+        "filter": "10000:300000"
+    },
+    "tokenizer": {
+        "type": "SentencePieceTokenizer",
+        "option-train": {
+            "model_type": "char",
+            "vocab_size": 4232,
+            "add_dummy_prefix": false,
+            "use_all_vocab": true,
+            "model_prefix": "sentencepiece/aishell4_char/spm"
+        },
+        "|V|": 3038,
+        "file": "exp/Exp8-TFGrid+CTC/tokenizer.tknz"
+    },
+    "train": {
+        "bin": "cat.ctc.train_raw_multi_SACC",
+        "option": {
+            "amp": false,
+            "batch_size": 10,
+            "grad_norm": 2.0,
+            "check_freq": 471,
+            "seed": 0,
+            "grad_accum_fold": 7,
+            "batching_uneven": true,
+            "unfreeze": null,
+            "bf": null,
+            "am": "/home/XiangzhuKong/workspace/CAT/egs/aishell4/exp/Exp8-TFGrid+CTC/best-20.pt",
+            "simu": null
+        }
+    },
+    "env": {
+        "CUDA_VISIBLE_DEVICES": "0"
+    },
+    "inference": {
+        "avgmodel": {
+            "mode": "best",
+            "num": 5
+        },
+        "infer": {
+            "bin": "cat.ctc.decode_me2e",
+            "option": {
+                "beam_size": 32,
+                "nj": 4,
+                "built_model_by": "cat.ctc.train_unified_multi_SACC",
+                "n_fft": 512,
+                "win_length": 400,
+                "hop_length": 160,
+                "wpe": false,
+                "noSE": true,
+                "use_SACC": false,
+                "streaming": false,
+                "gpu": true
+            }
+        },
+        "er": {
+            "cer": true
+        }
+    },
+    "commit": "618a15f70780200cdc42eed3f69f6ce1d61a4e61"
+}
