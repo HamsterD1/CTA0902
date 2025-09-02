@@ -6,9 +6,6 @@
 * GPU info \[9\]
   * \[9\] NVIDIA GeForce RTX 3090
 
-### Notes
-
-* 
 
 ### Result
 ```
@@ -64,44 +61,3 @@ test_raw        %SER 88.28 | %CER 29.37 [ 38566 / 131298, 3920 ins, 5218 del, 29
 |     training process    |
 |:-----------------------:|
 |![tb-plot](./monitor.png)|
-
-
-self.get_model_flops(time = 1)
-Model FLOPs: 0.45 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 2)
-Model FLOPs: 0.90 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 3)
-Model FLOPs: 1.34 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 4)
-Model FLOPs: 1.79 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 5)
-Model FLOPs: 2.24 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 6)
-Model FLOPs: 2.24 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 7)
-Model FLOPs: 2.69 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 8)
-Model FLOPs: 3.13 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 9)
-Model FLOPs: 3.58 GFLOPs
-Model Parameters: 0.43 M
-
-self.get_model_flops(time = 10)
-Model FLOPs: 4.03 GFLOPs
-Model Parameters: 0.43 M
