@@ -210,6 +210,67 @@ class KaldiSpeechDataset(AbsDataset):
         return torch.tensor(mat), torch.tensor(label)
 
 
+class KaldiMultiSpeechDataset(AbsDataset):
+    """Read in kaldi style with ark file.
+
+    Data format (store with pickle):
+        {
+            'label_spk1': np.ndarray,
+            'label_spk2': np.ndarray,
+            'linfo': np.ndarray,
+            'arkname': np.ndarray,
+            'key': np.ndarray
+        }
+    """
+
+    def __init__(self, path: str) -> None:
+        super().__init__(path)
+        with open(path, "rb") as fib:
+            self._meta_data = pickle.load(fib)
+        self._feat_reader = FeatureReader()
+
+    def filt_by_len(self, filt_func: Callable[[int, int], bool]):
+        """Filter the dataset according to the `filt_func`, call before loading data.
+
+        filt_func (function): invoked via filt_func(feat_len, label_len_spk1, label_len_spk2),
+            True for keeping the data, False for removing.
+        """
+        torm = []
+        linfo = self._meta_data["linfo"]
+        labellen_spk1 = self._meta_data["label_spk1"][:, -1]
+        labellen_spk2 = self._meta_data["label_spk2"][:, -1]
+        for i in range(len(self)):
+            if not filt_func(linfo[i], labellen_spk1[i], labellen_spk2[i]):
+                torm.append(i)
+        del linfo
+        del labellen_spk1
+        del labellen_spk2
+
+        for metakey in ["label_spk1", "label_spk2", "linfo", "arkname", "key"]:
+            self._meta_data[metakey] = np.delete(self._meta_data[metakey], torm, axis=0)
+        return
+
+    def get_seq_len(self) -> List[int]:
+        return self._meta_data["linfo"]
+
+    def __len__(self) -> int:
+        return len(self._meta_data["linfo"])
+
+    def __getitem__(self, index: int) -> Tuple[torch.FloatTensor, torch.LongTensor, torch.LongTensor]:
+        mat = self._feat_reader(self._meta_data["arkname"][index])
+
+        # Remove padding in labels
+        # Speaker 1: [*, *, *, *, -1, -1, rel_len(4)]
+        label_spk1 = self._meta_data["label_spk1"][index]
+        label_spk1 = label_spk1[: label_spk1[-1]]
+
+        # Speaker 2: [*, *, *, *, -1, -1, rel_len(4)]
+        label_spk2 = self._meta_data["label_spk2"][index]
+        label_spk2 = label_spk2[: label_spk2[-1]]
+
+        return torch.tensor(mat), torch.tensor(label_spk1), torch.tensor(label_spk2)
+
+
 class CorpusDataset(AbsDataset):
     """LM corpus dataset
 
@@ -410,6 +471,47 @@ class sortedPadCollateASR:
         label_lengths = torch.LongTensor([x[1].size(0) for x in batch_sorted])
 
         return mats, input_lengths, labels, label_lengths
+
+
+class sortedPadCollateMultiASR:
+    """Collect data into batch by descending order according to frame length and add padding.
+
+    Args:
+        batch  : list of (mat, label_spk1, label_spk2)
+        mat    : torch.FloatTensor
+        label_spk1 : torch.IntTensor
+        label_spk2 : torch.IntTensor
+
+    Return:
+        (logits, input_lengths, labels_spk1, labels_spk1_lengths, labels_spk2, labels_spk2_lengths)
+    """
+
+    def __init__(self, flatten_target: bool = False) -> None:
+        """
+        flatten_target (bool): flatten the target to be 1-dim, default False (2-dim)
+        """
+        self._flatten_target = flatten_target
+
+    def __call__(self, batch: List[Tuple[torch.FloatTensor, torch.IntTensor, torch.IntTensor]]):
+        # Sort batch by frame length in descending order
+        batches = [(mat, label_spk1, label_spk2, mat.size(0)) for mat, label_spk1, label_spk2 in batch]
+        batch_sorted = sorted(batches, key=lambda item: item[3], reverse=True)
+
+        mats = coreutils.pad_list([x[0] for x in batch_sorted])
+
+        if self._flatten_target:
+            labels_spk1 = torch.cat([x[1] for x in batch_sorted], dim=0)
+            labels_spk2 = torch.cat([x[2] for x in batch_sorted], dim=0)
+        else:
+            labels_spk1 = coreutils.pad_list([x[1] for x in batch_sorted]).to(torch.long)
+            labels_spk2 = coreutils.pad_list([x[2] for x in batch_sorted]).to(torch.long)
+
+        input_lengths = torch.LongTensor([x[3] for x in batch_sorted])
+
+        label_spk1_lengths = torch.LongTensor([x[1].size(0) for x in batch_sorted])
+        label_spk2_lengths = torch.LongTensor([x[2].size(0) for x in batch_sorted])
+
+        return mats, input_lengths, labels_spk1, label_spk1_lengths, labels_spk2, label_spk2_lengths
 
 
 class sortedPadCollateLM:
