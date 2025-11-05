@@ -1,4 +1,5 @@
 # What's New
+- 2025/11/05: We have opened a space in Hugging Face to host and release our models: https://huggingface.co/thu-spmi
 - 2025.8: Release the code for the INTERSPEECH 2025 paper "Lightweight and Robust Multi-Channel End-to-End Speech Recognition with Spherical Harmonic Transform". [Readme](../egs/shtnet/README.md) | [Paper](https://arxiv.org/abs/2506.11630)
 - 2025.6: Release the code for the INTERSPEECH 2025 paper "LLM-based phoneme-to-grapheme for phoneme-based speech recognition". [Readme](../egs/llm-p2g/README.md) | [Paper](https://arxiv.org/abs/2506.04711)
 - 2024.8: Release the code for “Low-Resourced Speech Recognition for Iu Mien Language via Weakly-Supervised Phoneme-based Multilingual Pre-training” [Readme](../egs/IuMien/README.md) | [Paper](https://arxiv.org/abs/2407.13292)
