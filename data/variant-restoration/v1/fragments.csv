@@ -1,0 +1,498 @@
+﻿fragment_id,source_row_id,variant_fragment_raw,variant_fragment_normalized,phonetic_text,pinyin_reading,canonical_fragment,canonical_phonetic_text,canonical_pinyin_reading,canonical_ipa,canonical_ipa_candidate,canonical_needs_manual_review,canonical_manual_review_reasons,ipa,ipa_candidate,needs_manual_review,manual_review_reasons,normalization_rules,macro_category,category,original_variant_text,original_canonical_text
+biz_symbol_000025#1:01,biz_symbol_000025#1,王者荣耀策划4000+,王者荣耀策划4000+,王者荣耀策划四千加,wang zhe rong yao ce hua si qian jia,王者荣耀策划死全家,王者荣耀策划死全家,wang zhe rong yao ce hua si quan jia,uɑŋ ʈʂɤ ɻʊŋ iɑʊ tsʰɤ xua sɹ̩ tɕʰyɛn tɕia,uɑŋ ʈʂɤ ɻʊŋ iɑʊ tsʰɤ xua sɹ̩ tɕʰyɛn tɕia,否,,uɑŋ ʈʂɤ ɻʊŋ iɑʊ tsʰɤ xua sɹ̩ tɕʰiɛn tɕia,uɑŋ ʈʂɤ ɻʊŋ iɑʊ tsʰɤ xua sɹ̩ tɕʰiɛn tɕia,否,,"[{""surface"": ""4000+"", ""text"": ""四千加""}]",拟音,语音符号替代,王者荣耀策划4000+,王者荣耀策划死全家
+biz_symbol_000075#1:01,biz_symbol_000075#1,没跌媚娘,没跌媚娘,没跌媚娘,mei die mei niang,没爹没娘,没爹没娘,mei die mei niang,mei tiɛ mei niɑŋ,mei tiɛ mei niɑŋ,否,,mei tiɛ mei niɑŋ,mei tiɛ mei niɑŋ,否,,[],拟音,非词汇同音词,没跌媚娘看腻木呢？🤓,没爹没娘看你妈呢？🤓
+biz_symbol_000075#1:02,biz_symbol_000075#1,看腻木呢,看腻木呢,看腻木呢,kan ni mu ne,看你妈呢,看你妈呢,kan ni ma ne,kʰan ni ma nɤ,kʰan ni ma nɤ,否,,kʰan ni mu nɤ,kʰan ni mu nɤ,否,,[],拟音,非词汇同音词,没跌媚娘看腻木呢？🤓,没爹没娘看你妈呢？🤓
+biz_symbol_000069#1:01,biz_symbol_000069#1,十出十进,十出十进,十出十进,shi chu shi jin,时出时进,时出时进,shi chu shi jin,ʂɻ̩ ʈʂʰu ʂɻ̩ tɕin,ʂɻ̩ ʈʂʰu ʂɻ̩ tɕin,否,,ʂɻ̩ ʈʂʰu ʂɻ̩ tɕin,ʂɻ̩ ʈʂʰu ʂɻ̩ tɕin,否,,[],拟音,歧义同音词,小姐姐十出十进干.,小姐姐时出时进干.
+biz_symbol_000024#1:01,biz_symbol_000024#1,1+4完,1+4完,一加四完,yi jia si wan,一家死完,一家死完,yi jia si wan,i tɕia sɹ̩ uan,i tɕia sɹ̩ uan,否,,i tɕia sɹ̩ uan,i tɕia sɹ̩ uan,否,,"[{""surface"": ""1"", ""text"": ""一""}, {""surface"": ""+"", ""text"": ""加""}, {""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,祝APEX手把玩家3年之内1+4完,祝APEX手把玩家3年之内一家死完
+biz_symbol_000010#1:01,biz_symbol_000010#1,小公举,小公举,小公举,xiao gong ju,小公主,小公主,xiao gong zhu,ɕiɑʊ kʊŋ ʈʂu,ɕiɑʊ kʊŋ ʈʂu,否,,ɕiɑʊ kʊŋ tɕy,ɕiɑʊ kʊŋ tɕy,否,,[],拟音,非词汇同音词,来世做个小公举，只吃几把不吃苦,来世做个小公主，只吃鸡巴不吃苦
+biz_symbol_000010#1:02,biz_symbol_000010#1,几把,几把,几把,ji ba,鸡巴,鸡巴,ji ba,tɕi pa,tɕi pa,否,,tɕi pa,tɕi pa,否,,[],拟音,非词汇同音词,来世做个小公举，只吃几把不吃苦,来世做个小公主，只吃鸡巴不吃苦
+biz_rare_char_000065#1:01,biz_rare_char_000065#1,匿孖码撕了,匿孖码撕了,匿孖码撕了,ni ma ma si le,你妈妈死了,你妈妈死了,ni ma ma si le,ni ma ma sɹ̩ lɤ,ni ma ma sɹ̩ lɤ,否,,ni ma ma sɹ̩ lɤ,ni ma ma sɹ̩ lɤ,否,,[],拟音,非词汇同音词,匿孖码撕了,你妈妈死了
+biz_rare_char_000126#1:01,biz_rare_char_000126#1,鰠逼,鰠逼,鰠逼,sao bi,骚逼,骚逼,sao bi,sɑʊ pi,sɑʊ pi,否,,sɑʊ pi,sɑʊ pi,否,,[],拟音,非词汇同音词,鰠逼一个,骚逼一个
+biz_rare_char_000161#1:01,biz_rare_char_000161#1,襙,襙,襙,cao,操,操,cao,tsʰɑʊ,tsʰɑʊ,否,,tsʰɑʊ,tsʰɑʊ,否,,[],拟音,非词汇同音词,襙路婷婷臊俾,操路婷婷骚逼
+biz_rare_char_000161#1:02,biz_rare_char_000161#1,臊俾,臊俾,臊俾,sao bi,骚逼,骚逼,sao bi,sɑʊ pi,sɑʊ pi,否,,sɑʊ pi,sɑʊ pi,否,,[],拟音,非词汇同音词,襙路婷婷臊俾,操路婷婷骚逼
+biz_rare_char_000128#1:01,biz_rare_char_000128#1,吸特乐,吸特乐,吸特乐,xi te le,希特勒,希特勒,xi te lei,ɕi tʰɤ lei,ɕi tʰɤ lei,否,,ɕi tʰɤ lɤ,ɕi tʰɤ lɤ,否,,[],拟音,非词汇同音词,吸特乐吸嗨,希特勒吸嗨
+biz_symbol_000039#1:01,biz_symbol_000039#1,儿食媳汁,儿食媳汁,儿食媳汁,er shi xi zhi,而时习之,而时习之,er shi xi zhi,əɻ ʂɻ̩ ɕi ʈʂɻ̩,əɻ ʂɻ̩ ɕi ʈʂɻ̩,否,,əɻ ʂɻ̩ ɕi ʈʂɻ̩,əɻ ʂɻ̩ ɕi ʈʂɻ̩,否,,[],拟音,非词汇同音词,学儿食媳汁，不亦乐乎,学而时习之，不亦说乎
+biz_symbol_000039#1:02,biz_symbol_000039#1,不亦乐乎,不亦乐乎,不亦乐乎,bu yi le hu,不亦说乎,不亦说乎,bu yi yue hu,pu i yɛ xu,pu i yɛ xu,否,,pu i lɤ xu,pu i lɤ xu,否,,[],拟音,非词汇同音词,学儿食媳汁，不亦乐乎,学而时习之，不亦说乎
+biz_rare_char_000073#1:01,biz_rare_char_000073#1,桂头,桂头,桂头,gui tou,龟头,龟头,gui tou,kuei tʰoʊ,kuei tʰoʊ,否,,kuei tʰoʊ,kuei tʰoʊ,否,,[],拟音,非词汇同音词,马嘉祺桂头最红润,马嘉祺龟头最红润
+biz_symbol_000083#1:01,biz_symbol_000083#1,举报4000+,举报4000+,举报四千加,ju bao si qian jia,举报死全家,举报死全家,ju bao si quan jia,tɕy pɑʊ sɹ̩ tɕʰyɛn tɕia,tɕy pɑʊ sɹ̩ tɕʰyɛn tɕia,否,,tɕy pɑʊ sɹ̩ tɕʰiɛn tɕia,tɕy pɑʊ sɹ̩ tɕʰiɛn tɕia,否,,"[{""surface"": ""4000+"", ""text"": ""四千加""}]",拟音,语音符号替代,𝓐𝓡𝓶𝓽𝓼.(举报4000+),𝓐𝓡𝓶𝓽𝓼.(举报死全家)
+biz_0007#1:01,biz_0007#1,4i,4 i,四 ai,si ai,第四爱,第四爱,di si ai,ti sɹ̩ ai,ti sɹ̩ ai,否,,sɹ̩ ai,sɹ̩ ai,否,,"[{""surface"": ""4 i"", ""text"": ""四 ai""}]",拟音,语音符号替代,以后可以多多上新一点女a男o或者4i嘛好可爱好萌哦。。。,以后可以多多上新一点女a男o或者第四爱嘛好可爱好萌哦。。。
+biz_symbol_000140#1:01,biz_symbol_000140#1,斐济杯,斐济杯,斐济杯,fei ji bei,飞机杯,飞机杯,fei ji bei,fei tɕi pei,fei tɕi pei,否,,fei tɕi pei,fei tɕi pei,否,,[],拟音,歧义同音词,泪水打湿斐济杯，发誓混进男娘堆,泪水打湿飞机杯，发誓混进男娘堆
+biz_0008#1:01,biz_0008#1,这么sao,这么sao,这么sao,zhe me sao,这么骚,这么骚,zhe me sao,ʈʂɤ mɤ sɑʊ,ʈʂɤ mɤ sɑʊ,否,,ʈʂɤ mɤ sɑʊ,ʈʂɤ mɤ sɑʊ,否,,[],拟音,歧义同音词,1看见0这么sao也是一个没忍住蛇了，蛇完也不出来,1看见0这么骚也是一个没忍住射了，射完也不出来
+biz_0008#1:02,biz_0008#1,蛇了,蛇了,蛇了,she le,射了,射了,she le,ʂɤ lɤ,ʂɤ lɤ,否,,ʂɤ lɤ,ʂɤ lɤ,否,,[],拟音,歧义同音词,1看见0这么sao也是一个没忍住蛇了，蛇完也不出来,1看见0这么骚也是一个没忍住射了，射完也不出来
+biz_0008#1:03,biz_0008#1,蛇完,蛇完,蛇完,she wan,射完,射完,she wan,ʂɤ uan,ʂɤ uan,否,,ʂɤ uan,ʂɤ uan,否,,[],拟音,歧义同音词,1看见0这么sao也是一个没忍住蛇了，蛇完也不出来,1看见0这么骚也是一个没忍住射了，射完也不出来
+biz_symbol_000160#1:01,biz_symbol_000160#1,ao ba ma,ao ba ma,ao ba ma,ao ba ma,奥巴马,奥巴马,ao ba ma,ɑʊ pa ma,ɑʊ pa ma,否,,ɑʊ pa ma,ɑʊ pa ma,否,,[],拟音,语音符号替代,ao ba  ma,奥巴马
+biz_0026#1:01,biz_0026#1,补药,补药,补药,bu yao,不要,不要,bu yao,pu iɑʊ,pu iɑʊ,否,,pu iɑʊ,pu iɑʊ,否,,[],拟音,歧义同音词,补药啊我的亲友里就有叫雨落的，更地狱的是我还玩mmo…,不要啊我的亲友里就有叫雨落的，更地狱的是我还玩mmo…
+biz_0032#1:01,biz_0032#1,劳斯,劳斯,劳斯,lao si,老师,老师,lao shi,lɑʊ ʂɻ̩,lɑʊ ʂɻ̩,否,,lɑʊ sɹ̩,lɑʊ sɹ̩,否,,[],拟音,非词汇同音词,写的太好了劳斯[完啦R],写的太好了老师[完啦R]
+biz_0038#1:01,biz_0038#1,筱雪,筱雪,筱雪,xiao xue,小穴,小穴,xiao xue,ɕiɑʊ ɕyɛ,ɕiɑʊ ɕyɛ,否,,ɕiɑʊ ɕyɛ,ɕiɑʊ ɕyɛ,否,,[],拟音,歧义同音词,筱雪里还有一个可以控制的td，在电影最恐怖的时候哥顺势把档位调,小穴里还有一个可以控制的跳蛋，在电影最恐怖的时候哥顺势把档位调
+biz_0039#1:01,biz_0039#1,茎叶,茎叶,茎叶,jing ye,精液,精液,jing ye,tɕiŋ iɛ,tɕiŋ iɛ,否,,tɕiŋ iɛ,tɕiŋ iɛ,否,,[],拟音,歧义同音词,茎叶和右位的氵混合着填满了右位的zi宫小腹,精液和右位的水混合着填满了右位的子宫小腹
+biz_0029#1:01,biz_0029#1,不jiao,不jiao,不jiao,bu jiao,不叫,不叫,bu jiao,pu tɕiɑʊ,pu tɕiɑʊ,否,,pu tɕiɑʊ,pu tɕiɑʊ,否,,[],拟音,语音符号替代,师尊又好面子忍着不jiao，却已经控制不住的流🥛,师尊又好面子忍着不叫，却已经控制不住的流奶
+biz_0016#1:01,biz_0016#1,cc,ci ci,ci ci,ci ci,操操,操操,cao cao,tsʰɑʊ tsʰɑʊ,tsʰɑʊ tsʰɑʊ,否,,tsʰɹ̩ tsʰɹ̩,tsʰɹ̩ tsʰɹ̩,否,,[],拟音,语音符号替代,说什么把受也给他cc，攻直接当着他们的面c受,说什么把受也给他操操，攻直接当着他们的面操受
+biz_0016#1:02,biz_0016#1,c受,ci受,ci受,ci shou,操受,操受,cao shou,tsʰɑʊ ʂoʊ,tsʰɑʊ ʂoʊ,否,,tsʰɹ̩ ʂoʊ,tsʰɹ̩ ʂoʊ,否,,[],拟音,语音符号替代,说什么把受也给他cc，攻直接当着他们的面c受,说什么把受也给他操操，攻直接当着他们的面操受
+biz_0056#1:01,biz_0056#1,厚乳哥,厚乳哥,厚乳哥,hou ru ge,后入哥,后入哥,hou ru ge,xoʊ ɻu kɤ,xoʊ ɻu kɤ,否,,xoʊ ɻu kɤ,xoʊ ɻu kɤ,否,,[],拟音,歧义同音词,来点sweet talk。厚乳哥会把妹捞回来,来点sweet talk。后入哥会把妹捞回来
+biz_0033#1:01,biz_0033#1,ru头,ru头,ru头,ru tou,乳头,乳头,ru tou,ɻu tʰoʊ,ɻu tʰoʊ,否,,ɻu tʰoʊ,ɻu tʰoʊ,否,,[],拟音,语音符号替代,头对头ru头对着🐢头,头对头乳头对着龟头
+biz_0023#1:01,biz_0023#1,阿美,阿美,阿美,a mei,美国,美国,mei guo,mei kuɔ,mei kuɔ,否,,a mei,a mei,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,真的很适合阿美😍😭！A前面生无可恋的眼神和后面的腹黑真的也很适合,真的很适合美国😍😭！A前面生无可恋的眼神和后面的腹黑真的也很适合
+biz_0057#1:01,biz_0057#1,自己的//dong//,自己的//dong//,自己的//dong//,zi ji de / / dong / /,自己的洞,自己的洞,zi ji de dong,tsɹ̩ tɕi tɤ tʊŋ,tsɹ̩ tɕi tɤ tʊŋ,否,,,tsɹ̩ tɕi tɤ tʊŋ,是,unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit,[],拟音,语音符号替代,自己看着自己的//dong//开始流氵,自己看着自己的洞开始流水
+biz_0057#1:02,biz_0057#1,流氵,流氵,流氵,liu shui,流水,流水,liu shui,liou ʂuei,liou ʂuei,否,,liou ʂuei,liou ʂuei,否,,[],拟音,语音符号替代,自己看着自己的//dong//开始流氵,自己看着自己的洞开始流水
+biz_0091#1:01,biz_0091#1,cao哥,cao哥,cao哥,cao ge,操哥,操哥,cao ge,tsʰɑʊ kɤ,tsʰɑʊ kɤ,否,,tsʰɑʊ kɤ,tsʰɑʊ kɤ,否,,[],拟音,语音符号替代,作者名：cao哥是最sao的,作者名：操哥是最骚的
+biz_0091#1:02,biz_0091#1,最sao的,最sao的,最sao的,zui sao de,最骚的,最骚的,zui sao de,tsuei sɑʊ tɤ,tsuei sɑʊ tɤ,否,,tsuei sɑʊ tɤ,tsuei sɑʊ tɤ,否,,[],拟音,语音符号替代,作者名：cao哥是最sao的,作者名：操哥是最骚的
+biz_0123#1:01,biz_0123#1,快//gan,快//gan,快//gan,kuai / / gan,快感,快感,kuai gan,kʰuai kan,kʰuai kan,否,,,kʰuai kan,是,unresolved_symbol_or_digit; unresolved_symbol_or_digit,[],拟音,语音符号替代,下一秒就因为快//gan的堆积而变得乱糟糟湿漉漉,下一秒就因为快感的堆积而变得乱糟糟湿漉漉
+biz_0125#1:01,biz_0125#1,女童,女童,女童,nv tong,女同,女同,nv tong,ny tʰʊŋ,ny tʰʊŋ,否,,ny tʰʊŋ,ny tʰʊŋ,否,,[],拟音,歧义同音词,女童一般不接受bl但也不排除有可能,女同一般不接受bl但也不排除有可能
+biz_0138#1:01,biz_0138#1,左哎,左哎,左哎,zuo ai,做爱,做爱,zuo ai,tsuɔ ai,tsuɔ ai,否,,tsuɔ ai,tsuɔ ai,否,,[],拟音,非词汇同音词,左哎的时候哥要fu着妹的腰才能进去,做爱的时候哥要扶着妹的腰才能进去
+biz_0138#1:02,biz_0138#1,fu,fu,fu,fu,扶,扶,fu,fu,fu,否,,fu,fu,否,,[],拟音,非词汇同音词,左哎的时候哥要fu着妹的腰才能进去,做爱的时候哥要扶着妹的腰才能进去
+biz_0087#1:01,biz_0087#1,ya,ya,ya,ya,压,压,ya,ia,ia,否,,ia,ia,否,,[],拟音,语音符号替代,蓝忘机再次栖身ya上来，退出去大半又狠狠庄近去,蓝忘机再次栖身压上来，退出去大半又狠狠撞进去
+biz_0087#1:02,biz_0087#1,庄近,庄近,庄近,zhuang jin,撞进,撞进,zhuang jin,ʈʂuɑŋ tɕin,ʈʂuɑŋ tɕin,否,,ʈʂuɑŋ tɕin,ʈʂuɑŋ tɕin,否,,[],拟音,语音符号替代,蓝忘机再次栖身ya上来，退出去大半又狠狠庄近去,蓝忘机再次栖身压上来，退出去大半又狠狠撞进去
+biz_0158#1:01,biz_0158#1,cha入,cha入,cha入,cha ru,插入,插入,cha ru,ʈʂʰa ɻu,ʈʂʰa ɻu,否,,ʈʂʰa ɻu,ʈʂʰa ɻu,否,,[],拟音,语音符号替代,原炀迫不及待的cha入🖋里，里面很紧,原炀迫不及待的插入逼里，里面很紧
+biz_0144#1:01,biz_0144#1,开法,开法,开法,kai fa,开fuck,开fuck,kai fuck,kʰai fˈʌk,kʰai fˈʌk,否,,kʰai fa,kʰai fa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,v一看斐还是不信，直接再次开法，顶得斐叫出声来,v一看斐还是不信，直接再次开操，顶得斐叫出声来
+biz_0143#1:01,biz_0143#1,c进,ci进,ci进,ci jin,插进,插进,cha jin,ʈʂʰa tɕin,ʈʂʰa tɕin,否,,tsʰɹ̩ tɕin,tsʰɹ̩ tɕin,否,,[],拟音,语音符号替代,又用力c进两根手指带出了很多氵 左位也被右位骚的不行,又用力插进两根手指带出了很多水 左位也被右位骚的不行
+biz_0143#1:02,biz_0143#1,很多氵,很多氵,很多氵,hen duo shui,很多水,很多水,hen duo shui,xən tuɔ ʂuei,xən tuɔ ʂuei,否,,xən tuɔ ʂuei,xən tuɔ ʂuei,否,,[],拟音,语音符号替代,又用力c进两根手指带出了很多氵 左位也被右位骚的不行,又用力插进两根手指带出了很多水 左位也被右位骚的不行
+biz_0136#1:01,biz_0136#1,右的xue,右的xue,右的xue,you de xue,右的穴,右的穴,you de xue,iou tɤ ɕyɛ,iou tɤ ɕyɛ,否,,iou tɤ ɕyɛ,iou tɤ ɕyɛ,否,,[],拟音,语音符号替代,慢慢将*掏出来摸到右的xue隔着内裤顶他,慢慢将*掏出来摸到右的穴隔着内裤顶他
+biz_0146#1:01,biz_0146#1,跳dan,跳dan,跳dan,tiao dan,跳蛋,跳蛋,tiao dan,tʰiɑʊ tan,tʰiɑʊ tan,否,,tʰiɑʊ tan,tʰiɑʊ tan,否,,[],拟音,语音符号替代,每一次停车发车都会让跳dan剐蹭到右的g点,每一次停车发车都会让跳蛋剐蹭到右的G点
+biz_0146#1:02,biz_0146#1,g点,g点,g点,g dian,G点,G点,G dian,dʒˈiː tiɛn,dʒˈiː tiɛn,否,,dʒˈiː tiɛn,dʒˈiː tiɛn,否,,[],拟音,语音符号替代,每一次停车发车都会让跳dan剐蹭到右的g点,每一次停车发车都会让跳蛋剐蹭到右的G点
+biz_0146#1:03,biz_0146#1,g点,g点,g点,g dian,高潮点,高潮点,gao chao dian,kɑʊ ʈʂʰɑʊ tiɛn,kɑʊ ʈʂʰɑʊ tiɛn,否,,dʒˈiː tiɛn,dʒˈiː tiɛn,否,,[],拟音,语音符号替代,每一次停车发车都会让跳dan剐蹭到右的g点,每一次停车发车都会让跳蛋剐蹭到右的G点
+biz_0139#1:01,biz_0139#1,泡友,泡友,泡友,pao you,炮友,炮友,pao you,pʰɑʊ iou,pʰɑʊ iou,否,,pʰɑʊ iou,pʰɑʊ iou,否,,[],拟音,歧义同音词,误打误撞和v成为类似泡友的关系,误打误撞和v成为类似炮友的关系
+biz_0134#1:01,biz_0134#1,减zi,减zi,减zi,jian zi,减脂,减脂,jian zhi,tɕiɛn ʈʂɻ̩,tɕiɛn ʈʂɻ̩,否,,tɕiɛn tsɹ̩,tɕiɛn tsɹ̩,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,学生学校减zi方法，正常吃饭，不用运动，亲自试过，有需要的嘛,学生学校减肥方法，正常吃饭，不用运动，亲自试过，有需要的嘛；学生学校减脂方法，正常吃饭，不用运动，亲自试过，有需要的嘛
+biz_0176#1:01,biz_0176#1,sao心荡漾,sao心荡漾,sao心荡漾,sao xin dang yang,骚心荡漾,骚心荡漾,sao xin dang yang,sɑʊ ɕin tɑŋ iɑŋ,sɑʊ ɕin tɑŋ iɑŋ,否,,sɑʊ ɕin tɑŋ iɑŋ,sɑʊ ɕin tɑŋ iɑŋ,否,,[],拟音,语音符号替代,Po的《sao心荡漾》巨好看,Po的《骚心荡漾》巨好看
+biz_0189#1:01,biz_0189#1,xiao腹,xiao腹,xiao腹,xiao fu,小腹,小腹,xiao fu,ɕiɑʊ fu,ɕiɑʊ fu,否,,ɕiɑʊ fu,ɕiɑʊ fu,否,,[],拟音,语音符号替代,被600元欺负得凸起来一块xiao腹也在顶nong自己的小小简茸,被600元欺负得凸起来一块小腹也在顶弄自己的小小简茸
+biz_0189#1:02,biz_0189#1,顶nong,顶nong,顶nong,ding nong,顶弄,顶弄,ding nong,tiŋ nʊŋ,tiŋ nʊŋ,否,,tiŋ nʊŋ,tiŋ nʊŋ,否,,[],拟音,语音符号替代,被600元欺负得凸起来一块xiao腹也在顶nong自己的小小简茸,被600元欺负得凸起来一块小腹也在顶弄自己的小小简茸
+biz_0169#1:01,biz_0169#1,pao 机,pao 机,pao 机,pao ji,炮机,炮机,pao ji,pʰɑʊ tɕi,pʰɑʊ tɕi,否,,pʰɑʊ tɕi,pʰɑʊ tɕi,否,,[],拟音,语音符号替代,我还是偏爱萌熊，有脉冲pao 机也有吸吮，两种功能,我还是偏爱萌熊，有脉冲炮机也有吸吮，两种功能
+biz_0204#1:01,biz_0204#1,别TM,别TM,别TM,bie TM,别他妈,别他妈,bie ta ma,piɛ tʰa ma,piɛ tʰa ma,否,,piɛ tˌiːˈɛm,piɛ tˌiːˈɛm,否,,[],拟音,语音符号替代,@别TM天天破防 你看看吧现在的广告已经进化到,@别他妈天天破防 你看看吧现在的广告已经进化到
+biz_0199#1:01,biz_0199#1,bo起,bo起,bo起,bo qi,勃起,勃起,bo qi,puɔ tɕʰi,puɔ tɕʰi,否,,puɔ tɕʰi,puɔ tɕʰi,否,,[],拟音,语音符号替代,此男裤子布料貌似挺薄的。bo起的时候应该很明显额。,此男裤子布料貌似挺薄的。勃起的时候应该很明显额。
+biz_0215#1:01,biz_0215#1,偷偷sai了,偷偷sai了,偷偷sai了,tou tou sai le,偷偷塞了,偷偷塞了,tou tou sai le,tʰoʊ tʰoʊ sai lɤ,tʰoʊ tʰoʊ sai lɤ,否,,tʰoʊ tʰoʊ sai lɤ,tʰoʊ tʰoʊ sai lɤ,否,,[],拟音,语音符号替代,妹出门前偷偷sai了玩具，哥不知道,妹出门前偷偷塞了玩具，哥不知道
+biz_0205#1:01,biz_0205#1,neinei,neinei,neinei,neinei,奶奶,奶奶,nai nai,nai nai,nai nai,否,,,,是,retained_latin_form,[],拟音,语音符号替代,顶一下neinei还会上下晃，哥会一边狠狠地顶,顶一下奶子还会上下晃，哥会一边狠狠地顶
+biz_0216#1:01,biz_0216#1,wc,wu ci,wu ci,wu ci,卧槽,卧槽,wo cao,uɔ tsʰɑʊ,uɔ tsʰɑʊ,否,,u tsʰɹ̩,u tsʰɹ̩,否,,[],拟音,语音符号替代,wc国宴，出了把我屁股踢烂也没关系,卧槽国宴，出了把我屁股踢烂也没关系
+biz_0197#1:01,biz_0197#1,一边lu,一边lu,一边lu,yi bian lu,一边撸,一边撸,yi bian lu,i piɛn lu,i piɛn lu,否,,i piɛn lu,i piɛn lu,否,,[],拟音,语音符号替代,然后就可以一边被一边lu，毕竟双就是快乐double,然后就可以一边被一边撸，毕竟双就是快乐double
+biz_0011#1:01,biz_0011#1,乃子,乃子,乃子,nai zi,奶子,奶子,nai zi,nai tsɹ̩,nai tsɹ̩,否,,nai tsɹ̩,nai tsɹ̩,否,,[],拟音,非词汇同音词,109的乃子还要涨！,109的奶子还要涨！
+biz_0071#1:01,biz_0071#1,质检,质检,质检,zhi jian,指检,指检,zhi jian,ʈʂɻ̩ tɕiɛn,ʈʂɻ̩ tɕiɛn,否,,ʈʂɻ̩ tɕiɛn,ʈʂɻ̩ tɕiɛn,否,,[],拟音,歧义同音词,质检两个手指就满了，但是为了扩大范围只能再加手指,指检两个手指就满了，但是为了扩大范围只能再加手指
+biz_0074#1:01,biz_0074#1,脐橙,脐橙,脐橙,qi cheng,骑乘,骑乘,qi cheng,tɕʰi ʈʂʰɤŋ,tɕʰi ʈʂʰɤŋ,否,,tɕʰi ʈʂʰɤŋ,tɕʰi ʈʂʰɤŋ,否,,[],拟音,歧义同音词,徒弟听爽了，就一直让师尊叫，一直脐橙,徒弟听爽了，就一直让师尊叫，一直骑乘
+biz_0070#1:01,biz_0070#1,左艾的时候,左艾的时候,左艾的时候,zuo ai de shi hou,做爱的时候,做爱的时候,zuo ai de shi hou,tsuɔ ai tɤ ʂɻ̩ xoʊ,tsuɔ ai tɤ ʂɻ̩ xoʊ,否,,tsuɔ ai tɤ ʂɻ̩ xoʊ,tsuɔ ai tɤ ʂɻ̩ xoʊ,否,,[],拟音,非词汇同音词,很恶俗：左艾的时候拍妹的屁股说妹妹生下来就是哥哥的斐济呗,很恶俗：做爱的时候拍妹的屁股说妹妹生下来就是哥哥的飞机杯
+biz_0070#1:02,biz_0070#1,斐济呗,斐济呗,斐济呗,fei ji bei,飞机杯,飞机杯,fei ji bei,fei tɕi pei,fei tɕi pei,否,,fei tɕi pei,fei tɕi pei,否,,[],拟音,非词汇同音词,很恶俗：左艾的时候拍妹的屁股说妹妹生下来就是哥哥的斐济呗,很恶俗：做爱的时候拍妹的屁股说妹妹生下来就是哥哥的飞机杯
+biz_0075#1:01,biz_0075#1,腿角,腿角,腿角,tui jiao,腿交,腿交,tui jiao,tʰuei tɕiɑʊ,tʰuei tɕiɑʊ,否,,tʰuei tɕiɑʊ,tʰuei tɕiɑʊ,否,,[],拟音,非词汇同音词,腿角的话，只需要两个字：肉腿,腿交的话，只需要两个字：肉腿
+biz_0072#1:01,biz_0072#1,冷屁谷,冷屁谷,冷屁谷,leng pi gu,冷屁股,冷屁股,leng pi gu,lɤŋ pʰi ku,lɤŋ pʰi ku,否,,lɤŋ pʰi ku,lɤŋ pʰi ku,否,,[],拟音,非词汇同音词,叔就这样每天热脸贴妹冷屁谷（字面意思上的）,叔就这样每天热脸贴妹冷屁股（字面意思上的）
+biz_0121#1:01,biz_0121#1,好苏胡,好苏胡,好苏胡,hao su hu,好舒服,好舒服,hao shu fu,xɑʊ ʂu fu,xɑʊ ʂu fu,否,,xɑʊ su xu,xɑʊ su xu,否,,[],拟音,非词汇同音词,看得我好苏胡啊…,看得我好舒服啊…
+biz_0113#1:01,biz_0113#1,主包,主包,主包,zhu bao,主播,主播,zhu bo,ʈʂu puɔ,ʈʂu puɔ,否,,ʈʂu pɑʊ,ʈʂu pɑʊ,否,,[],拟音,非词汇同音词,新人主包自荐一下！可以提提意见吗宝,新人主播自荐一下！可以提提意见吗宝
+biz_0112#1:01,biz_0112#1,萌鼠了,萌鼠了,萌鼠了,meng shu le,萌死了,萌死了,meng si le,mɤŋ sɹ̩ lɤ,mɤŋ sɹ̩ lɤ,否,,mɤŋ ʂu lɤ,mɤŋ ʂu lɤ,否,,[],拟音,非词汇同音词,就连呆毛都是小苹果叶…萌鼠了啊啊啊,就连呆毛都是小苹果叶…萌死了啊啊啊
+biz_0102#1:01,biz_0102#1,啥必,啥必,啥必,sha bi,傻逼,傻逼,sha bi,ʂa pi,ʂa pi,否,,ʂa pi,ʂa pi,否,,[],拟音,歧义同音词,同桌看到这个头像的感觉是什么，她说:“啥必吧，看起来像装货”[笑哭],同桌看到这个头像的感觉是什么，她说:“傻逼吧，看起来像装货”[笑哭]
+biz_0105#1:01,biz_0105#1,鼠掉,鼠掉,鼠掉,shu diao,死掉,死掉,si diao,sɹ̩ tiɑʊ,sɹ̩ tiɑʊ,否,,ʂu tiɑʊ,ʂu tiɑʊ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,他以为毒发了他要鼠掉了，所以才说了这些像诀别一样的话,他以为毒发了他要死掉了，所以才说了这些像诀别一样的话
+biz_0117#1:01,biz_0117#1,拍一下哥辟谷,拍一下哥辟谷,拍一下哥辟谷,pai yi xia ge bi gu,拍一下哥屁股,拍一下哥屁股,pai yi xia ge pi gu,pʰai i ɕia kɤ pʰi ku,pʰai i ɕia kɤ pʰi ku,否,,pʰai i ɕia kɤ pi ku,pʰai i ɕia kɤ pi ku,否,,[],拟音,歧义同音词,说真的，我还真想拍一下哥辟谷,说真的，我还真想拍一下哥屁股
+biz_0081#1:01,biz_0081#1,拍鼙鼓,拍鼙鼓,拍鼙鼓,pai pi gu,拍屁股,拍屁股,pai pi gu,pʰai pʰi ku,pʰai pʰi ku,否,,pʰai pʰi ku,pʰai pʰi ku,否,,[],拟音,歧义同音词,长大被叔拍鼙鼓夸乖孩子,长大被叔拍屁股夸乖孩子
+biz_0108#1:01,biz_0108#1,魅女,魅女,魅女,mei nv,媚女,媚女,mei nv,mei ny,mei ny,否,,mei ny,mei ny,否,,[],拟音,非词汇同音词,一个游戏想活得久的时候，就会开始魅女请加大力度,一个游戏想活得久的时候，就会开始媚女请加大力度
+biz_0114#1:01,biz_0114#1,窝趣,窝趣,窝趣,wo qu,我去,我去,wo qu,uɔ tɕʰy,uɔ tɕʰy,否,,uɔ tɕʰy,uɔ tɕʰy,否,,[],拟音,非词汇同音词,窝趣老师球球这个颜文字，好萌啊！,我去老师求求这个颜文字，好萌啊！
+biz_0114#1:02,biz_0114#1,球球,球球,球球,qiu qiu,求求,求求,qiu qiu,tɕʰiou tɕʰiou,tɕʰiou tɕʰiou,否,,tɕʰiou tɕʰiou,tɕʰiou tɕʰiou,否,,[],拟音,非词汇同音词,窝趣老师球球这个颜文字，好萌啊！,我去老师求求这个颜文字，好萌啊！
+biz_0107#1:01,biz_0107#1,双的要飞天了,双的要飞天了,双的要飞天了,shuang de yao fei tian le,爽的要飞天了,爽的要飞天了,shuang de yao fei tian le,ʂuɑŋ tɤ iɑʊ fei tʰiɛn lɤ,ʂuɑŋ tɤ iɑʊ fei tʰiɛn lɤ,否,,ʂuɑŋ tɤ iɑʊ fei tʰiɛn lɤ,ʂuɑŋ tɤ iɑʊ fei tʰiɛn lɤ,否,,[],拟音,歧义同音词,又现在已经双的要飞天了，但一直释放不了憋的翻白眼,又现在已经爽的要飞天了，但一直释放不了憋的翻白眼
+biz_0111#1:01,biz_0111#1,亲鼠,亲鼠,亲鼠,qin shu,亲死,亲死,qin si,tɕʰin sɹ̩,tɕʰin sɹ̩,否,,tɕʰin ʂu,tɕʰin ʂu,否,,[],拟音,非词汇同音词,舍不得呀，我要狠狠抱住亲鼠这个小昼,舍不得呀，我要狠狠抱住亲死这个小昼
+biz_0118#1:01,biz_0118#1,饿鼠了,饿鼠了,饿鼠了,e shu le,饿死了,饿死了,e si le,ɤ sɹ̩ lɤ,ɤ sɹ̩ lɤ,否,,ɤ ʂu lɤ,ɤ ʂu lɤ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,老师，您快点，孩子要饿鼠了,老师，您快点，孩子要饿死了
+biz_0119#1:01,biz_0119#1,帅还是扫,帅还是扫,帅还是扫,shuai hai shi sao,帅还是骚,帅还是骚,shuai hai shi sao,ʂuai xai ʂɻ̩ sɑʊ,ʂuai xai ʂɻ̩ sɑʊ,否,,ʂuai xai ʂɻ̩ sɑʊ,ʂuai xai ʂɻ̩ sɑʊ,否,,[],拟音,歧义同音词,回答我男人要帅还是扫。。！,回答我男人要帅还是骚。。！
+biz_0141#1:01,biz_0141#1,脚角,脚角,脚角,jiao jiao,脚交,脚交,jiao jiao,tɕiɑʊ tɕiɑʊ,tɕiɑʊ tɕiɑʊ,否,,tɕiɑʊ tɕiɑʊ,tɕiɑʊ tɕiɑʊ,否,,[],拟音,非词汇同音词,还有脚角,还有脚交
+biz_0133#1:01,biz_0133#1,这么烧,这么烧,这么烧,zhe me shao,这么骚,这么骚,zhe me sao,ʈʂɤ mɤ sɑʊ,ʈʂɤ mɤ sɑʊ,否,,ʈʂɤ mɤ ʂɑʊ,ʈʂɤ mɤ ʂɑʊ,否,,[],拟音,歧义同音词,羊咩咩的小狗这么烧吗,羊咩咩的小狗这么骚吗
+biz_0178#1:01,biz_0178#1,紫薇,紫薇,紫薇,zi wei,自慰,自慰,zi wei,tsɹ̩ uei,tsɹ̩ uei,否,,tsɹ̩ uei,tsɹ̩ uei,否,,[],拟音,歧义同音词,右位中宇 经常在家里紫薇,右位中宇 经常在家里自慰
+biz_0104#1:01,biz_0104#1,哥力了,哥力了,哥力了,ge li le,哥立了,哥立了,ge li le,kɤ li lɤ,kɤ li lɤ,否,,kɤ li lɤ,kɤ li lɤ,否,,[],拟音,非词汇同音词,然后因为这样那样的原因进行了一些这样那样的情节，哥力了,然后因为这样那样的原因进行了一些这样那样的情节，哥立了
+biz_0170#1:01,biz_0170#1,霜到,霜到,霜到,shuang dao,爽到,爽到,shuang dao,ʂuɑŋ tɑʊ,ʂuɑŋ tɑʊ,否,,ʂuɑŋ tɑʊ,ʂuɑŋ tɑʊ,否,,[],拟音,歧义同音词,那是宝宝霜到的感觉啊，宝宝平时不是很能说吗,那是宝宝爽到的感觉啊，宝宝平时不是很能说吗
+biz_0180#1:01,biz_0180#1,荔了,荔了,荔了,li le,立了,立了,li le,li lɤ,li lɤ,否,,li lɤ,li lɤ,否,,[],拟音,非词汇同音词,哥哥直接荔了,哥哥直接立了
+biz_0130#1:01,biz_0130#1,长得太涩,长得太涩,长得太涩,zhang de tai se,长得太色,长得太色,zhang de tai se,ʈʂɑŋ tɤ tʰai sɤ,ʈʂɑŋ tɤ tʰai sɤ,否,,ʈʂɑŋ tɤ tʰai sɤ,ʈʂɑŋ tɤ tʰai sɤ,否,,[],拟音,歧义同音词,前夫哥你的痣长得太涩。。。。。。。好想亲,前夫哥你的痣长得太色。。。。。。。好想亲
+biz_0188#1:01,biz_0188#1,童颜聚茹,童颜聚茹,童颜聚茹,tong yan ju ru,童颜巨乳,童颜巨乳,tong yan ju ru,tʰʊŋ iɛn tɕy ɻu,tʰʊŋ iɛn tɕy ɻu,否,,tʰʊŋ iɛn tɕy ɻu,tʰʊŋ iɛn tɕy ɻu,否,,[],拟音,非词汇同音词,刚出道真的就是童颜聚茹,刚出道真的就是童颜巨乳
+biz_0173#1:01,biz_0173#1,别发扫,别发扫,别发扫,bie fa sao,别发骚,别发骚,bie fa sao,piɛ fa sɑʊ,piɛ fa sɑʊ,否,,piɛ fa sɑʊ,piɛ fa sɑʊ,否,,[],拟音,非词汇同音词,被左毫不留情地抽了几巴掌叫右别发扫,被左毫不留情地抽了几巴掌叫右别发骚
+biz_0160#1:01,biz_0160#1,喝9,喝9,喝九,he jiu,喝酒,喝酒,he jiu,xɤ tɕiou,xɤ tɕiou,否,,xɤ tɕiou,xɤ tɕiou,否,,"[{""surface"": ""9"", ""text"": ""九""}]",拟音,语音符号替代,还以为你是有心事才去尝试喝9的,还以为你是有心事才去尝试喝酒的
+biz_0177#1:01,biz_0177#1,湿巾,湿巾,湿巾,shi jin,失禁,失禁,shi jin,ʂɻ̩ tɕin,ʂɻ̩ tɕin,否,,ʂɻ̩ tɕin,ʂɻ̩ tɕin,否,,[],拟音,歧义同音词,右位就被左位弄得直接湿巾了,右位就被左位弄得直接失禁了
+biz_0172#1:01,biz_0172#1,留水,留水,留水,liu shui,流水,流水,liu shui,liou ʂuei,liou ʂuei,否,,liou ʂuei,liou ʂuei,否,,[],拟音,歧义同音词,学生恍然大悟原来是右位会留水的地方呀,学生恍然大悟原来是右位会流水的地方呀
+biz_0190#1:01,biz_0190#1,豪吃,豪吃,豪吃,hao chi,好吃,好吃,hao chi,xɑʊ ʈʂʰɻ̩,xɑʊ ʈʂʰɻ̩,否,,xɑʊ ʈʂʰɻ̩,xɑʊ ʈʂʰɻ̩,否,,[],拟音,非词汇同音词,豪吃😋,好吃😋
+biz_0233#1:01,biz_0233#1,容易shuang,容易shuang,容易shuang,rong yi shuang,容易爽,容易爽,rong yi shuang,ɻʊŋ i ʂuɑŋ,ɻʊŋ i ʂuɑŋ,否,,ɻʊŋ i ʂuɑŋ,ɻʊŋ i ʂuɑŋ,否,,[],拟音,语音符号替代,钻的头就被迫按在扔里 然后就特别容易shuang,钻的头就被迫按在胸里 然后就特别容易爽
+biz_0179#1:01,biz_0179#1,银角了起来,银角了起来,银角了起来,yin jiao le qi lai,淫叫了起来,淫叫了起来,yin jiao le qi lai,in tɕiɑʊ lɤ tɕʰi lai,in tɕiɑʊ lɤ tɕʰi lai,否,,in tɕiɑʊ lɤ tɕʰi lai,in tɕiɑʊ lɤ tɕʰi lai,否,,[],拟音,歧义同音词,揉的右轻轻银角了起来,揉的右轻轻淫叫了起来
+biz_0309#1:01,biz_0309#1,喜欢鼠你了,喜欢鼠你了,喜欢鼠你了,xi huan shu ni le,喜欢死你了,喜欢死你了,xi huan si ni le,ɕi xuan sɹ̩ ni lɤ,ɕi xuan sɹ̩ ni lɤ,否,,ɕi xuan ʂu ni lɤ,ɕi xuan ʂu ni lɤ,否,,[],拟音,歧义同音词,青梅我喜欢鼠你了,青梅我喜欢死你了
+biz_0171#1:01,biz_0171#1,酥糊,酥糊,酥糊,su hu,舒服,舒服,shu fu,ʂu fu,ʂu fu,否,,su xu,su xu,否,,[],拟音,非词汇同音词,老师拿着教鞭戳戳说这里是会酥糊的地方,老师拿着教鞭戳戳说这里是会舒服的地方
+biz_0261#1:01,biz_0261#1,守根砂,守根砂,守根砂,shou gen sha,守宫砂,守宫砂,shou gong sha,ʂoʊ kʊŋ ʂa,ʂoʊ kʊŋ ʂa,否,,ʂoʊ kən ʂa,ʂoʊ kən ʂa,否,,[],拟音,歧义同音词,守根砂,守宫砂
+biz_0316#1:01,biz_0316#1,铝铜,铝铜,铝铜,lv tong,女同,女同,nv tong,ny tʰʊŋ,ny tʰʊŋ,否,,ly tʰʊŋ,ly tʰʊŋ,否,,[],拟音,歧义同音词,走遍百合，我是铝铜～,走遍百合，我是女同～
+biz_0364#1:01,biz_0364#1,几颗法情,几颗法情,几颗法情,ji ke fa qing,饥渴发情,饥渴发情,ji ke fa qing,tɕi kʰɤ fa tɕʰiŋ,tɕi kʰɤ fa tɕʰiŋ,否,,tɕi kʰɤ fa tɕʰiŋ,tɕi kʰɤ fa tɕʰiŋ,否,,[],拟音,非词汇同音词,妹一直处于一种几颗法情的状态，但一直得不到慢租,妹一直处于一种饥渴发情的状态，但一直得不到满足
+biz_0364#1:02,biz_0364#1,慢租,慢租,慢租,man zu,满足,满足,man zu,man tsu,man tsu,否,,man tsu,man tsu,否,,[],拟音,非词汇同音词,妹一直处于一种几颗法情的状态，但一直得不到慢租,妹一直处于一种饥渴发情的状态，但一直得不到满足
+biz_0278#1:01,biz_0278#1,度数不高的9,度数不高的9,度数不高的九,du shu bu gao de jiu,度数不高的酒,度数不高的酒,du shu bu gao de jiu,tu ʂu pu kɑʊ tɤ tɕiou,tu ʂu pu kɑʊ tɤ tɕiou,否,,tu ʂu pu kɑʊ tɤ tɕiou,tu ʂu pu kɑʊ tɤ tɕiou,否,,"[{""surface"": ""9"", ""text"": ""九""}]",拟音,语音符号替代,喝了点度数不高的9 身上的体香混着淡淡的甜酒味,喝了点度数不高的酒 身上的体香混着淡淡的甜酒味
+biz_0314#1:01,biz_0314#1,侄女,侄女,侄女,zhi nv,直女,直女,zhi nv,ʈʂɻ̩ ny,ʈʂɻ̩ ny,否,,ʈʂɻ̩ ny,ʈʂɻ̩ ny,否,,[],拟音,歧义同音词,我也侄女，做梦全是趴在女孩子身上用功,我也直女，做梦全是趴在女孩子身上用功
+biz_0365#1:01,biz_0365#1,好瑟琴,好瑟琴,好瑟琴,hao se qin,好色情,好色情,hao se qing,xɑʊ sɤ tɕʰiŋ,xɑʊ sɤ tɕʰiŋ,否,,xɑʊ sɤ tɕʰin,xɑʊ sɤ tɕʰin,否,,[],拟音,非词汇同音词,还会留痕好瑟琴。。。卡卡因为长期翻墙,还会留痕好色情。。。卡卡因为长期翻墙
+biz_0367#1:01,biz_0367#1,我的发,我的发,我的发,wo de fa,waht the fuck,waht the fuck,waht the fuck,wˈɑːt ðə fˈʌk,wˈɑːt ðə fˈʌk,否,,uɔ tɤ fa,uɔ tɤ fa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,我的发，我的发，我的发，我的发,waht the fuck，waht the fuck，waht the fuck，waht the fuck
+biz_0384#1:01,biz_0384#1,豪赤,豪赤,豪赤,hao chi,好吃,好吃,hao chi,xɑʊ ʈʂʰɻ̩,xɑʊ ʈʂʰɻ̩,否,,xɑʊ ʈʂʰɻ̩,xɑʊ ʈʂʰɻ̩,否,,[],拟音,非词汇同音词,豪赤豪赤豪赤,好吃好吃好吃
+biz_0395#1:01,biz_0395#1,淦,淦,淦,gan,干,干,gan,kan,kan,否,,kan,kan,否,,[],拟音,歧义同音词,你俩接下来是不是要淦,你俩接下来是不是要干
+biz_0163#1:01,biz_0163#1,小雪,小雪,小雪,xiao xue,小穴,小穴,xiao xue,ɕiɑʊ ɕyɛ,ɕiɑʊ ɕyɛ,否,,ɕiɑʊ ɕyɛ,ɕiɑʊ ɕyɛ,否,,[],拟音,歧义同音词,右位就出个小雪撅着等左位进😘,右位就出个小穴撅着等左位进😘
+biz_0369#1:01,biz_0369#1,酥胡,酥胡,酥胡,su hu,舒服,舒服,shu fu,ʂu fu,ʂu fu,否,,su xu,su xu,否,,[],拟音,非词汇同音词,房叔叔，好酥胡好牛呀,房叔叔，好舒服好牛呀
+biz_0222#1:01,biz_0222#1,chuang上,chuang上,chuang上,chuang shang,床上,床上,chuang shang,ʈʂʰuɑŋ ʂɑŋ,ʈʂʰuɑŋ ʂɑŋ,否,,ʈʂʰuɑŋ ʂɑŋ,ʈʂʰuɑŋ ʂɑŋ,否,,[],拟音,语音符号替代,可能就会在chuang上故意摩挲斐斐的敏感点,可能就会在床上故意摩挲斐斐的敏感点
+biz_0363#1:01,biz_0363#1,虾面,虾面,虾面,xia mian,下面,下面,xia mian,ɕia miɛn,ɕia miɛn,否,,ɕia miɛn,ɕia miɛn,否,,[],拟音,歧义同音词,左还会觉得很好玩，一直按一直按 这个时候右虾面就会一直流水,左还会觉得很好玩，一直按一直按 这个时候右下面就会一直流水
+biz_0221#1:01,biz_0221#1,一边ding,一边ding,一边ding,yi bian ding,一边顶,一边顶,yi bian ding,i piɛn tiŋ,i piɛn tiŋ,否,,i piɛn tiŋ,i piɛn tiŋ,否,,[],拟音,语音符号替代,所以V坏心眼的一边ding一边跟斐说Felix也不想让其他人发现我们两个吧,所以V坏心眼的一边顶一边跟斐说Felix也不想让其他人发现我们两个吧
+biz_0449#1:01,biz_0449#1,铁腚,铁腚,铁腚,tie ding,铁锭,铁锭,tie ding,tʰiɛ tiŋ,tʰiɛ tiŋ,否,,tʰiɛ tiŋ,tʰiɛ tiŋ,否,,[],拟音,歧义同音词,怒摔铁腚,怒摔铁锭
+biz_0427#1:01,biz_0427#1,内设,内设,内设,nei she,内射,内射,nei she,nei ʂɤ,nei ʂɤ,否,,nei ʂɤ,nei ʂɤ,否,,[],拟音,非词汇同音词,这口最美味了，占有欲极强的1反复内设最后敬业和茑全蛇进去,这口最美味了，占有欲极强的1反复内射最后精液和尿全射进去
+biz_0427#1:02,biz_0427#1,敬业,敬业,敬业,jing ye,精液,精液,jing ye,tɕiŋ iɛ,tɕiŋ iɛ,否,,tɕiŋ iɛ,tɕiŋ iɛ,否,,[],拟音,非词汇同音词,这口最美味了，占有欲极强的1反复内设最后敬业和茑全蛇进去,这口最美味了，占有欲极强的1反复内射最后精液和尿全射进去
+biz_0427#1:03,biz_0427#1,和茑全蛇,和茑全蛇,和茑全蛇,he niao quan she,和尿全射,和尿全射,he niao quan she,xɤ niɑʊ tɕʰyɛn ʂɤ,xɤ niɑʊ tɕʰyɛn ʂɤ,否,,xɤ niɑʊ tɕʰyɛn ʂɤ,xɤ niɑʊ tɕʰyɛn ʂɤ,否,,[],拟音,非词汇同音词,这口最美味了，占有欲极强的1反复内设最后敬业和茑全蛇进去,这口最美味了，占有欲极强的1反复内射最后精液和尿全射进去
+biz_0453#1:01,biz_0453#1,偷偷kou右,偷偷kou右,偷偷kou右,tou tou kou you,偷偷抠右,偷偷抠右,tou tou kou you,tʰoʊ tʰoʊ kʰoʊ iou,tʰoʊ tʰoʊ kʰoʊ iou,否,,tʰoʊ tʰoʊ kʰoʊ iou,tʰoʊ tʰoʊ kʰoʊ iou,否,,[],拟音,语音符号替代,左特别吃醋右和别人亲昵 就在直播的时候在下面偷偷kou右,左特别吃醋右和别人亲昵 就在直播的时候在下面偷偷抠右
+biz_0461#1:01,biz_0461#1,我嘞个豆,我嘞个豆,我嘞个豆,wo lei ge dou,我的妈呀,我的妈呀,wo de ma ya,uɔ tɤ ma ia,uɔ tɤ ma ia,否,,uɔ lei kɤ toʊ,uɔ lei kɤ toʊ,否,,[],拟音,非词汇同音词,我嘞个豆。。,我的妈呀
+biz_0371#1:01,biz_0371#1,蛰bi,蛰bi,蛰bi,zhe bi,蛰逼,蛰逼,zhe bi,ʈʂɤ pi,ʈʂɤ pi,否,,ʈʂɤ pi,ʈʂɤ pi,否,,[],拟音,语音符号替代,两个人也在把受埋在土里被蜜蜂蛰bi的情节,两个人也在把受埋在土里被蜜蜂蛰逼的情节
+biz_0447#1:01,biz_0447#1,很烧,很烧,很烧,hen shao,很骚,很骚,hen sao,xən sɑʊ,xən sɑʊ,否,,xən ʂɑʊ,xən ʂɑʊ,否,,[],拟音,非词汇同音词,感觉哭起来应该会很烧很好听）,感觉哭起来应该会很骚很好听）
+biz_0599#1:01,biz_0599#1,加大力度艹,加大力度艹,加大力度艹,jia da li du cao,加大力度操,加大力度操,jia da li du cao,tɕia ta li tu tsʰɑʊ,tɕia ta li tu tsʰɑʊ,否,,tɕia ta li tu tsʰɑʊ,tɕia ta li tu tsʰɑʊ,否,,[],拟音,非词汇同音词,因为跑不快被追上来，可以加大力度艹,因为跑不快被追上来，可以加大力度操
+biz_0446#1:01,biz_0446#1,脐橙,脐橙,脐橙,qi cheng,骑乘,骑乘,qi cheng,tɕʰi ʈʂʰɤŋ,tɕʰi ʈʂʰɤŋ,否,,tɕʰi ʈʂʰɤŋ,tɕʰi ʈʂʰɤŋ,否,,[],拟音,歧义同音词,此男体力很差，脐橙的时候动了两下没力气只能趴在左位身上,此男体力很差，骑乘的时候动了两下没力气只能趴在左位身上
+biz_0572#1:01,biz_0572#1,赛小玩具,赛小玩具,赛小玩具,sai xiao wan ju,塞小玩具,塞小玩具,sai xiao wan ju,sai ɕiɑʊ uan tɕy,sai ɕiɑʊ uan tɕy,否,,sai ɕiɑʊ uan tɕy,sai ɕiɑʊ uan tɕy,否,,[],拟音,歧义同音词,然后V在斐拍摄之前往斐体内赛小玩具,然后V在斐拍摄之前往斐体内塞小玩具
+biz_0536#1:01,biz_0536#1,苏福,苏福,苏福,su fu,舒服,舒服,shu fu,ʂu fu,ʂu fu,否,,su fu,su fu,否,,[],拟音,非词汇同音词,看得我好苏福哟 女神牛逼克拉斯,看得我好舒服哟 女神牛逼克拉斯
+biz_0548#1:01,biz_0548#1,法不服,法不服,法不服,fa bu fu,fuck不服,fuck不服,fuck bu fu,fˈʌk pu fu,fˈʌk pu fu,否,,fa pu fu,fa pu fu,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,像这种人是法不服的，那怎么办呢？法不服就一直法呗,像这种人是操不服的，那怎么办呢？fuck不服就一直fuck呗
+biz_0535#1:01,biz_0535#1,最稍了,最稍了,最稍了,zui shao le,最骚了,最骚了,zui sao le,tsuei sɑʊ lɤ,tsuei sɑʊ lɤ,否,,tsuei ʂɑʊ lɤ,tsuei ʂɑʊ lɤ,否,,[],拟音,歧义同音词,穿着华丽整齐的衣服被弄乱的时候最稍了,穿着华丽整齐的衣服被弄乱的时候最骚了
+biz_0464#1:01,biz_0464#1,搞完,搞完,搞完,gao wan,睾丸,睾丸,gao wan,kɑʊ uan,kɑʊ uan,否,,kɑʊ uan,kɑʊ uan,否,,[],拟音,歧义同音词,用手托起右位的搞完，嘴不轻不重的叼起,用手托起右位的睾丸，嘴不轻不重的叼起
+biz_0533#1:01,biz_0533#1,厚入,厚入,厚入,hou ru,后入,后入,hou ru,xoʊ ɻu,xoʊ ɻu,否,,xoʊ ɻu,xoʊ ɻu,否,,[],拟音,非词汇同音词,妹对厚入很敏感 哥最后总是忍不住把妹翻个身重重的撞,妹对后入很敏感 哥最后总是忍不住把妹翻个身重重的撞
+biz_0540#1:01,biz_0540#1,汝交,汝交,汝交,ru jiao,乳交,乳交,ru jiao,ɻu tɕiɑʊ,ɻu tɕiɑʊ,否,,ɻu tɕiɑʊ,ɻu tɕiɑʊ,否,,[],拟音,歧义同音词,还有我捧着胸给他汝交,还有我捧着胸给他乳交
+biz_0593#1:01,biz_0593#1,不喜欢角,不喜欢角,不喜欢角,bu xi huan jiao,不喜欢叫,不喜欢叫,bu xi huan jiao,pu ɕi xuan tɕiɑʊ,pu ɕi xuan tɕiɑʊ,否,,pu ɕi xuan tɕiɑʊ,pu ɕi xuan tɕiɑʊ,否,,[],拟音,歧义同音词,妹害羞不喜欢角 一般真的受不了了才会角,妹害羞不喜欢叫 一般真的受不了了才会叫
+biz_0593#1:02,biz_0593#1,才会角,才会角,才会角,cai hui jiao,才会叫,才会叫,cai hui jiao,tsʰai xuei tɕiɑʊ,tsʰai xuei tɕiɑʊ,否,,tsʰai xuei tɕiɑʊ,tsʰai xuei tɕiɑʊ,否,,[],拟音,歧义同音词,妹害羞不喜欢角 一般真的受不了了才会角,妹害羞不喜欢叫 一般真的受不了了才会叫
+biz_0542#1:01,biz_0542#1,烧烧,烧烧,烧烧,shao shao,骚骚,骚骚,sao sao,sɑʊ sɑʊ,sɑʊ sɑʊ,否,,ʂɑʊ ʂɑʊ,ʂɑʊ ʂɑʊ,否,,[],拟音,非词汇同音词,哥哥喘的更烧烧的,哥哥喘的更骚骚的
+biz_0543#1:01,biz_0543#1,雾草,雾草,雾草,wu cao,卧槽,卧槽,wo cao,uɔ tsʰɑʊ,uɔ tsʰɑʊ,否,,u tsʰɑʊ,u tsʰɑʊ,否,,[],拟音,歧义同音词,雾草全都好萌,卧槽全都好萌
+biz_0534#1:01,biz_0534#1,小楚女,小楚女,小楚女,xiao chu nv,小处女,小处女,xiao chu nv,ɕiɑʊ ʈʂʰu ny,ɕiɑʊ ʈʂʰu ny,否,,ɕiɑʊ ʈʂʰu ny,ɕiɑʊ ʈʂʰu ny,否,,[],拟音,歧义同音词,在贵族圈里臭名远扬的情场高手竟然是小楚女吗,在贵族圈里臭名远扬的情场高手竟然是小处女吗
+biz_0538#1:01,biz_0538#1,网煌,网煌,网煌,wang huang,网黄,网黄,wang huang,uɑŋ xuɑŋ,uɑŋ xuɑŋ,否,,uɑŋ xuɑŋ,uɑŋ xuɑŋ,否,,[],拟音,非词汇同音词,工是网煌但是还有另一个身份,工是网黄但是还有另一个身份
+biz_0226#1:01,biz_0226#1,用jiechi,用jiechi,用jiechi,yong jiechi,用戒尺,用戒尺,yong jie chi,iʊŋ tɕiɛ ʈʂʰɻ̩,iʊŋ tɕiɛ ʈʂʰɻ̩,否,,iʊŋ dʒˈaɪtʃaɪ,iʊŋ dʒˈaɪtʃaɪ,否,,[],拟音,语音符号替代,左见右不听话，用jiechi狠狠打了右的🍑一下，右吃痛,左见右不听话，用戒尺狠狠打了右的屁股一下，右吃痛
+biz_0227#1:01,biz_0227#1,fa qing,fa qing,fa qing,fa qing,发情,发情,fa qing,fa tɕʰiŋ,fa tɕʰiŋ,否,,fa tɕʰiŋ,fa tɕʰiŋ,否,,[],拟音,语音符号替代,被1扔进一堆fa qing的实验体中，使用了三天三夜,被1扔进一堆发情的实验体中，使用了三天三夜
+biz_0595#1:01,biz_0595#1,叫的越烧,叫的越烧,叫的越烧,jiao de yue shao,叫的越骚,叫的越骚,jiao de yue sao,tɕiɑʊ tɤ yɛ sɑʊ,tɕiɑʊ tɤ yɛ sɑʊ,否,,tɕiɑʊ tɤ yɛ ʂɑʊ,tɕiɑʊ tɤ yɛ ʂɑʊ,否,,[],拟音,非词汇同音词,还会说什么宝宝叫的越烧哥哥越有劲,还会说什么宝宝叫的越骚哥哥越有劲
+biz_0537#1:01,biz_0537#1,肚子和比,肚子和比,肚子和比,du zi he bi,肚子和逼,肚子和逼,du zi he bi,tu tsɹ̩ xɤ pi,tu tsɹ̩ xɤ pi,否,,tu tsɹ̩ xɤ pi,tu tsɹ̩ xɤ pi,否,,[],拟音,歧义同音词,肚子和比都肥肥软软的腿根尤其是,肚子和逼都肥肥软软的腿根尤其是
+biz_0241#1:01,biz_0241#1,娇chuan,娇chuan,娇chuan,jiao chuan,娇喘,娇喘,jiao chuan,tɕiɑʊ ʈʂʰuan,tɕiɑʊ ʈʂʰuan,否,,tɕiɑʊ ʈʂʰuan,tɕiɑʊ ʈʂʰuan,否,,[],拟音,语音符号替代,低声娇chuan，，niao顺着大腿流了下来,低声娇喘，，尿顺着大腿流了下来
+biz_0241#1:02,biz_0241#1,niao顺着大腿流了下来,niao顺着大腿流了下来,niao顺着大腿流了下来,niao shun zhe da tui liu le xia lai,尿顺着大腿流了下来,尿顺着大腿流了下来,niao shun zhe da tui liu le xia lai,niɑʊ ʂuən ʈʂɤ ta tʰuei liou lɤ ɕia lai,niɑʊ ʂuən ʈʂɤ ta tʰuei liou lɤ ɕia lai,否,,niɑʊ ʂuən ʈʂɤ ta tʰuei liou lɤ ɕia lai,niɑʊ ʂuən ʈʂɤ ta tʰuei liou lɤ ɕia lai,否,,[],拟音,语音符号替代,低声娇chuan，，niao顺着大腿流了下来,低声娇喘，，尿顺着大腿流了下来
+biz_0228#1:01,biz_0228#1,ying了,ying了,ying了,ying le,硬了,硬了,ying le,iŋ lɤ,iŋ lɤ,否,,iŋ lɤ,iŋ lɤ,否,,[],拟音,语音符号替代,“宝宝别哭了，哭得我更ying了😋”,宝宝别哭了，哭得我更硬了😋
+biz_0271#1:01,biz_0271#1,woc,woc,woc,woc,卧槽,卧槽,wo cao,uɔ tsʰɑʊ,uɔ tsʰɑʊ,否,,wˈɒk,wˈɒk,否,,[],拟音,语音符号替代,woc！！女主跟我简直是知己！！,卧槽！！女主跟我简直是知己！！
+biz_0268#1:01,biz_0268#1,很zhong了,很zhong了,很zhong了,hen zhong le,很肿了,很肿了,hen zhong le,xən ʈʂʊŋ lɤ,xən ʈʂʊŋ lɤ,否,,xən ʈʂʊŋ lɤ,xən ʈʂʊŋ lɤ,否,,[],拟音,语音符号替代,每次吸的她受不了了才放开，发现已经很zhong了,每次吸的她受不了了才放开，发现已经很肿了
+biz_0273#1:01,biz_0273#1,凌ru,凌ru,凌ru,ling ru,凌辱,凌辱,ling ru,liŋ ɻu,liŋ ɻu,否,,liŋ ɻu,liŋ ɻu,否,,[],拟音,语音符号替代,猜你想看《凌ru》by白花花,猜你想看《凌辱》by白花花
+biz_0326#1:01,biz_0326#1,gao//chao,gao//chao,gao//chao,gao / / chao,高潮,高潮,gao chao,kɑʊ ʈʂʰɑʊ,kɑʊ ʈʂʰɑʊ,否,,,kɑʊ ʈʂʰɑʊ,是,unresolved_symbol_or_digit; unresolved_symbol_or_digit,[],拟音,语音符号替代,已经想好该怎么在gao//chao的时候对大扔子做点什么了,已经想好该怎么在高潮的时候对大奶子做点什么了
+biz_0347#1:01,biz_0347#1,zhang奶,zhang奶,zhang奶,zhang nai,涨奶,涨奶,zhang nai,ʈʂɑŋ nai,ʈʂɑŋ nai,否,,ʈʂɑŋ nai,ʈʂɑŋ nai,否,,[],拟音,语音符号替代,右位体质特殊，会出现zhang奶的时期,右位体质特殊，会出现涨奶的时期
+biz_0346#1:01,biz_0346#1,min感点,min感点,min感点,min gan dian,敏感点,敏感点,min gan dian,min kan tiɛn,min kan tiɛn,否,,min kan tiɛn,min kan tiɛn,否,,[],拟音,语音符号替代,然后师尊就被碰到min感点，，师尊就忍不住的叫出来了,然后师尊就被碰到敏感点，，师尊就忍不住的叫出来了
+biz_0336#1:01,biz_0336#1,JuHua,JuHua,JuHua,JuHua,菊花,菊花,ju hua,tɕy xua,tɕy xua,否,,dʒˈuː hjˈuːa,dʒˈuː hjˈuːa,否,,[],拟音,语音符号替代,刺)插进右位的JuHua，把右位插满，然后用右位流出的水,刺)插进右位的菊花，把右位插满，然后用右位流出的水
+biz_0334#1:01,biz_0334#1,gu起来了,gu起来了,gu起来了,gu qi lai le,鼓起来了,鼓起来了,gu qi lai le,ku tɕʰi lai lɤ,ku tɕʰi lai lɤ,否,,ku tɕʰi lai lɤ,ku tɕʰi lai lɤ,否,,[],拟音,语音符号替代,右的肚子已经被填的gu起来了，左就会好奇,右的肚子已经被填的鼓起来了，左就会好奇
+biz_0374#1:01,biz_0374#1,炒点,炒点,炒点,chao dian,操点,操点,cao dian,tsʰɑʊ tiɛn,tsʰɑʊ tiɛn,否,,ʈʂʰɑʊ tiɛn,ʈʂʰɑʊ tiɛn,否,,[],拟音,歧义同音词,我先炒点 哥先把妹的眼睛蒙上然后把水果塞进妹🖊️里,我先操点 哥先把妹的眼睛蒙上然后把水果塞进妹逼里
+biz_0348#1:01,biz_0348#1,tiao到最大,tiao到最大,tiao到最大,tiao dao zui da,调到最大,调到最大,diao dao zui da,tiɑʊ tɑʊ tsuei ta,tiɑʊ tɑʊ tsuei ta,否,,tʰiɑʊ tɑʊ tsuei ta,tʰiɑʊ tɑʊ tsuei ta,否,,[],拟音,语音符号替代,屏幕正对着右，左直接tiao到最大,屏幕正对着右，左直接调到最大
+biz_0393#1:01,biz_0393#1,niao,niao,niao,niao,尿,尿,niao,niɑʊ,niɑʊ,否,,niɑʊ,niɑʊ,否,,[],拟音,语音符号替代,然后这个弟弟是双性，逼他用女生的地方niao,然后这个弟弟是双性，逼他用女生的地方尿
+biz_0389#1:01,biz_0389#1,qicheng,qicheng,qicheng,qicheng,骑乘,骑乘,qi cheng,tɕʰi ʈʂʰɤŋ,tɕʰi ʈʂʰɤŋ,否,,kɪtʃˈɛŋ,kɪtʃˈɛŋ,否,,[],拟音,语音符号替代,此男腿不是断过吗。不能qicheng只能压着。,此男腿不是断过吗。不能骑乘只能压着。
+biz_0360#1:01,biz_0360#1,1直,1直,一直,yi zhi,一直,一直,yi zhi,i ʈʂɻ̩,i ʈʂɻ̩,否,,i ʈʂɻ̩,i ʈʂɻ̩,否,,"[{""surface"": ""1"", ""text"": ""一""}]",拟音,语音符号替代,原来1直在往0❄塞小🍅，用手给他掏烂,原来一直在往0穴塞小番茄，用手给他掏烂
+biz_0422#1:01,biz_0422#1,还shi着,还shi着,还shi着,hai shi zhe,还湿着,还湿着,hai shi zhe,xai ʂɻ̩ ʈʂɤ,xai ʂɻ̩ ʈʂɤ,否,,xai ʂɻ̩ ʈʂɤ,xai ʂɻ̩ ʈʂɤ,否,,[],拟音,歧义同音词,裤子和床单还shi着就能水煎了,裤子和床单还湿着就能睡奸了
+biz_0422#1:02,biz_0422#1,水煎,水煎,水煎,shui jian,睡奸,睡奸,shui jian,ʂuei tɕiɛn,ʂuei tɕiɛn,否,,ʂuei tɕiɛn,ʂuei tɕiɛn,否,,[],拟音,歧义同音词,裤子和床单还shi着就能水煎了,裤子和床单还湿着就能睡奸了
+biz_0320#1:01,biz_0320#1,法了,法了,法了,fa le,fuck了,fuck了,fuck le,fˈʌk lɤ,fˈʌk lɤ,否,,fa lɤ,fa lɤ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,我也是昨天刚梦到被一个没有见过的短发帅t法了,我也是昨天刚梦到被一个没有见过的短发帅t做了
+biz_0390#1:01,biz_0390#1,上chang,上chang,上chang,shang chang,上床,上床,shang chuang,ʂɑŋ ʈʂʰuɑŋ,ʂɑŋ ʈʂʰuɑŋ,否,,ʂɑŋ ʈʂʰɑŋ,ʂɑŋ ʈʂʰɑŋ,否,,[],拟音,语音符号替代,所以三言两语就能给他哄上chang，然后此男因为有腿伤,所以三言两语就能给他哄上床，然后此男因为有腿伤
+biz_0414#1:01,biz_0414#1,想法她,想法她,想法她,xiang fa ta,想fuck她,想fuck她,xiang fuck ta,ɕiɑŋ fˈʌk tʰa,ɕiɑŋ fˈʌk tʰa,否,,ɕiɑŋ fa tʰa,ɕiɑŋ fa tʰa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,左位每次想法她时（一般都是石油人😋）都会以各种理由让她来办公室,左位每次想fuck她时（一般都是石油人😋）都会以各种理由让她来办公室
+biz_0462#1:01,biz_0462#1,法的,法的,法的,fa de,操的,操的,cao de,tsʰɑʊ tɤ,tsʰɑʊ tɤ,否,,fa tɤ,fa tɤ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,600法的太狠本想抓着床单逃走,600操的太狠本想抓着床单逃走
+biz_0491#1:01,biz_0491#1,雪口,雪口,雪口,xue kou,穴口,穴口,xue kou,ɕyɛ kʰoʊ,ɕyɛ kʰoʊ,否,,ɕyɛ kʰoʊ,ɕyɛ kʰoʊ,否,,[],拟音,非词汇同音词,此时的雪口只是勉强能含下，但随着玩具的启动,此时的穴口只是勉强能含下，但随着玩具的启动
+biz_0471#1:01,biz_0471#1,水煎,水煎,水煎,shui jian,睡奸,睡奸,shui jian,ʂuei tɕiɛn,ʂuei tɕiɛn,否,,ʂuei tɕiɛn,ʂuei tɕiɛn,否,,[],拟音,歧义同音词,可以理解成水煎了！（真的吗）真要扣的话也不会反抗什么,可以理解成睡奸了！（真的吗）真要抠的话也不会反抗什么
+biz_0471#1:02,biz_0471#1,扣,扣,扣,kou,抠,抠,kou,kʰoʊ,kʰoʊ,否,,kʰoʊ,kʰoʊ,否,,[],拟音,歧义同音词,可以理解成水煎了！（真的吗）真要扣的话也不会反抗什么,可以理解成睡奸了！（真的吗）真要抠的话也不会反抗什么
+biz_0469#1:01,biz_0469#1,雪/口,雪/口,雪/口,xue / kou,穴口,穴口,xue kou,ɕyɛ kʰoʊ,ɕyɛ kʰoʊ,否,,,ɕyɛ kʰoʊ,是,unresolved_symbol_or_digit,[],拟音,非词汇同音词,膝盖并拢时大腿中间会有缝隙，就像是天然的雪/口直接叉进去,膝盖并拢时大腿中间会有缝隙，就像是天然的穴口直接叉进去
+biz_0553#1:01,biz_0553#1,狠狠法,狠狠法,狠狠法,hen hen fa,狠狠fuck,狠狠fuck,hen hen fuck,xən xən fˈʌk,xən xən fˈʌk,否,,xən xən fa,xən xən fa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,之后就是哥哥狠狠法妹妹 一直摸/舔/嗦/揉妹妹啦,之后就是哥哥狠狠操妹妹 一直摸/舔/嗦/揉妹妹啦
+biz_0559#1:01,biz_0559#1,老福特,老福特,老福特,lao fu te,LOFTER,LOFTER,LOFTER,lˈɒftə,lˈɒftə,否,,lɑʊ fu tʰɤ,lɑʊ fu tʰɤ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,我草我在老福特看过…震撼美味,我草我在LOFTER看过…震撼美味
+biz_0581#1:01,biz_0581#1,妹糕潮,妹糕潮,妹糕潮,mei gao chao,妹高潮,妹高潮,mei gao chao,mei kɑʊ ʈʂʰɑʊ,mei kɑʊ ʈʂʰɑʊ,否,,mei kɑʊ ʈʂʰɑʊ,mei kɑʊ ʈʂʰɑʊ,否,,[],拟音,非词汇同音词,哥感受到妹糕潮下面收缩夹的他在妹宝耳边喘的更厉害了,哥感受到妹高潮下面收缩夹的他在妹宝耳边喘的更厉害了
+biz_0570#1:01,biz_0570#1,双星,双星,双星,shuang xing,双性,双性,shuang xing,ʂuɑŋ ɕiŋ,ʂuɑŋ ɕiŋ,否,,ʂuɑŋ ɕiŋ,ʂuɑŋ ɕiŋ,否,,[],拟音,歧义同音词,春眠，受是双星,春眠，受是双性
+biz_0584#1:01,biz_0584#1,法着放心,法着放心,法着放心,fa zhe fang xin,fuck着放心,fuck着放心,fuck zhe fang xin,fˈʌk ʈʂɤ fɑŋ ɕin,fˈʌk ʈʂɤ fɑŋ ɕin,否,,fa ʈʂɤ fɑŋ ɕin,fa ʈʂɤ fɑŋ ɕin,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,自己养大的法着放心,自己养大的操着放心
+biz_0302#1:01,biz_0302#1,好ru,好ru,好ru,hao ru,好入,好入,hao ru,xɑʊ ɻu,xɑʊ ɻu,否,,xɑʊ ɻu,xɑʊ ɻu,否,,[],拟音,语音符号替代,师尊的身体是非常好ru的那种,师尊的身体是非常好入的那种
+biz_0582#1:01,biz_0582#1,被法得受不了,被法得受不了,被法得受不了,bei fa de shou bu liao,被fuck得受不了,被fuck得受不了,bei fuck de shou bu liao,pei fˈʌk tɤ ʂoʊ pu liɑʊ,pei fˈʌk tɤ ʂoʊ pu liɑʊ,否,,pei fa tɤ ʂoʊ pu liɑʊ,pei fa tɤ ʂoʊ pu liɑʊ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,被法得受不了求饶时左位不听,被操得受不了求饶时左位不听
+biz_0308#1:01,biz_0308#1,b头像,b头像,b头像,b tou xiang,逼头像,逼头像,bi tou xiang,pi tʰoʊ ɕiɑŋ,pi tʰoʊ ɕiɑŋ,否,,bˈiː tʰoʊ ɕiɑŋ,bˈiː tʰoʊ ɕiɑŋ,否,,[],拟音,语音符号替代,我什么时候看见我这个b头像都绷不住,我什么时候看见我这个逼头像都绷不住
+biz_0356#1:01,biz_0356#1,摩ca,摩ca,摩ca,mo ca,摩擦,摩擦,mo ca,muɔ tsʰa,muɔ tsʰa,否,,muɔ tsʰa,muɔ tsʰa,否,,[],拟音,语音符号替代,被被子全方位反复摩ca,被被子全方位反复摩擦
+biz_0339#1:01,biz_0339#1,gc特别多,gc特别多,gc特别多,gc te bie duo,高潮特别多,高潮特别多,gao chao te bie duo,kɑʊ ʈʂʰɑʊ tʰɤ piɛ tuɔ,kɑʊ ʈʂʰɑʊ tʰɤ piɛ tuɔ,否,,dʒˌiːsˈiː tʰɤ piɛ tuɔ,dʒˌiːsˈiː tʰɤ piɛ tuɔ,否,,[],拟音,语音符号替代,gc特别多 shui也多每次都是爽的不行才停下,高潮特别多 水也多每次都是爽的不行才停下
+biz_0339#1:02,biz_0339#1,shui也多,shui也多,shui也多,shui ye duo,水也多,水也多,shui ye duo,ʂuei iɛ tuɔ,ʂuei iɛ tuɔ,否,,ʂuei iɛ tuɔ,ʂuei iɛ tuɔ,否,,[],拟音,语音符号替代,gc特别多 shui也多每次都是爽的不行才停下,高潮特别多 水也多每次都是爽的不行才停下
+biz_0349#1:01,biz_0349#1,sao浪,sao浪,sao浪,sao lang,骚浪,骚浪,sao lang,sɑʊ lɑŋ,sɑʊ lɑŋ,否,,sɑʊ lɑŋ,sɑʊ lɑŋ,否,,[],拟音,语音符号替代,左看着右这副sao浪模样以为右在勾引他,左看着右这副骚浪模样以为右在勾引他
+biz_0337#1:01,biz_0337#1,失jin,失jin,失jin,shi jin,失禁,失禁,shi jin,ʂɻ̩ tɕin,ʂɻ̩ tɕin,否,,ʂɻ̩ tɕin,ʂɻ̩ tɕin,否,,[],拟音,语音符号替代,喷的时候学生还说老师为什么失jin了,喷的时候学生还说老师为什么失禁了
+biz_0397#1:01,biz_0397#1,luo着,luo着,luo着,luo zhe,裸着,裸着,luo zhe,luɔ ʈʂɤ,luɔ ʈʂɤ,否,,luɔ ʈʂɤ,luɔ ʈʂɤ,否,,[],拟音,语音符号替代,在公司单面镜让luo着做动作展示,在公司单面镜让裸着做动作展示
+biz_0404#1:01,biz_0404#1,jiao,jiao,jiao,jiao,叫,叫,jiao,tɕiɑʊ,tɕiɑʊ,否,,tɕiɑʊ,tɕiɑʊ,否,,[],拟音,语音符号替代,师尊又好面子忍着不jiao,师尊又好面子忍着不叫
+biz_0405#1:01,biz_0405#1,挑 逗,挑 逗,挑 逗,tiao dou,挑逗,挑逗,tiao dou,tʰiɑʊ toʊ,tʰiɑʊ toʊ,否,,tʰiɑʊ toʊ,tʰiɑʊ toʊ,否,,[],拟音,语音符号替代,用手轻轻挑 逗着另一边，将那边弄出些许y e体,用手轻轻挑逗着另一边，将那边弄出些许液体
+biz_0405#1:02,biz_0405#1,y e体,y e体,y e体,y e ti,液体,液体,ye ti,iɛ tʰi,iɛ tʰi,否,,wˈaɪ ˈiː tʰi,wˈaɪ ˈiː tʰi,否,,[],拟音,语音符号替代,用手轻轻挑 逗着另一边，将那边弄出些许y e体,用手轻轻挑逗着另一边，将那边弄出些许液体
+biz_0442#1:01,biz_0442#1,shenyin,shenyin,shenyin,shenyin,呻吟,呻吟,shen yin,ʂən in,ʂən in,否,,ʃˈɛniˌɪn,ʃˈɛniˌɪn,否,,[],拟音,语音符号替代,妹妹一边shenyin一边发出娇chuan,妹妹一边呻吟一边发出娇喘
+biz_0442#1:02,biz_0442#1,娇chuan,娇chuan,娇chuan,jiao chuan,娇喘,娇喘,jiao chuan,tɕiɑʊ ʈʂʰuan,tɕiɑʊ ʈʂʰuan,否,,tɕiɑʊ ʈʂʰuan,tɕiɑʊ ʈʂʰuan,否,,[],拟音,语音符号替代,妹妹一边shenyin一边发出娇chuan,妹妹一边呻吟一边发出娇喘
+biz_0443#1:01,biz_0443#1,yin jiao着,yin jiao着,yin jiao着,yin jiao zhe,淫叫着,淫叫着,yin jiao zhe,in tɕiɑʊ ʈʂɤ,in tɕiɑʊ ʈʂɤ,否,,in tɕiɑʊ ʈʂɤ,in tɕiɑʊ ʈʂɤ,否,,[],拟音,语音符号替代,从后面插入 妹妹yin jiao着 脸粉嫩嫩的,从后面插入 妹妹淫叫着 脸粉嫩嫩的
+biz_0440#1:01,biz_0440#1,妹的pp,妹的pp,妹的pp,mei de pp,妹的屁屁,妹的屁屁,mei de pi pi,mei tɤ pʰi pʰi,mei tɤ pʰi pʰi,否,,mei tɤ pˌiːpˈiː,mei tɤ pˌiːpˈiː,否,,[],拟音,语音符号替代,让妹的pp 刚好放进哥tui 间的空隙里,让妹的屁股刚好放进哥腿间的空隙里
+biz_0440#1:02,biz_0440#1,哥的tui,哥的tui,哥的tui,ge de tui,哥的腿,哥的腿,ge de tui,kɤ tɤ tʰuei,kɤ tɤ tʰuei,否,,kɤ tɤ tʰuei,kɤ tɤ tʰuei,否,,[],拟音,语音符号替代,让妹的pp 刚好放进哥tui 间的空隙里,让妹的屁股刚好放进哥腿间的空隙里
+biz_0401#1:01,biz_0401#1,说真sao,说真sao,说真sao,shuo zhen sao,说真骚,说真骚,shuo zhen sao,ʂuɔ ʈʂən sɑʊ,ʂuɔ ʈʂən sɑʊ,否,,ʂuɔ ʈʂən sɑʊ,ʂuɔ ʈʂən sɑʊ,否,,[],拟音,语音符号替代,恶俗一点的话哥会扇一下说真sao,恶俗一点的话哥会扇一下说真骚
+biz_0441#1:01,biz_0441#1,choucha 的时候,choucha 的时候,choucha 的时候,choucha de shi hou,抽插的时候,抽插的时候,chou cha de shi hou,ʈʂʰoʊ ʈʂʰa tɤ ʂɻ̩ xoʊ,ʈʂʰoʊ ʈʂʰa tɤ ʂɻ̩ xoʊ,否,,tʃˈaʊtʃə tɤ ʂɻ̩ xoʊ,tʃˈaʊtʃə tɤ ʂɻ̩ xoʊ,否,,[],拟音,语音符号替代,choucha 的时候会带动两团rq晃动,抽插的时候会带动两团肉球晃动
+biz_0506#1:01,biz_0506#1,扇b,扇b,扇b,shan b,扇逼,扇逼,shan bi,ʂan pi,ʂan pi,否,,ʂan bˈiː,ʂan bˈiː,否,,[],拟音,语音符号替代,关于扇b，哥扇了一下后问妹喜不喜欢,关于扇逼，哥扇了一下后问妹喜不喜欢
+biz_0478#1:01,biz_0478#1,印bi,印bi,印bi,yin bi,印逼,印逼,yin bi,in pi,in pi,否,,in pi,in pi,否,,[],拟音,语音符号替代,有用打印机印bi，在公司单面镜让luo着做动作展示,有用打印机印逼，在公司单面镜让裸着做动作展示
+biz_0478#1:02,biz_0478#1,luo着,luo着,luo着,luo zhe,裸着,裸着,luo zhe,luɔ ʈʂɤ,luɔ ʈʂɤ,否,,luɔ ʈʂɤ,luɔ ʈʂɤ,否,,[],拟音,语音符号替代,有用打印机印bi，在公司单面镜让luo着做动作展示,有用打印机印逼，在公司单面镜让裸着做动作展示
+biz_0505#1:01,biz_0505#1,pao 机,pao 机,pao 机,pao ji,炮机,炮机,pao ji,pʰɑʊ tɕi,pʰɑʊ tɕi,否,,pʰɑʊ tɕi,pʰɑʊ tɕi,否,,[],拟音,语音符号替代,有脉冲pao 机也有吸吮，两种功能,有脉冲炮机也有吸吮，两种功能
+biz_0484#1:01,biz_0484#1,rou挺香的,rou挺香的,rou挺香的,rou ting xiang de,肉挺香的,肉挺香的,rou ting xiang de,ɻoʊ tʰiŋ ɕiɑŋ tɤ,ɻoʊ tʰiŋ ɕiɑŋ tɤ,否,,ɻoʊ tʰiŋ ɕiɑŋ tɤ,ɻoʊ tʰiŋ ɕiɑŋ tɤ,否,,[],拟音,语音符号替代,攻发现受双性让他认主还是什么，rou挺香的,攻发现受双性让他认主还是什么，肉挺香的
+biz_0529#1:01,biz_0529#1,右的雪里,右的雪里,右的雪里,you de xue li,右的穴里,右的穴里,you de xue li,iou tɤ ɕyɛ li,iou tɤ ɕyɛ li,否,,iou tɤ ɕyɛ li,iou tɤ ɕyɛ li,否,,[],拟音,非词汇同音词,右是偶像，左在右雪里放可以连接歌曲,右是偶像，左在右穴里放可以连接歌曲
+biz_0523#1:01,biz_0523#1,涩情,涩情,涩情,se qing,色情,色情,se qing,sɤ tɕʰiŋ,sɤ tɕʰiŋ,否,,sɤ tɕʰiŋ,sɤ tɕʰiŋ,否,,[],拟音,非词汇同音词,胸口和眼睛的星空还有瘦瘦的身体都很涩情✋🏻,胸口和眼睛的星空还有瘦瘦的身体都很色情✋🏻
+biz_0575#1:01,biz_0575#1,➗超多,➗超多,➗超多,➗ chao duo,出超多,出超多,chu chao duo,ʈʂʰu ʈʂʰɑʊ tuɔ,ʈʂʰu ʈʂʰɑʊ tuɔ,否,,,ʈʂʰɑʊ tuɔ,是,unresolved_symbol_or_digit,[],拟音,语音符号替代,➗超多 看到下辈子,出超多 看到下辈子
+biz_0445#1:01,biz_0445#1,亲亲,亲亲,亲亲,qin qin,ちんちん,ちんちん,ち ん ち ん,,,是,unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit,tɕʰin tɕʰin,tɕʰin tɕʰin,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,妹问哥要亲亲的时候会说“亲亲”但是这两个字和日语的ちんちん发音很像,妹问哥要亲亲的时候会说“亲亲”但是这两个字和日语的ちんちん发音很像
+biz_0366#1:01,biz_0366#1,妹的扔,妹的扔,妹的扔,mei de reng,妹的奶,妹的奶,mei de nai,mei tɤ nai,mei tɤ nai,否,,mei tɤ ɻɤŋ,mei tɤ ɻɤŋ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,低头咬住妹的扔（妹身体特殊会产汝）,低头咬住妹的奶（妹身体特殊会产乳）
+biz_0366#1:02,biz_0366#1,产汝,产汝,产汝,chan ru,产乳,产乳,chan ru,ʈʂʰan ɻu,ʈʂʰan ɻu,否,,ʈʂʰan ɻu,ʈʂʰan ɻu,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,低头咬住妹的扔（妹身体特殊会产汝）,低头咬住妹的奶（妹身体特殊会产乳）
+biz_0368#1:01,biz_0368#1,抢了,抢了,抢了,qiang le,强了,强了,qiang le,tɕʰiɑŋ lɤ,tɕʰiɑŋ lɤ,否,,tɕʰiɑŋ lɤ,tɕʰiɑŋ lɤ,否,,[],拟音,歧义同音词,在家抢了。妹没认出伪装得好的叔,在家强（奸）了。妹没认出伪装得好的叔
+toxicloakcn_homophone_keyword_001165#1:01,toxicloakcn_homophone_keyword_001165#1,募购,募购,募购,mu gou,母狗,母狗,mu gou,mu koʊ,mu koʊ,否,,mu koʊ,mu koʊ,否,,[],拟音,歧义同音词,一群募购什么事做不出来,一群母狗什么事做不出来
+toxicloakcn_homophone_keyword_002327#1:01,toxicloakcn_homophone_keyword_002327#1,难桶性恋者,难桶性恋者,难桶性恋者,nan tong xing lian zhe,男同性恋者,男同性恋者,nan tong xing lian zhe,nan tʰʊŋ ɕiŋ liɛn ʈʂɤ,nan tʰʊŋ ɕiŋ liɛn ʈʂɤ,否,,nan tʰʊŋ ɕiŋ liɛn ʈʂɤ,nan tʰʊŋ ɕiŋ liɛn ʈʂɤ,否,,[],拟音,非词汇同音词,一些难桶性恋者会说出一些符合女性特质的话语，比如“我的β很胀很痒。”“给本宫请安。”“叫我大姐。”“妹妹你来啦。”“塑料姐妹花”。语义空间上，很多难桶性恋者可能认为“姐妹相称”或使用一些“女性专属”的语料可能是风趣幽末，或者开玩笑，但其中有一部分却可能是真实存在“性别焦虑”问题者。而对于一部分难桶性恋者来说，使用女性化的语料，更“母”的语言与行为会让他们感觉在社交中更为舒适。在主观上与他人眼中，这有意或无意地更加模糊了“难桶性恋”中的0角色与“跨性别者”“性别焦虑者”的界限。,一些男同性恋者会说出一些符合女性特质的话语，比如“我的β很胀很痒。”“给本宫请安。”“叫我大姐。”“妹妹你来啦。”“塑料姐妹花”。语义空间上，很多男同性恋者可能认为“姐妹相称”或使用一些“女性专属”的语料可能是风趣幽默，或者开玩笑，但其中有一部分却可能是真实存在“性别焦虑”问题者。而对于一部分男同性恋者来说，使用女性化的语料，更“母”的语言与行为会让他们感觉在社交中更为舒适。在主观上与他人眼中，这有意或无意地更加模糊了“男同性恋”中的0角色与“跨性别者”“性别焦虑者”的界限。
+toxicloakcn_homophone_keyword_002327#1:02,toxicloakcn_homophone_keyword_002327#1,幽末,幽末,幽末,you mo,幽默,幽默,you mo,iou muɔ,iou muɔ,否,,iou muɔ,iou muɔ,否,,[],拟音,非词汇同音词,一些难桶性恋者会说出一些符合女性特质的话语，比如“我的β很胀很痒。”“给本宫请安。”“叫我大姐。”“妹妹你来啦。”“塑料姐妹花”。语义空间上，很多难桶性恋者可能认为“姐妹相称”或使用一些“女性专属”的语料可能是风趣幽末，或者开玩笑，但其中有一部分却可能是真实存在“性别焦虑”问题者。而对于一部分难桶性恋者来说，使用女性化的语料，更“母”的语言与行为会让他们感觉在社交中更为舒适。在主观上与他人眼中，这有意或无意地更加模糊了“难桶性恋”中的0角色与“跨性别者”“性别焦虑者”的界限。,一些男同性恋者会说出一些符合女性特质的话语，比如“我的β很胀很痒。”“给本宫请安。”“叫我大姐。”“妹妹你来啦。”“塑料姐妹花”。语义空间上，很多男同性恋者可能认为“姐妹相称”或使用一些“女性专属”的语料可能是风趣幽默，或者开玩笑，但其中有一部分却可能是真实存在“性别焦虑”问题者。而对于一部分男同性恋者来说，使用女性化的语料，更“母”的语言与行为会让他们感觉在社交中更为舒适。在主观上与他人眼中，这有意或无意地更加模糊了“男同性恋”中的0角色与“跨性别者”“性别焦虑者”的界限。
+toxicloakcn_homophone_keyword_002001#1:01,toxicloakcn_homophone_keyword_002001#1,蝈腩,蝈腩,蝈腩,guo nan,国男,国男,guo nan,kuɔ nan,kuɔ nan,否,,kuɔ nan,kuɔ nan,否,,[],拟音,非词汇同音词,谦虚点，我们蝈腩😆,谦虚点，我们国男😆
+toxicloakcn_emoji_keyword_001302#1:01,toxicloakcn_emoji_keyword_001302#1,3️⃣非,3️⃣非,三️⃣非,san ️ ⃣ fei,三非,三非,san fei,san fei,san fei,否,,,san fei,是,unresolved_symbol_or_digit; unresolved_symbol_or_digit,"[{""surface"": ""3"", ""text"": ""三""}]",拟音,语音符号替代,个人觉得蝴蝶姬的老公有问题，要么是3️⃣非，要么是搞非法买卖的，从她的行为非常可疑。,个人觉得蝴蝶姬的老公有问题，要么是三非，要么是搞非法买卖的，从她的行为非常可疑。
+toxicloakcn_homophone_keyword_002353#1:01,toxicloakcn_homophone_keyword_002353#1,一穆三分地,一穆三分地,一穆三分地,yi mu san fen di,一亩三分地,一亩三分地,yi mu san fen di,i mu san fən ti,i mu san fən ti,否,,i mu san fən ti,i mu san fən ti,否,,[],拟音,非词汇同音词,拿出这种言论，我感觉你的世界观只能覆盖自己眼前的一穆三分地。同样，这样的观念并没有错，只是狭隘而已。其次，喜欢只是一种感受不是一种权利，能和喜欢的人生活在阳光下才是权利；最后，你提到的反感也不是一种自由，而是有限的眼界里，表现出的无知与傲慢。,拿出这种言论，我感觉你的世界观只能覆盖自己眼前的一亩三分地。同样，这样的观念并没有错，只是狭隘而已。其次，喜欢只是一种感受不是一种权利，能和喜欢的人生活在阳光下才是权利；最后，你提到的反感也不是一种自由，而是有限的眼界里，表现出的无知与傲慢。
+toxicloakcn_homophone_keyword_001196#1:01,toxicloakcn_homophone_keyword_001196#1,贵亩,贵亩,贵亩,gui mu,鬼母,鬼母,gui mu,kuei mu,kuei mu,否,,kuei mu,kuei mu,否,,[],拟音,非词汇同音词,兄弟，辛苦了，现在喷吧基本被拿下来了，就贵亩跟几个还在狗延残喘，好好休息，明天再战,兄弟，辛苦了，现在喷吧基本被拿下来了，就鬼母跟几个还在苟延残喘，好好休息，明天再战
+toxicloakcn_homophone_keyword_001196#1:02,toxicloakcn_homophone_keyword_001196#1,狗延残喘,狗延残喘,狗延残喘,gou yan can chuan,苟延残喘,苟延残喘,gou yan can chuan,koʊ iɛn tsʰan ʈʂʰuan,koʊ iɛn tsʰan ʈʂʰuan,否,,koʊ iɛn tsʰan ʈʂʰuan,koʊ iɛn tsʰan ʈʂʰuan,否,,[],拟音,非词汇同音词,兄弟，辛苦了，现在喷吧基本被拿下来了，就贵亩跟几个还在狗延残喘，好好休息，明天再战,兄弟，辛苦了，现在喷吧基本被拿下来了，就鬼母跟几个还在苟延残喘，好好休息，明天再战
+toxicloakcn_homophone_keyword_000298#1:01,toxicloakcn_homophone_keyword_000298#1,黑部牛球的,黑部牛球的,黑部牛球的,hei bu niu qiu de,黑不溜秋的,黑不溜秋的,hei bu liu qiu de,xei pu liou tɕʰiou tɤ,xei pu liou tɕʰiou tɤ,否,,xei pu niou tɕʰiou tɤ,xei pu niou tɕʰiou tɤ,否,,[],拟音,非词汇同音词,起码自私 中国上到公务员 下到服务员 到要求五官端正 形象气质佳 黑部牛球的除了进工厂 连工作都找不到 如果是黑人土豪还情有可元,起码自私 中国上到公务员 下到服务员 到要求五官端正 形象气质佳 黑不溜秋的除了进工厂 连工作都找不到 如果是黑人土豪还情有可原
+toxicloakcn_homophone_keyword_000298#1:02,toxicloakcn_homophone_keyword_000298#1,情有可元,情有可元,情有可元,qing you ke yuan,情有可原,情有可原,qing you ke yuan,tɕʰiŋ iou kʰɤ yɛn,tɕʰiŋ iou kʰɤ yɛn,否,,tɕʰiŋ iou kʰɤ yɛn,tɕʰiŋ iou kʰɤ yɛn,否,,[],拟音,非词汇同音词,起码自私 中国上到公务员 下到服务员 到要求五官端正 形象气质佳 黑部牛球的除了进工厂 连工作都找不到 如果是黑人土豪还情有可元,起码自私 中国上到公务员 下到服务员 到要求五官端正 形象气质佳 黑不溜秋的除了进工厂 连工作都找不到 如果是黑人土豪还情有可原
+toxicloakcn_homophone_keyword_001782#1:01,toxicloakcn_homophone_keyword_001782#1,冲雷,冲雷,冲雷,chong lei,虫类,虫类,chong lei,ʈʂʰʊŋ lei,ʈʂʰʊŋ lei,否,,ʈʂʰʊŋ lei,ʈʂʰʊŋ lei,否,,[],拟音,非词汇同音词,楼主你恐怕不知道冲雷及其后代从荤是拉美人外全球第二大贩毒和运毒和磕药的大户,楼主你恐怕不知道虫类及其后代虫混是拉美人外全球第二大贩毒和运毒和磕药的大户
+toxicloakcn_homophone_keyword_001782#1:02,toxicloakcn_homophone_keyword_001782#1,从荤,从荤,从荤,cong hun,虫混,虫混,chong hun,ʈʂʰʊŋ xuən,ʈʂʰʊŋ xuən,否,,tsʰʊŋ xuən,tsʰʊŋ xuən,否,,[],拟音,非词汇同音词,楼主你恐怕不知道冲雷及其后代从荤是拉美人外全球第二大贩毒和运毒和磕药的大户,楼主你恐怕不知道虫类及其后代虫混是拉美人外全球第二大贩毒和运毒和磕药的大户
+biz_0152#1:01,biz_0152#1,被法时,被法时,被法时,bei fa shi,被fuck时,被fuck时,bei fuck shi,pei fˈʌk ʂɻ̩,pei fˈʌk ʂɻ̩,否,,pei fa ʂɻ̩,pei fa ʂɻ̩,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,此女怪好嬷的，被法时可能很快就会哭出来吧,此女怪好嬷的，被fuck时可能很快就会哭出来吧
+toxicloakcn_homophone_keyword_002673#1:01,toxicloakcn_homophone_keyword_002673#1,冲雷,冲雷,冲雷,chong lei,虫类,虫类,chong lei,ʈʂʰʊŋ lei,ʈʂʰʊŋ lei,否,,ʈʂʰʊŋ lei,ʈʂʰʊŋ lei,否,,[],拟音,非词汇同音词,可见苍天有多震怒对全球所有冲雷及其它们后代从荤已惩罚之态及其它们亲儿子和左棍和республиканскоеправительство已惩罚之态！,可见苍天有多震怒对全球所有虫类及其它们后代虫混已惩罚之态及其它们亲儿子和左棍和республиканскоеправительство已惩罚之态！
+toxicloakcn_homophone_keyword_002673#1:02,toxicloakcn_homophone_keyword_002673#1,从荤,从荤,从荤,cong hun,虫混,虫混,chong hun,ʈʂʰʊŋ xuən,ʈʂʰʊŋ xuən,否,,tsʰʊŋ xuən,tsʰʊŋ xuən,否,,[],拟音,非词汇同音词,可见苍天有多震怒对全球所有冲雷及其它们后代从荤已惩罚之态及其它们亲儿子和左棍和республиканскоеправительство已惩罚之态！,可见苍天有多震怒对全球所有虫类及其它们后代虫混已惩罚之态及其它们亲儿子和左棍和республиканскоеправительство已惩罚之态！
+toxicloakcn_homophone_keyword_001161#1:01,toxicloakcn_homophone_keyword_001161#1,女全,女全,女全,nv quan,女拳,女拳,nv quan,ny tɕʰyɛn,ny tɕʰyɛn,否,,ny tɕʰyɛn,ny tɕʰyɛn,否,,[],拟音,非词汇同音词,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女全怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些美飞表嫁给这类黑人，有谁会骂她们？可现实是和那些美飞表交往的黑人都是一些懒惰，喜欢犯罪的言垃圾。而且这帮美飞表被甩了以后，还在社交媒体上跪天嗨人，还想拉其他无辜的女生下水。,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女拳怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些媚黑婊嫁给这类黑人，有谁会骂她们？可现实是和那些媚黑婊交往的黑人都是一些懒惰，喜欢犯罪的洋垃圾。而且这帮媚黑婊被甩了以后，还在社交媒体上跪舔黑人，还想拉其他无辜的女生下水。
+toxicloakcn_homophone_keyword_001161#1:02,toxicloakcn_homophone_keyword_001161#1,美飞表,美飞表,美飞表,mei fei biao,媚黑婊,媚黑婊,mei hei biao,mei xei piɑʊ,mei xei piɑʊ,否,,mei fei piɑʊ,mei fei piɑʊ,否,,[],拟音,非词汇同音词,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女全怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些美飞表嫁给这类黑人，有谁会骂她们？可现实是和那些美飞表交往的黑人都是一些懒惰，喜欢犯罪的言垃圾。而且这帮美飞表被甩了以后，还在社交媒体上跪天嗨人，还想拉其他无辜的女生下水。,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女拳怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些媚黑婊嫁给这类黑人，有谁会骂她们？可现实是和那些媚黑婊交往的黑人都是一些懒惰，喜欢犯罪的洋垃圾。而且这帮媚黑婊被甩了以后，还在社交媒体上跪舔黑人，还想拉其他无辜的女生下水。
+toxicloakcn_homophone_keyword_001161#1:03,toxicloakcn_homophone_keyword_001161#1,言垃圾,言垃圾,言垃圾,yan la ji,洋垃圾,洋垃圾,yang la ji,iɑŋ la tɕi,iɑŋ la tɕi,否,,iɛn la tɕi,iɛn la tɕi,否,,[],拟音,非词汇同音词,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女全怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些美飞表嫁给这类黑人，有谁会骂她们？可现实是和那些美飞表交往的黑人都是一些懒惰，喜欢犯罪的言垃圾。而且这帮美飞表被甩了以后，还在社交媒体上跪天嗨人，还想拉其他无辜的女生下水。,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女拳怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些媚黑婊嫁给这类黑人，有谁会骂她们？可现实是和那些媚黑婊交往的黑人都是一些懒惰，喜欢犯罪的洋垃圾。而且这帮媚黑婊被甩了以后，还在社交媒体上跪舔黑人，还想拉其他无辜的女生下水。
+toxicloakcn_homophone_keyword_001161#1:04,toxicloakcn_homophone_keyword_001161#1,跪天嗨人,跪天嗨人,跪天嗨人,gui tian hai ren,跪舔黑人,跪舔黑人,gui tian hei ren,kuei tʰiɛn xei ɻən,kuei tʰiɛn xei ɻən,否,,kuei tʰiɛn xai ɻən,kuei tʰiɛn xai ɻən,否,,[],拟音,非词汇同音词,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女全怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些美飞表嫁给这类黑人，有谁会骂她们？可现实是和那些美飞表交往的黑人都是一些懒惰，喜欢犯罪的言垃圾。而且这帮美飞表被甩了以后，还在社交媒体上跪天嗨人，还想拉其他无辜的女生下水。,⁉你tm是在转移话题吧。再说了替黑人洗地的大都是女性，不然像这次宁波工程学院事件，那些女拳怎么不出来发声？男生崇拜的是像科比和詹姆斯那样有成就的黑人，要是国内那些媚黑婊嫁给这类黑人，有谁会骂她们？可现实是和那些媚黑婊交往的黑人都是一些懒惰，喜欢犯罪的洋垃圾。而且这帮媚黑婊被甩了以后，还在社交媒体上跪舔黑人，还想拉其他无辜的女生下水。
+toxicloakcn_homophone_keyword_001006#1:01,toxicloakcn_homophone_keyword_001006#1,天沟,天沟,天沟,tian gou,舔狗,舔狗,tian gou,tʰiɛn koʊ,tʰiɛn koʊ,否,,tʰiɛn koʊ,tʰiɛn koʊ,否,,[],拟音,非词汇同音词,那要知道这些女人男人塑造的，不过是男人怕其他男人变成天沟罢了,那要知道这些女人男人塑造的，不过是男人怕其他男人变成舔狗罢了
+toxicloakcn_homophone_keyword_002264#1:01,toxicloakcn_homophone_keyword_002264#1,好一朵百年,好一朵百年,好一朵百年,hao yi duo bai nian,好一朵白莲,好一朵白莲,hao yi duo bai lian,xɑʊ i tuɔ pai liɛn,xɑʊ i tuɔ pai liɛn,否,,xɑʊ i tuɔ pai niɛn,xɑʊ i tuɔ pai niɛn,否,,[],拟音,歧义同音词,开始什么样。最开始的早就被他自己删光了吧好一朵百年,开始什么样。最开始的早就被他自己删光了吧好一朵白莲
+toxicloakcn_homophone_keyword_000190#1:01,toxicloakcn_homophone_keyword_000190#1,亩人,亩人,亩人,mu ren,母人,母人,mu ren,mu ɻən,mu ɻən,否,,mu ɻən,mu ɻən,否,,[],拟音,非词汇同音词,亩人和理客中一样恶心,母人和理客中一样恶心
+toxicloakcn_homophone_keyword_000991#1:01,toxicloakcn_homophone_keyword_000991#1,笑仙女,笑仙女,笑仙女,xiao xian nv,小仙女,小仙女,xiao xian nv,ɕiɑʊ ɕiɛn ny,ɕiɑʊ ɕiɛn ny,否,,ɕiɑʊ ɕiɛn ny,ɕiɑʊ ɕiɛn ny,否,,[],拟音,歧义同音词,充满了抠脚汉油腻荷尔蒙气息的匿名笑仙女🐶🐶,充满了抠脚汉油腻荷尔蒙气息的匿名小仙女🐶🐶
+toxicloakcn_homophone_keyword_001289#1:01,toxicloakcn_homophone_keyword_001289#1,嫁及随及,嫁及随及,嫁及随及,jia ji sui ji,嫁鸡随鸡,嫁鸡随鸡,jia ji sui ji,tɕia tɕi suei tɕi,tɕia tɕi suei tɕi,否,,tɕia tɕi suei tɕi,tɕia tɕi suei tɕi,否,,[],拟音,歧义同音词,我不歧视这样的女的，只希望他们不要在中国了，嫁及随及，嫁购随购，和黑人去非洲开疆扩土吧！,我不歧视这样的女的，只希望他们不要在中国了，嫁鸡随鸡，嫁狗随狗，和黑人去非洲开疆扩土吧！
+toxicloakcn_homophone_keyword_001289#1:02,toxicloakcn_homophone_keyword_001289#1,嫁购随购,嫁购随购,嫁购随购,jia gou sui gou,嫁狗随狗,嫁狗随狗,jia gou sui gou,tɕia koʊ suei koʊ,tɕia koʊ suei koʊ,否,,tɕia koʊ suei koʊ,tɕia koʊ suei koʊ,否,,[],拟音,歧义同音词,我不歧视这样的女的，只希望他们不要在中国了，嫁及随及，嫁购随购，和黑人去非洲开疆扩土吧！,我不歧视这样的女的，只希望他们不要在中国了，嫁鸡随鸡，嫁狗随狗，和黑人去非洲开疆扩土吧！
+toxicloakcn_homophone_keyword_000911#1:01,toxicloakcn_homophone_keyword_000911#1,圣母标,圣母标,圣母标,sheng mu biao,圣母婊,圣母婊,sheng mu biao,ʂɤŋ mu piɑʊ,ʂɤŋ mu piɑʊ,否,,ʂɤŋ mu piɑʊ,ʂɤŋ mu piɑʊ,否,,[],拟音,歧义同音词,真是国际圣母标和圣父标 他/她们那微不足道所谓善心真是没地方散发去援助时刻对人类社会无不垂涎入寝野生动物昆虫纲最低等卵体寄生虫而且从来没有寄生冲雷及其它们后代靠着自己本事与能力让它们物种群过上好日子完全就是饭来张口，衣来伸手不断吸食地球血液而且不知大家看到没有它们都是基本上统一无爹。,真是国际圣母婊和圣父婊 他/她们那微不足道所谓善心真是没地方散发去援助时刻对人类社会无不垂涎入寝野生动物昆虫纲最低等卵体寄生虫而且从来没有寄生虫类及其它们后代靠着自己本事与能力让它们物种群过上好日子完全就是饭来张口，衣来伸手不断吸食地球血液而且不知大家看到没有它们都是基本上统一无爹。
+toxicloakcn_homophone_keyword_000911#1:02,toxicloakcn_homophone_keyword_000911#1,圣父标,圣父标,圣父标,sheng fu biao,圣父婊,圣父婊,sheng fu biao,ʂɤŋ fu piɑʊ,ʂɤŋ fu piɑʊ,否,,ʂɤŋ fu piɑʊ,ʂɤŋ fu piɑʊ,否,,[],拟音,歧义同音词,真是国际圣母标和圣父标 他/她们那微不足道所谓善心真是没地方散发去援助时刻对人类社会无不垂涎入寝野生动物昆虫纲最低等卵体寄生虫而且从来没有寄生冲雷及其它们后代靠着自己本事与能力让它们物种群过上好日子完全就是饭来张口，衣来伸手不断吸食地球血液而且不知大家看到没有它们都是基本上统一无爹。,真是国际圣母婊和圣父婊 他/她们那微不足道所谓善心真是没地方散发去援助时刻对人类社会无不垂涎入寝野生动物昆虫纲最低等卵体寄生虫而且从来没有寄生虫类及其它们后代靠着自己本事与能力让它们物种群过上好日子完全就是饭来张口，衣来伸手不断吸食地球血液而且不知大家看到没有它们都是基本上统一无爹。
+toxicloakcn_homophone_keyword_000911#1:03,toxicloakcn_homophone_keyword_000911#1,寄生冲雷,寄生冲雷,寄生冲雷,ji sheng chong lei,寄生虫类,寄生虫类,ji sheng chong lei,tɕi ʂɤŋ ʈʂʰʊŋ lei,tɕi ʂɤŋ ʈʂʰʊŋ lei,否,,tɕi ʂɤŋ ʈʂʰʊŋ lei,tɕi ʂɤŋ ʈʂʰʊŋ lei,否,,[],拟音,歧义同音词,真是国际圣母标和圣父标 他/她们那微不足道所谓善心真是没地方散发去援助时刻对人类社会无不垂涎入寝野生动物昆虫纲最低等卵体寄生虫而且从来没有寄生冲雷及其它们后代靠着自己本事与能力让它们物种群过上好日子完全就是饭来张口，衣来伸手不断吸食地球血液而且不知大家看到没有它们都是基本上统一无爹。,真是国际圣母婊和圣父婊 他/她们那微不足道所谓善心真是没地方散发去援助时刻对人类社会无不垂涎入寝野生动物昆虫纲最低等卵体寄生虫而且从来没有寄生虫类及其它们后代靠着自己本事与能力让它们物种群过上好日子完全就是饭来张口，衣来伸手不断吸食地球血液而且不知大家看到没有它们都是基本上统一无爹。
+toxicloakcn_homophone_keyword_002167#1:01,toxicloakcn_homophone_keyword_002167#1,广东满子,广东满子,广东满子,guang dong man zi,广东蛮子,广东蛮子,guang dong man zi,kuɑŋ tʊŋ man tsɹ̩,kuɑŋ tʊŋ man tsɹ̩,否,,kuɑŋ tʊŋ man tsɹ̩,kuɑŋ tʊŋ man tsɹ̩,否,,[],拟音,非词汇同音词,你这个广东满子，黑河南、黑北方的总部是广州，核心地带是从上海到广州的整个东南沿海，范围是整个南方,你这个广东蛮子，黑河南、黑北方的总部是广州，核心地带是从上海到广州的整个东南沿海，范围是整个南方
+toxicloakcn_emoji_keyword_002595#1:01,toxicloakcn_emoji_keyword_002595#1,国铝,国铝,国铝,guo lv,国女,国女,guo nv,kuɔ ny,kuɔ ny,否,,kuɔ ly,kuɔ ly,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,国铝只会pua国男，怎么可能骂洋大人呢,国女只会pua国男，怎么可能骂洋大人呢
+toxicloakcn_emoji_keyword_001540#1:01,toxicloakcn_emoji_keyword_001540#1,恶熏,恶熏,恶熏,e xun,恶心,恶心,e xin,ɤ ɕin,ɤ ɕin,否,,ɤ ɕyn,ɤ ɕyn,否,,[],拟音,非词汇同音词,请像楼上这种恶熏的怪物停止进直男🍚同帖贩剑，否则进淋β反应！,请像楼上这种恶心的怪物停止进直男反同帖贩剑，否则进淋逼反应！
+toxicloakcn_homophone_keyword_001391#1:01,toxicloakcn_homophone_keyword_001391#1,做你的钢经,做你的钢经,做你的钢经,zuo ni de gang jing,做你的杠精,做你的杠精,zuo ni de gang jing,tsuɔ ni tɤ kɑŋ tɕiŋ,tsuɔ ni tɤ kɑŋ tɕiŋ,否,,tsuɔ ni tɤ kɑŋ tɕiŋ,tsuɔ ni tɤ kɑŋ tɕiŋ,否,,[],拟音,非词汇同音词,我有说不能讲上海话吗？你是看不懂中文还是以为方言别人都听得懂。都讲普通话是双方尊重，语言是用来交流的ok？不是用来做你的钢经的。,我有说不能讲上海话吗？你是看不懂中文还是以为方言别人都听得懂。都讲普通话是双方尊重，语言是用来交流的ok？不是用来做你的杠精的。
+toxicloakcn_homophone_keyword_001799#1:01,toxicloakcn_homophone_keyword_001799#1,贵难,贵难,贵难,gui nan,龟男,龟男,gui nan,kuei nan,kuei nan,否,,kuei nan,kuei nan,否,,[],拟音,非词汇同音词,还不是贵难不努力,还不是龟男不努力
+toxicloakcn_homophone_keyword_003161#1:01,toxicloakcn_homophone_keyword_003161#1,元因,元因,元因,yuan yin,原因,原因,yuan yin,yɛn in,yɛn in,否,,yɛn in,yɛn in,否,,[],拟音,非词汇同音词,我感觉你了解，我感觉写那些的人也不理解，真正可以研究同性恋是什么的元因应该是当事人去研究更好，一个正常取向的人是无法去研究同性者的存在，就好比你相信人有灵魂的说法一样啊。同性者就好比一个身体和灵魂不匹配。他们也是不幸的，比如难桶我猜也不是见一个喜欢一个，应该就和正常人去喜欢一个人一样有感觉的吧。,我感觉你了解，我感觉写那些的人也不理解，真正可以研究同性恋是什么的原因应该是当事人去研究更好，一个正常取向的人是无法去研究同性者的存在，就好比你相信人有灵魂的说法一样啊。同性者就好比一个身体和灵魂不匹配。他们也是不幸的，比如男同我猜也不是见一个喜欢一个，应该就和正常人去喜欢一个人一样有感觉的吧。
+toxicloakcn_homophone_keyword_003161#1:02,toxicloakcn_homophone_keyword_003161#1,难桶,难桶,难桶,nan tong,男同,男同,nan tong,nan tʰʊŋ,nan tʰʊŋ,否,,nan tʰʊŋ,nan tʰʊŋ,否,,[],拟音,非词汇同音词,我感觉你了解，我感觉写那些的人也不理解，真正可以研究同性恋是什么的元因应该是当事人去研究更好，一个正常取向的人是无法去研究同性者的存在，就好比你相信人有灵魂的说法一样啊。同性者就好比一个身体和灵魂不匹配。他们也是不幸的，比如难桶我猜也不是见一个喜欢一个，应该就和正常人去喜欢一个人一样有感觉的吧。,我感觉你了解，我感觉写那些的人也不理解，真正可以研究同性恋是什么的原因应该是当事人去研究更好，一个正常取向的人是无法去研究同性者的存在，就好比你相信人有灵魂的说法一样啊。同性者就好比一个身体和灵魂不匹配。他们也是不幸的，比如男同我猜也不是见一个喜欢一个，应该就和正常人去喜欢一个人一样有感觉的吧。
+toxicloakcn_emoji_keyword_002868#1:01,toxicloakcn_emoji_keyword_002868#1,气大活好,气大活好,气大活好,qi da huo hao,器大活好,器大活好,qi da huo hao,tɕʰi ta xuɔ xɑʊ,tɕʰi ta xuɔ xɑʊ,否,,tɕʰi ta xuɔ xɑʊ,tɕʰi ta xuɔ xɑʊ,否,,[],拟音,歧义同音词,气大活好哦，调侃一下,器大活好哦，调侃一下
+toxicloakcn_homophone_keyword_002006#1:01,toxicloakcn_homophone_keyword_002006#1,蜱判,蜱判,蜱判,pi pan,批判,批判,pi pan,pʰi pʰan,pʰi pʰan,否,,pʰi pʰan,pʰi pʰan,否,,[],拟音,非词汇同音词,他们之所以态度决绝，像是蜱判，是想把这姑娘骂醒。大家都看到了前面是个悬崖，就是铁了心要跳。劝了没用，那就只能骂了。最后的不幸也就姑娘自己体验了。,他们之所以态度决绝，像是批判，是想把这姑娘骂醒。大家都看到了前面是个悬崖，就是铁了心要跳。劝了没用，那就只能骂了。最后的不幸也就姑娘自己体验了。
+toxicloakcn_homophone_keyword_000087#1:01,toxicloakcn_homophone_keyword_000087#1,p不放一个,p不放一个,p不放一个,p bu fang yi ge,屁不放一个,屁不放一个,pi bu fang yi ge,pʰi pu fɑŋ i kɤ,pʰi pu fɑŋ i kɤ,否,,pˈiː pu fɑŋ i kɤ,pˈiː pu fɑŋ i kɤ,否,,[],拟音,语音符号替代,因为知乎上自称歧视黑人的中国南方人只嘴炮，现实见到黑人p不放一个，而白人歧视黑人不网上歧视，在现实见到黑人常常敢动手,因为知乎上自称歧视黑人的中国南方人只嘴炮，现实见到黑人屁不放一个，而白人歧视黑人不网上歧视，在现实见到黑人常常敢动手
+toxicloakcn_emoji_keyword_002737#1:01,toxicloakcn_emoji_keyword_002737#1,⭕因,⭕因,⭕因,⭕ yin,原因,原因,yuan yin,yɛn in,yɛn in,否,,,in,是,unresolved_symbol_or_digit,[],拟音,表情符号替换,最近挺热闹啊，是不是放暑假的⭕因使得一些反某某歧视的多了起来,最近挺热闹啊，是不是放暑假的原因使得一些反某某歧视的多了起来
+toxicloakcn_homophone_keyword_001875#1:01,toxicloakcn_homophone_keyword_001875#1,亩人,亩人,亩人,mu ren,母人,母人,mu ren,mu ɻən,mu ɻən,否,,mu ɻən,mu ɻən,否,,[],拟音,非词汇同音词,亩人已经很可怜了，色情上服务男性，穿暴露会被指点，婚前破了是没贞操，力气小，参政更少，孩子还大部分跟男方姓,母人已经很可怜了，色情上服务男性，穿暴露会被指点，婚前破了是没贞操，力气小，参政更少，孩子还大部分跟男方姓
+toxicloakcn_homophone_keyword_002165#1:01,toxicloakcn_homophone_keyword_002165#1,女全,女全,女全,nv quan,女拳,女拳,nv quan,ny tɕʰyɛn,ny tɕʰyɛn,否,,ny tɕʰyɛn,ny tɕʰyɛn,否,,[],拟音,非词汇同音词,因为女全绝大多数人腿上都有个♠️,因为女拳绝大多数人腿上都有个♠️
+toxicloakcn_homophone_keyword_004210#1:01,toxicloakcn_homophone_keyword_004210#1,反钙吧,反钙吧,反钙吧,fan gai ba,反gay吧,反gay吧,fan gay ba,fan ɡˈeɪ pa,fan ɡˈeɪ pa,否,,fan kai pa,fan kai pa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,我记得你是反钙吧的,我记得你是反gay吧的
+toxicloakcn_homophone_keyword_001939#1:01,toxicloakcn_homophone_keyword_001939#1,杀乱,杀乱,杀乱,sha luan,傻卵,傻卵,sha luan,ʂa luan,ʂa luan,否,,ʂa luan,ʂa luan,否,,[],拟音,非词汇同音词,这种空间自我介绍有一个算一个杀乱,这种空间自我介绍有一个算一个傻卵
+toxicloakcn_homophone_keyword_004111#1:01,toxicloakcn_homophone_keyword_004111#1,东北人ba,东北人ba,东北人ba,dong bei ren ba,东北人吧,东北人吧,dong bei ren ba,tʊŋ pei ɻən pa,tʊŋ pei ɻən pa,否,,tʊŋ pei ɻən pa,tʊŋ pei ɻən pa,否,,[],拟音,语音符号替代,你是东北人ba,你是东北人吧
+toxicloakcn_homophone_keyword_001715#1:01,toxicloakcn_homophone_keyword_001715#1,喜融,喜融,喜融,xi rong,西戎,西戎,xi rong,ɕi ɻʊŋ,ɕi ɻʊŋ,否,,ɕi ɻʊŋ,ɕi ɻʊŋ,否,,[],拟音,非词汇同音词,喜融 被地 难满 东移，没一个是好听的。只有我大中元人杰地灵??,西戎 北狄 南蛮 东夷，没一个是好听的。只有我大中原人杰地灵??
+toxicloakcn_homophone_keyword_001715#1:02,toxicloakcn_homophone_keyword_001715#1,被地,被地,被地,bei di,北狄,北狄,bei di,pei ti,pei ti,否,,pei ti,pei ti,否,,[],拟音,非词汇同音词,喜融 被地 难满 东移，没一个是好听的。只有我大中元人杰地灵??,西戎 北狄 南蛮 东夷，没一个是好听的。只有我大中原人杰地灵??
+toxicloakcn_homophone_keyword_001715#1:03,toxicloakcn_homophone_keyword_001715#1,难满,难满,难满,nan man,南蛮,南蛮,nan man,nan man,nan man,否,,nan man,nan man,否,,[],拟音,非词汇同音词,喜融 被地 难满 东移，没一个是好听的。只有我大中元人杰地灵??,西戎 北狄 南蛮 东夷，没一个是好听的。只有我大中原人杰地灵??
+toxicloakcn_homophone_keyword_001715#1:04,toxicloakcn_homophone_keyword_001715#1,东移,东移,东移,dong yi,东夷,东夷,dong yi,tʊŋ i,tʊŋ i,否,,tʊŋ i,tʊŋ i,否,,[],拟音,非词汇同音词,喜融 被地 难满 东移，没一个是好听的。只有我大中元人杰地灵??,西戎 北狄 南蛮 东夷，没一个是好听的。只有我大中原人杰地灵??
+toxicloakcn_homophone_keyword_001715#1:05,toxicloakcn_homophone_keyword_001715#1,大中元,大中元,大中元,da zhong yuan,大中原,大中原,da zhong yuan,ta ʈʂʊŋ yɛn,ta ʈʂʊŋ yɛn,否,,ta ʈʂʊŋ yɛn,ta ʈʂʊŋ yɛn,否,,[],拟音,非词汇同音词,喜融 被地 难满 东移，没一个是好听的。只有我大中元人杰地灵??,西戎 北狄 南蛮 东夷，没一个是好听的。只有我大中原人杰地灵??
+toxicloakcn_homophone_keyword_002412#1:01,toxicloakcn_homophone_keyword_002412#1,这购,这购,这购,zhe gou,这狗,这狗,zhe gou,ʈʂɤ koʊ,ʈʂɤ koʊ,否,,ʈʂɤ koʊ,ʈʂɤ koʊ,否,,[],拟音,歧义同音词,这购知道那些小购是它的孩子吗？真是它的孩子吗？？？,这狗知道那些小狗是它的孩子吗？真是它的孩子吗？？？
+toxicloakcn_homophone_keyword_002412#1:02,toxicloakcn_homophone_keyword_002412#1,小购,小购,小购,xiao gou,小狗,小狗,xiao gou,ɕiɑʊ koʊ,ɕiɑʊ koʊ,否,,ɕiɑʊ koʊ,ɕiɑʊ koʊ,否,,[],拟音,歧义同音词,这购知道那些小购是它的孩子吗？真是它的孩子吗？？？,这狗知道那些小狗是它的孩子吗？真是它的孩子吗？？？
+toxicloakcn_emoji_keyword_001316#1:01,toxicloakcn_emoji_keyword_001316#1,有I不能见人,有I不能见人,有I不能见人,you I bu neng jian ren,有艾不能见人,有艾不能见人,you ai bu neng jian ren,iou ai pu nɤŋ tɕiɛn ɻən,iou ai pu nɤŋ tɕiɛn ɻən,否,,iou i pu nɤŋ tɕiɛn ɻən,iou i pu nɤŋ tɕiɛn ɻən,否,,[],拟音,语音符号替代,你是自卑没有自信还是有I不能见人吗？看看某基佬也不会蒙面穿衣服发照了,你是自卑没有自信还是有艾滋病不能见人吗？看看某基佬也不会蒙面穿衣服发照了
+toxicloakcn_homophone_keyword_000717#1:01,toxicloakcn_homophone_keyword_000717#1,也不是一定纯,也不是一定纯,也不是一定纯,ye bu shi yi ding chun,也不是一定蠢,也不是一定蠢,ye bu shi yi ding chun,iɛ pu ʂɻ̩ i tiŋ ʈʂʰuən,iɛ pu ʂɻ̩ i tiŋ ʈʂʰuən,否,,iɛ pu ʂɻ̩ i tiŋ ʈʂʰuən,iɛ pu ʂɻ̩ i tiŋ ʈʂʰuən,否,,[],拟音,歧义同音词,先不说是不是全世界都反华，就算人家真的坏，也不是一定纯啊。人家有好东西，有些东西比自己的好，干嘛不学，马克思还是德国人呢，德国还是二战战败国呢，不还是学了？？9年义务教育呢？,先不说是不是全世界都反华，就算人家真的坏，也不是一定蠢啊。人家有好东西，有些东西比自己的好，干嘛不学，马克思还是德国人呢，德国还是二战战败国呢，不还是学了？？9年义务教育呢？
+toxicloakcn_homophone_keyword_002367#1:01,toxicloakcn_homophone_keyword_002367#1,女全,女全,女全,nv quan,女拳,女拳,nv quan,ny tɕʰyɛn,ny tɕʰyɛn,否,,ny tɕʰyɛn,ny tɕʰyɛn,否,,[],拟音,非词汇同音词,微博女全什么成分大家都知道的吧，“对啊对啊女的脑子里也就那点东西了”,微博女拳什么成分大家都知道的吧，“对啊对啊女的脑子里也就那点东西了”
+toxicloakcn_homophone_keyword_002023#1:01,toxicloakcn_homophone_keyword_002023#1,女全国,女全国,女全国,nv quan guo,女拳国,女拳国,nv quan guo,ny tɕʰyɛn kuɔ,ny tɕʰyɛn kuɔ,否,,ny tɕʰyɛn kuɔ,ny tɕʰyɛn kuɔ,否,,[],拟音,非词汇同音词,仙女在世界第一女全国享有犯罪豁免权，二等男人就别叽叽歪歪了。女全国怎么可能有公平的法律。,仙女在世界第一女拳国享有犯罪豁免权，二等男人就别叽叽歪歪了。女拳国怎么可能有公平的法律。
+toxicloakcn_homophone_keyword_001125#1:01,toxicloakcn_homophone_keyword_001125#1,黑购,黑购,黑购,hei gou,黑狗,黑狗,hei gou,xei koʊ,xei koʊ,否,,xei koʊ,xei koʊ,否,,[],拟音,歧义同音词,只有涤清圣土桖洗黑购，才能延续文明,只有涤清圣土桖洗黑狗，才能延续文明
+toxicloakcn_emoji_keyword_003371#1:01,toxicloakcn_emoji_keyword_003371#1,⭕因,⭕因,⭕因,⭕ yin,原因,原因,yuan yin,yɛn in,yɛn in,否,,,in,是,unresolved_symbol_or_digit,[],拟音,表情符号替换,你想多了，黑人的器大就是吹出来来的，不信可以去看看健美比赛那些黑人，感觉好小。各国大小都是12-14，但是中国人最硬，这也是中国人能在黑人头上种草，并且白皮女和东亚男人离婚率低的⭕因,你想多了，黑人的器大就是吹出来来的，不信可以去看看健美比赛那些黑人，感觉好小。各国大小都是12-14，但是中国人最硬，这也是中国人能在黑人头上种草，并且白皮女和东亚男人离婚率低的原因
+toxicloakcn_homophone_keyword_000579#1:01,toxicloakcn_homophone_keyword_000579#1,sao货,sao货,sao货,sao huo,骚货,骚货,sao huo,sɑʊ xuɔ,sɑʊ xuɔ,否,,sɑʊ xuɔ,sɑʊ xuɔ,否,,[],拟音,语音符号替代,所以我劝如果男人脑子不太聪明分不清sao货和良女的话，那就自律一点，不要婚前性行为，也不要婚后嫖娼 这样百分百没有病,所以我劝如果男人脑子不太聪明分不清骚货和良女的话，那就自律一点，不要婚前性行为，也不要婚后嫖娼 这样百分百没有病
+toxicloakcn_homophone_keyword_001591#1:01,toxicloakcn_homophone_keyword_001591#1,亩去,亩去,亩去,mu qu,母蛆,母蛆,mu qu,mu tɕʰy,mu tɕʰy,否,,mu tɕʰy,mu tɕʰy,否,,[],拟音,非词汇同音词,这下亩去help亩去了,这下母蛆help母蛆了
+toxicloakcn_homophone_keyword_001866#1:01,toxicloakcn_homophone_keyword_001866#1,房通力量,房通力量,房通力量,fang tong li liang,反同力量,反同力量,fan tong li liang,fan tʰʊŋ li liɑŋ,fan tʰʊŋ li liɑŋ,否,,fɑŋ tʰʊŋ li liɑŋ,fɑŋ tʰʊŋ li liɑŋ,否,,[],拟音,非词汇同音词,君子和而不同，小人同而不和！团结一起房通力量，为人类创造美好的明天！,君子和而不同，小人同而不和！团结一起反同力量，为人类创造美好的明天！
+toxicloakcn_homophone_keyword_000974#1:01,toxicloakcn_homophone_keyword_000974#1,这头募购,这头募购,这头募购,zhe tou mu gou,这头母狗,这头母狗,zhe tou mu gou,ʈʂɤ tʰoʊ mu koʊ,ʈʂɤ tʰoʊ mu koʊ,否,,ʈʂɤ tʰoʊ mu koʊ,ʈʂɤ tʰoʊ mu koʊ,否,,[],拟音,歧义同音词,杀了这头募购,杀了这头母狗
+toxicloakcn_homophone_keyword_001728#1:01,toxicloakcn_homophone_keyword_001728#1,畒狗,畒狗,畒狗,mu gou,母狗,母狗,mu gou,mu koʊ,mu koʊ,否,,mu koʊ,mu koʊ,否,,[],拟音,非词汇同音词,9.9看畒狗破防超值,9.9看母狗破防超值
+toxicloakcn_homophone_keyword_000407#1:01,toxicloakcn_homophone_keyword_000407#1,控通,控通,控通,kong tong,恐同,恐同,kong tong,kʰʊŋ tʰʊŋ,kʰʊŋ tʰʊŋ,否,,kʰʊŋ tʰʊŋ,kʰʊŋ tʰʊŋ,否,,[],拟音,非词汇同音词,所以控通就是犯罪这个文章就没有偏见?,所以恐同就是犯罪这个文章就没有偏见?
+toxicloakcn_homophone_keyword_001980#1:01,toxicloakcn_homophone_keyword_001980#1,三飞,三飞,三飞,san fei,三非,三非,san fei,san fei,san fei,否,,san fei,san fei,否,,[],拟音,非词汇同音词,证件都没有，抓了也没用，你能怎么样？动手？还不是又接触到了法律，好好动动脑子。三飞没有触犯法律？亏你口口声声法律。关起来可以吧？让他们在外面犯罪？动动你组脑子。不想遣返才是真正的元因。,证件都没有，抓了也没用，你能怎么样？动手？还不是又接触到了法律，好好动动脑子。三非没有触犯法律？亏你口口声声法律。关起来可以吧？让他们在外面犯罪？动动你猪脑子。不想遣返才是真正的原因。
+toxicloakcn_homophone_keyword_001980#1:02,toxicloakcn_homophone_keyword_001980#1,动动你组脑子,动动你组脑子,动动你组脑子,dong dong ni zu nao zi,动动你猪脑子,动动你猪脑子,dong dong ni zhu nao zi,tʊŋ tʊŋ ni ʈʂu nɑʊ tsɹ̩,tʊŋ tʊŋ ni ʈʂu nɑʊ tsɹ̩,否,,tʊŋ tʊŋ ni tsu nɑʊ tsɹ̩,tʊŋ tʊŋ ni tsu nɑʊ tsɹ̩,否,,[],拟音,非词汇同音词,证件都没有，抓了也没用，你能怎么样？动手？还不是又接触到了法律，好好动动脑子。三飞没有触犯法律？亏你口口声声法律。关起来可以吧？让他们在外面犯罪？动动你组脑子。不想遣返才是真正的元因。,证件都没有，抓了也没用，你能怎么样？动手？还不是又接触到了法律，好好动动脑子。三非没有触犯法律？亏你口口声声法律。关起来可以吧？让他们在外面犯罪？动动你猪脑子。不想遣返才是真正的原因。
+toxicloakcn_homophone_keyword_001980#1:03,toxicloakcn_homophone_keyword_001980#1,元因,元因,元因,yuan yin,原因,原因,yuan yin,yɛn in,yɛn in,否,,yɛn in,yɛn in,否,,[],拟音,非词汇同音词,证件都没有，抓了也没用，你能怎么样？动手？还不是又接触到了法律，好好动动脑子。三飞没有触犯法律？亏你口口声声法律。关起来可以吧？让他们在外面犯罪？动动你组脑子。不想遣返才是真正的元因。,证件都没有，抓了也没用，你能怎么样？动手？还不是又接触到了法律，好好动动脑子。三非没有触犯法律？亏你口口声声法律。关起来可以吧？让他们在外面犯罪？动动你猪脑子。不想遣返才是真正的原因。
+toxicloakcn_homophone_keyword_000558#1:01,toxicloakcn_homophone_keyword_000558#1,🐶,🐶,🐶,🐶,狗,狗,gou,koʊ,koʊ,否,,,,是,unresolved_symbol_or_digit,[],拟音,歧义同音词,🐶要是以后我女儿这样我还真会，并且会反思自己为什么教出伞兵,狗要是以后我女儿这样我还真会，并且会反思自己为什么教出傻逼
+toxicloakcn_homophone_keyword_000558#1:02,toxicloakcn_homophone_keyword_000558#1,伞兵,伞兵,伞兵,san bing,傻逼,傻逼,sha bi,ʂa pi,ʂa pi,否,,san piŋ,san piŋ,否,,[],拟音,歧义同音词,🐶要是以后我女儿这样我还真会，并且会反思自己为什么教出伞兵,狗要是以后我女儿这样我还真会，并且会反思自己为什么教出傻逼
+toxicloakcn_homophone_keyword_001517#1:01,toxicloakcn_homophone_keyword_001517#1,燕女,燕女,燕女,yan nv,厌女,厌女,yan nv,iɛn ny,iɛn ny,否,,iɛn ny,iɛn ny,否,,[],拟音,非词汇同音词,我一直燕女但这样的话太直接了只要表现出自己一点燕女就会被女的集火攻击不管上到40多还是下到13~4的那种逮着你就咬一点人简乐趣都体验不到后来我就隐藏了起来比如搞妞妹儿的时候我什么也不表现后来我就又成了她们嘴里的老（渣）鼠（男）人呜呜呜呜呜,我一直厌女但这样的话太直接了只要表现出自己一点厌女就会被女的集火攻击不管上到40多还是下到13~4的那种逮着你就咬一点人简乐趣都体验不到后来我就隐藏了起来比如搞妞妹儿的时候我什么也不表现后来我就又成了她们嘴里的老（渣）鼠（男）人呜呜呜呜呜
+toxicloakcn_homophone_keyword_001683#1:01,toxicloakcn_homophone_keyword_001683#1,无法狗同,无法狗同,无法狗同,wu fa gou tong,无法苟同,无法苟同,wu fa gou tong,u fa koʊ tʰʊŋ,u fa koʊ tʰʊŋ,否,,u fa koʊ tʰʊŋ,u fa koʊ tʰʊŋ,否,,[],拟音,非词汇同音词,非洲人真的无法狗同😲😲😲台湾人打死也不嫁，又穷又老色赔，日本人，台湾就学他们的。中东太乱，其他还好了。,非洲人真的无法苟同😲😲😲台湾人打死也不嫁，又穷又老色胚，日本人，台湾就学他们的。中东太乱，其他还好了。
+toxicloakcn_homophone_keyword_001683#1:02,toxicloakcn_homophone_keyword_001683#1,老色赔,老色赔,老色赔,lao se pei,老色胚,老色胚,lao se pei,lɑʊ sɤ pʰei,lɑʊ sɤ pʰei,否,,lɑʊ sɤ pʰei,lɑʊ sɤ pʰei,否,,[],拟音,非词汇同音词,非洲人真的无法狗同😲😲😲台湾人打死也不嫁，又穷又老色赔，日本人，台湾就学他们的。中东太乱，其他还好了。,非洲人真的无法苟同😲😲😲台湾人打死也不嫁，又穷又老色胚，日本人，台湾就学他们的。中东太乱，其他还好了。
+toxicloakcn_homophone_keyword_001063#1:01,toxicloakcn_homophone_keyword_001063#1,女全,女全,女全,nv quan,女拳,女拳,nv quan,ny tɕʰyɛn,ny tɕʰyɛn,否,,ny tɕʰyɛn,ny tɕʰyɛn,否,,[],拟音,歧义同音词,这人知名女全，散了吧，不用理,这人知名女拳，散了吧，不用理
+toxicloakcn_homophone_keyword_001824#1:01,toxicloakcn_homophone_keyword_001824#1,双表,双表,双表,shuang biao,双标,双标,shuang biao,ʂuɑŋ piɑʊ,ʂuɑŋ piɑʊ,否,,ʂuɑŋ piɑʊ,ʂuɑŋ piɑʊ,否,,[],拟音,歧义同音词,老双表了，表面一套，暗地里又一套,老双标了，表面一套，暗地里又一套
+toxicloakcn_homophone_keyword_000214#1:01,toxicloakcn_homophone_keyword_000214#1,主要元因,主要元因,主要元因,zhu yao yuan yin,主要原因,主要原因,zhu yao yuan yin,ʈʂu iɑʊ yɛn in,ʈʂu iɑʊ yɛn in,否,,ʈʂu iɑʊ yɛn in,ʈʂu iɑʊ yɛn in,否,,[],拟音,非词汇同音词,表面不说 确实南方普遍其实北方 主要元因是以前穷，大量的人口流动，尤其是河南安徽山东东北大量人口汇入南方，其次四川人也很多到处走的，现在少了 但以前很多的犯罪活动都是外来流入人口做的,表面不说 确实南方普遍其实北方 主要原因是以前穷，大量的人口流动，尤其是河南安徽山东东北大量人口汇入南方，其次四川人也很多到处走的，现在少了 但以前很多的犯罪活动都是外来流入人口做的
+toxicloakcn_homophone_keyword_001237#1:01,toxicloakcn_homophone_keyword_001237#1,砸披,砸披,砸披,za pi,杂皮,杂皮,za pi,tsa pʰi,tsa pʰi,否,,tsa pʰi,tsa pʰi,否,,[],拟音,非词汇同音词,哟呵结果又放鸽子了？不要脸的砸披重大教务处有空理你这种别三？？？可能吗？！,哟呵结果又放鸽子了？不要脸的杂皮重大教务处有空理你这种瘪三？？？可能吗？！
+toxicloakcn_homophone_keyword_001237#1:02,toxicloakcn_homophone_keyword_001237#1,别三,别三,别三,bie san,瘪三,瘪三,bie san,piɛ san,piɛ san,否,,piɛ san,piɛ san,否,,[],拟音,非词汇同音词,哟呵结果又放鸽子了？不要脸的砸披重大教务处有空理你这种别三？？？可能吗？！,哟呵结果又放鸽子了？不要脸的杂皮重大教务处有空理你这种瘪三？？？可能吗？！
+toxicloakcn_homophone_keyword_002130#1:01,toxicloakcn_homophone_keyword_002130#1,满多,满多,满多,man duo,蛮多,蛮多,man duo,man tuɔ,man tuɔ,否,,man tuɔ,man tuɔ,否,,[],拟音,歧义同音词,我就是杭州本地人，确实本地人对新疆歧视满多的，但是这种歧视怎么说吧，就是口头讲讲，涉及到实际利益的时候影响其实不大,我就是杭州本地人，确实本地人对新疆歧视蛮多的，但是这种歧视怎么说吧，就是口头讲讲，涉及到实际利益的时候影响其实不大
+toxicloakcn_emoji_keyword_002031#1:01,toxicloakcn_emoji_keyword_002031#1,⬇说,⬇说,⬇说,⬇ shuo,瞎说,瞎说,xia shuo,ɕia ʂuɔ,ɕia ʂuɔ,否,,,ʂuɔ,是,unresolved_symbol_or_digit,[],拟音,语音符号替代,春秋战国时期黑河南人是因为河南地区住的是殷商后羿并不是因为什么郑国和宋国弱小😞😞😞不知道就别⬇说按这个理论燕国啊 中山啊 韩国啊 就没怎么牛逼过还有什么陈国等一堆小国也没什么人黑。另外我觉得现在河南人被黑和口音有很大关系。。。,春秋战国时期黑河南人是因为河南地区住的是殷商后羿并不是因为什么郑国和宋国弱小😞😞😞不知道就别瞎说按这个理论燕国啊 中山啊 韩国啊 就没怎么牛逼过还有什么陈国等一堆小国也没什么人黑。另外我觉得现在河南人被黑和口音有很大关系。。。
+toxicloakcn_homophone_keyword_002696#1:01,toxicloakcn_homophone_keyword_002696#1,肖黑,肖黑,肖黑,xiao hei,小黑,小黑,xiao hei,ɕiɑʊ xei,ɕiɑʊ xei,否,,ɕiɑʊ xei,ɕiɑʊ xei,否,,[],拟音,非词汇同音词,哈哈 我在乍得 这边肖黑两瓶可乐就可以给你当一早上力工,哈哈 我在乍得 这边小黑两瓶可乐就可以给你当一早上力工
+toxicloakcn_homophone_keyword_000033#1:01,toxicloakcn_homophone_keyword_000033#1,外国仁,外国仁,外国仁,wai guo ren,歪果仁,歪果仁,wai guo ren,uai kuɔ ɻən,uai kuɔ ɻən,否,,uai kuɔ ɻən,uai kuɔ ɻən,否,,[],拟音,非词汇同音词,是吧，你实践过?这样来说外国仁传给国女，国女传播慢?你调研过啊?找了1000个男的和1000个女的互相传播?男的找女人上床要么帅，要么出钱，要么其他我，有成本，女的没有传播成本。传播元理是一样的体液交换，你哪来的女传男低，还说患上艾滋病后正常吃药活的很久呢，你也信?很多三五年之内就得死，什么活的很长。,是吧，你实践过?这样来说歪果仁传给国女，国女传播慢?你调研过啊?找了1000个男的和1000个女的互相传播?男的找女人上床要么帅，要么出钱，要么其他我，有成本，女的没有传播成本。传播原理是一样的体液交换，你哪来的女传男低，还说患上艾滋病后正常吃药活的很久呢，你也信?很多三五年之内就得死，什么活的很长。
+toxicloakcn_homophone_keyword_000033#1:02,toxicloakcn_homophone_keyword_000033#1,传播元理,传播元理,传播元理,chuan bo yuan li,传播原理,传播原理,chuan bo yuan li,ʈʂʰuan puɔ yɛn li,ʈʂʰuan puɔ yɛn li,否,,ʈʂʰuan puɔ yɛn li,ʈʂʰuan puɔ yɛn li,否,,[],拟音,非词汇同音词,是吧，你实践过?这样来说外国仁传给国女，国女传播慢?你调研过啊?找了1000个男的和1000个女的互相传播?男的找女人上床要么帅，要么出钱，要么其他我，有成本，女的没有传播成本。传播元理是一样的体液交换，你哪来的女传男低，还说患上艾滋病后正常吃药活的很久呢，你也信?很多三五年之内就得死，什么活的很长。,是吧，你实践过?这样来说歪果仁传给国女，国女传播慢?你调研过啊?找了1000个男的和1000个女的互相传播?男的找女人上床要么帅，要么出钱，要么其他我，有成本，女的没有传播成本。传播原理是一样的体液交换，你哪来的女传男低，还说患上艾滋病后正常吃药活的很久呢，你也信?很多三五年之内就得死，什么活的很长。
+toxicloakcn_homophone_keyword_000102#1:01,toxicloakcn_homophone_keyword_000102#1,区,区,区,qu,蛆,蛆,qu,tɕʰy,tɕʰy,否,,tɕʰy,tɕʰy,否,,[],拟音,歧义同音词,这也就是网上，有能耐过来当着我们面说我家乡不好试试，上面的，有一个算一个，区,这也就是网上，有能耐过来当着我们面说我家乡不好试试，上面的，有一个算一个，蛆
+pcr-95#1:01,pcr-95#1,真煞笔,真煞笔,真煞笔,zhen sha bi,真傻逼,真傻逼,zhen sha bi,ʈʂən ʂa pi,ʈʂən ʂa pi,否,,ʈʂən ʂa pi,ʈʂən ʂa pi,否,,[],拟音,非词汇同音词,说得好像你很懂一样，别在这装蒜行不行，真煞笔,说得好像你很懂一样，别在这装蒜行不行，真傻逼
+pcr-134#1:01,pcr-134#1,B数,B数,B数,B shu,逼数,逼数,bi shu,pi ʂu,pi ʂu,否,,bˈiː ʂu,bˈiː ʂu,否,,[],拟音,语音符号替代,自己几斤几两没点B数？还敢冲劳资吠？,自己几斤几两没点逼数？还敢冲老子吠？
+pcr-134#1:02,pcr-134#1,劳资,劳资,劳资,lao zi,老子,老子,lao zi,lɑʊ tsɹ̩,lɑʊ tsɹ̩,否,,lɑʊ tsɹ̩,lɑʊ tsɹ̩,否,,[],拟音,语音符号替代,自己几斤几两没点B数？还敢冲劳资吠？,自己几斤几两没点逼数？还敢冲老子吠？
+toxicloakcn_homophone_keyword_001518#1:01,toxicloakcn_homophone_keyword_001518#1,别三,别三,别三,bie san,瘪三,瘪三,bie san,piɛ san,piɛ san,否,,piɛ san,piɛ san,否,,[],拟音,非词汇同音词,可惜真正嫁出去的绝大部分找到都是外国别三和老头子。任何民族的精英男性都不会考虑外国人，你见过中国的精英男找外国女的吗？是他们没能力找吗？,可惜真正嫁出去的绝大部分找到都是外国瘪三和老头子。任何民族的精英男性都不会考虑外国人，你见过中国的精英男找外国女的吗？是他们没能力找吗？
+pcr-348#1:01,pcr-348#1,心香四橙,心香四橙,心香四橙,xin xiang si cheng,心想事成,心想事成,xin xiang shi cheng,ɕin ɕiɑŋ ʂɻ̩ ʈʂʰɤŋ,ɕin ɕiɑŋ ʂɻ̩ ʈʂʰɤŋ,否,,ɕin ɕiɑŋ sɹ̩ ʈʂʰɤŋ,ɕin ɕiɑŋ sɹ̩ ʈʂʰɤŋ,否,,[],拟音,非词汇同音词,心香四橙,心想事成
+pcr-491#1:01,pcr-491#1,fire gee,fire gee,fire gee,fire gee,火鸡,火鸡,huo ji,xuɔ tɕi,xuɔ tɕi,否,,fˈaɪə dʒˈiː,fˈaɪə dʒˈiː,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,fire gee让你屁股火辣辣,火鸡让你屁股火辣辣
+pcr-272#1:01,pcr-272#1,不李姐,不李姐,不李姐,bu li jie,不理解,不理解,bu li jie,pu li tɕiɛ,pu li tɕiɛ,否,,pu li tɕiɛ,pu li tɕiɛ,否,,[],拟音,歧义同音词,我不李姐,我不理解
+pcr-13#1:01,pcr-13#1,沸物,沸物,沸物,fei wu,废物,废物,fei wu,fei u,fei u,否,,fei u,fei u,否,,[],拟音,歧义同音词,你跟水一样，开了也是沸物。,你跟水一样，开了也是废物。
+pcr-243#1:01,pcr-243#1,水更溅,水更溅,水更溅,shui geng jian,谁更贱,谁更贱,shui geng jian,ʂuei kɤŋ tɕiɛn,ʂuei kɤŋ tɕiɛn,否,,ʂuei kɤŋ tɕiɛn,ʂuei kɤŋ tɕiɛn,否,,[],拟音,歧义同音词,把你放油锅里，看看水更溅,把你放油锅里，看看谁更贱
+pcr-6#1:01,pcr-6#1,幕购,幕购,幕购,mu gou,母狗,母狗,mu gou,mu koʊ,mu koʊ,否,,mu koʊ,mu koʊ,否,,[],拟音,非词汇同音词,应该改为蔡徐坤的幕购,应该改为蔡徐坤的母狗
+pcr-37#1:01,pcr-37#1,这么省金,这么省金,这么省金,zhe me sheng jin,这么神经,这么神经,zhe me shen jing,ʈʂɤ mɤ ʂən tɕiŋ,ʈʂɤ mɤ ʂən tɕiŋ,否,,ʈʂɤ mɤ ʂɤŋ tɕin,ʈʂɤ mɤ ʂɤŋ tɕin,否,,[],拟音,歧义同音词,学金融的吧这么省金,学金融的吧这么神经
+toxicloakcn_homophone_keyword_001085#1:01,toxicloakcn_homophone_keyword_001085#1,孙杂,孙杂,孙杂,sun za,孙砸,孙砸,sun za,suən tsa,suən tsa,否,,suən tsa,suən tsa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,孙杂能不能速度点出来给本帅哥跪下，一个个都被本帅哥一牛子捅哑巴了吗,孙子能不能速度点出来给本帅哥跪下，一个个都被本帅哥一牛子捅哑巴了吗
+pcr-207#1:01,pcr-207#1,活事,活事,活事,huo shi,活是,活是,huo shi,xuɔ ʂɻ̩,xuɔ ʂɻ̩,否,,xuɔ ʂɻ̩,xuɔ ʂɻ̩,否,,[],拟音,非词汇同音词,你的活事真滴不星啊,你的活是真的不行啊
+pcr-207#1:02,pcr-207#1,真滴,真滴,真滴,zhen di,真的,真的,zhen de,ʈʂən tɤ,ʈʂən tɤ,否,,ʈʂən ti,ʈʂən ti,否,,[],拟音,非词汇同音词,你的活事真滴不星啊,你的活是真的不行啊
+pcr-207#1:03,pcr-207#1,不星,不星,不星,bu xing,不行,不行,bu xing,pu ɕiŋ,pu ɕiŋ,否,,pu ɕiŋ,pu ɕiŋ,否,,[],拟音,非词汇同音词,你的活事真滴不星啊,你的活是真的不行啊
+pcr-346#1:01,pcr-346#1,校世我了,校世我了,校世我了,xiao shi wo le,笑死我了,笑死我了,xiao si wo le,ɕiɑʊ sɹ̩ uɔ lɤ,ɕiɑʊ sɹ̩ uɔ lɤ,否,,ɕiɑʊ ʂɻ̩ uɔ lɤ,ɕiɑʊ ʂɻ̩ uɔ lɤ,否,,[],拟音,非词汇同音词,校世我了,笑死我了
+pcr-494#1:01,pcr-494#1,饭车,饭车,饭车,fan che,翻车,翻车,fan che,fan ʈʂʰɤ,fan ʈʂʰɤ,否,,fan ʈʂʰɤ,fan ʈʂʰɤ,否,,[],拟音,歧义同音词,饭车现场,翻车现场
+pcr-443#1:01,pcr-443#1,8行,8行,八行,ba xing,不行的,不行的,bu xing de,pu ɕiŋ tɤ,pu ɕiŋ tɤ,否,,pa ɕiŋ,pa ɕiŋ,否,,"[{""surface"": ""8"", ""text"": ""八""}]",拟音,语音符号替代,他老说8行，其实根本没底气,他老说不行的，其实根本没底气
+pcr-323#1:01,pcr-323#1,到底瓶什么？,到底瓶什么？,到底瓶什么？,dao di ping shen me ？,到底凭什么？,到底凭什么？,dao di ping shen me ？,tɑʊ ti pʰiŋ ʂən mɤ,tɑʊ ti pʰiŋ ʂən mɤ,否,,tɑʊ ti pʰiŋ ʂən mɤ,tɑʊ ti pʰiŋ ʂən mɤ,否,,[],拟音,非词汇同音词,到底瓶什么？,到底凭什么？
+pcr-388#1:01,pcr-388#1,滴水blow,滴水blow,滴水blow,di shui blow,滴水不漏,滴水不漏,di shui bu lou,ti ʂuei pu loʊ,ti ʂuei pu loʊ,否,,ti ʂuei blˈəʊ,ti ʂuei blˈəʊ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,这个汇报真的滴水blow,这个汇报真的滴水不漏
+pcr-409#1:01,pcr-409#1,勿q,勿q,勿q,wu q,勿cue,勿cue,wu cue,u kjˈuː,u kjˈuː,否,,u kjˈuː,u kjˈuː,否,,[],拟音,语音符号替代,勿q,勿cue
+pcr-433#1:01,pcr-433#1,3Q,3Q,三Q,san Q,Thank you,Thank you,Thank you,θˈaŋk juː,θˈaŋk juː,否,,san kjˈuː,san kjˈuː,否,,"[{""surface"": ""3"", ""text"": ""三""}]",拟音,语音符号替代,3Q非常much,Thank you very much
+pcr-433#1:02,pcr-433#1,v瑞,v瑞,v瑞,v rui,very,very,very,vˈɛɹi,vˈɛɹi,否,,y ɻuei,y ɻuei,否,,[],拟音,语音符号替代,3Q非常much,Thank you very much
+pcr-364#1:01,pcr-364#1,失棉,失棉,失棉,shi mian,失眠,失眠,shi mian,ʂɻ̩ miɛn,ʂɻ̩ miɛn,否,,ʂɻ̩ miɛn,ʂɻ̩ miɛn,否,,[],拟音,非词汇同音词,今天晚上失棉了,今天晚上失眠了
+pcr-213#1:01,pcr-213#1,癞ha mo,癞ha mo,癞ha mo,lai ha mo,癞蛤蟆,癞蛤蟆,lai ha ma,lai xa ma,lai xa ma,否,,lai xa muɔ,lai xa muɔ,否,,[],拟音,语音符号替代,你真是癞hamo趴脚面,你真是癞蛤蟆趴脚面
+pcr-325#1:01,pcr-325#1,时来运砖,时来运砖,时来运砖,shi lai yun zhuan,时来运转,时来运转,shi lai yun zhuan,ʂɻ̩ lai yn ʈʂuan,ʂɻ̩ lai yn ʈʂuan,否,,ʂɻ̩ lai yn ʈʂuan,ʂɻ̩ lai yn ʈʂuan,否,,[],拟音,歧义同音词,时来运砖,时来运转
+pcr-61#1:01,pcr-61#1,步行,步行,步行,bu xing,不行,不行,bu xing,pu ɕiŋ,pu ɕiŋ,否,,pu ɕiŋ,pu ɕiŋ,否,,[],拟音,歧义同音词,真是弟弟出门遛弯，步行啊老弟,真是弟弟出门遛弯，不行啊老弟
+pcr-330#1:01,pcr-330#1,招财进堡,招财进堡,招财进堡,zhao cai jin bao,招财进宝,招财进宝,zhao cai jin bao,ʈʂɑʊ tsʰai tɕin pɑʊ,ʈʂɑʊ tsʰai tɕin pɑʊ,否,,ʈʂɑʊ tsʰai tɕin pɑʊ,ʈʂɑʊ tsʰai tɕin pɑʊ,否,,[],拟音,歧义同音词,招财进堡,招财进宝
+pcr-240#1:01,pcr-240#1,word麻鸭,word麻鸭,word麻鸭,word ma ya,我的妈呀,我的妈呀,wo de ma ya,uɔ tɤ ma ia,uɔ tɤ ma ia,否,,wˈɜːd ma ia,wˈɜːd ma ia,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,word麻鸭，是乔尼玛·麦彼得,我的妈呀，是操你妈卖逼的
+pcr-240#1:02,pcr-240#1,乔尼玛·麦彼得,乔尼玛·麦彼得,乔尼玛·麦彼得,qiao ni ma · mai bi de,操你妈卖逼的,操你妈卖逼的,cao ni ma mai bi de,tsʰɑʊ ni ma mai pi tɤ,tsʰɑʊ ni ma mai pi tɤ,否,,,tɕʰiɑʊ ni ma mai pi tɤ,是,unresolved_symbol_or_digit,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,word麻鸭，是乔尼玛·麦彼得,我的妈呀，是操你妈卖逼的
+pcr-94#1:01,pcr-94#1,碧嘴,碧嘴,碧嘴,bi zui,闭嘴,闭嘴,bi zui,pi tsuei,pi tsuei,否,,pi tsuei,pi tsuei,否,,[],拟音,非词汇同音词,碧嘴别叫了,闭嘴别叫了
+pcr-261#1:01,pcr-261#1,补兑,补兑,补兑,bu dui,不对,不对,bu dui,pu tuei,pu tuei,否,,pu tuei,pu tuei,否,,[],拟音,非词汇同音词,补兑,不对
+pcr-81#1:01,pcr-81#1,能桩,能桩,能桩,neng zhuang,能装,能装,neng zhuang,nɤŋ ʈʂuɑŋ,nɤŋ ʈʂuɑŋ,否,,nɤŋ ʈʂuɑŋ,nɤŋ ʈʂuɑŋ,否,,[],拟音,非词汇同音词,你真挺能桩的,你真挺能装的
+pcr-62#1:01,pcr-62#1,沸物,沸物,沸物,fei wu,废物,废物,fei wu,fei u,fei u,否,,fei u,fei u,否,,[],拟音,非词汇同音词,你跟水一样，开了也是沸物,你跟水一样，开了也是废物
+pcr-102#1:01,pcr-102#1,四麻,四麻,四麻,si ma,死妈,死妈,si ma,sɹ̩ ma,sɹ̩ ma,否,,sɹ̩ ma,sɹ̩ ma,否,,[],拟音,非词汇同音词,四麻养出来的钩，讲话都带毒。,死妈养出来的狗，讲话都带毒。
+pcr-102#1:02,pcr-102#1,钩,钩,钩,gou,狗,狗,gou,koʊ,koʊ,否,,koʊ,koʊ,否,,[],拟音,非词汇同音词,四麻养出来的钩，讲话都带毒。,死妈养出来的狗，讲话都带毒。
+pcr-252#1:01,pcr-252#1,沃德发,沃德发,沃德发,wo de fa,what the fuck,what the fuck,what the fuck,wˌɒt ðə fˈʌk,wˌɒt ðə fˈʌk,否,,uɔ tɤ fa,uɔ tɤ fa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,沃德发,what the fuck
+pcr-400#1:01,pcr-400#1,天津地义,天津地义,天津地义,tian jin di yi,天经地义,天经地义,tian jing di yi,tʰiɛn tɕiŋ ti i,tʰiɛn tɕiŋ ti i,否,,tʰiɛn tɕin ti i,tʰiɛn tɕin ti i,否,,[],拟音,非词汇同音词,到点下班天津地义,到点下班天经地义
+pcr-251#1:01,pcr-251#1,护士,护士,护士,hu shi,忽视,忽视,hu shi,xu ʂɻ̩,xu ʂɻ̩,否,,xu ʂɻ̩,xu ʂɻ̩,否,,[],拟音,歧义同音词,种族歧视的根源是底层的无知，护士规则,种族歧视的根源是底层的无知，忽视规则
+pcr-401#1:01,pcr-401#1,升职嘉兴,升职嘉兴,升职嘉兴,sheng zhi jia xing,升职加薪,升职加薪,sheng zhi jia xin,ʂɤŋ ʈʂɻ̩ tɕia ɕin,ʂɤŋ ʈʂɻ̩ tɕia ɕin,否,,ʂɤŋ ʈʂɻ̩ tɕia ɕiŋ,ʂɤŋ ʈʂɻ̩ tɕia ɕiŋ,否,,[],拟音,歧义同音词,愿你今年升职嘉兴,愿你今年升职加薪
+pcr-201#1:01,pcr-201#1,好表啊,好表啊,好表啊,hao biao a,好婊啊,好婊啊,hao biao a,xɑʊ piɑʊ a,xɑʊ piɑʊ a,否,,xɑʊ piɑʊ a,xɑʊ piɑʊ a,否,,[],拟音,歧义同音词,姐姐带的什么表啊，百达斐吗？好表啊,姐姐带的什么表啊，百达斐吗？好婊啊
+pcr-34#1:01,pcr-34#1,你是梅马,你是梅马,你是梅马,ni shi mei ma,你是没妈,你是没妈,ni shi mei ma,ni ʂɻ̩ mei ma,ni ʂɻ̩ mei ma,否,,ni ʂɻ̩ mei ma,ni ʂɻ̩ mei ma,否,,[],拟音,非词汇同音词,青梅竹马，别人是青竹，你是梅马,青梅竹马，别人是青竹，你是没妈
+toxicloakcn_emoji_keyword_002359#1:01,toxicloakcn_emoji_keyword_002359#1,黑砸,黑砸,黑砸,hei za,黑子,黑子,hei zi,xei tsɹ̩,xei tsɹ̩,否,,xei tsa,xei tsa,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,这是黑砸的正常操作，如果有做好事的新闻才是不正常,这是黑子的正常操作，如果有做好事的新闻才是不正常
+pcr-206#1:01,pcr-206#1,你的箭,你的箭,你的箭,ni de jian,你的贱,你的贱,ni de jian,ni tɤ tɕiɛn,ni tɤ tɕiɛn,否,,ni tɤ tɕiɛn,ni tɤ tɕiɛn,否,,[],拟音,歧义同音词,我不是草船，你的箭不要往我这里放,我不是草船，你的贱不要往我这里放
+pcr-11#1:01,pcr-11#1,我利了,我利了,我利了,wo li le,我立了,我立了,wo li le,uɔ li lɤ,uɔ li lɤ,否,,uɔ li lɤ,uɔ li lɤ,否,,[],拟音,歧义同音词,互联网真好，有利有弊，我利了，哪里有弊,互联网真好，有利有弊，我立了，哪里有逼
+pcr-11#1:02,pcr-11#1,哪里有弊,哪里有弊,哪里有弊,na li you bi,哪里有逼,哪里有逼,na li you bi,na li iou pi,na li iou pi,否,,na li iou pi,na li iou pi,否,,[],拟音,歧义同音词,互联网真好，有利有弊，我利了，哪里有弊,互联网真好，有利有弊，我立了，哪里有逼
+pcr-177#1:01,pcr-177#1,烦动,烦动,烦动,fan dong,反动,反动,fan dong,fan tʊŋ,fan tʊŋ,否,,fan tʊŋ,fan tʊŋ,否,,[],拟音,非词汇同音词,别给我放“烦动”烟雾弹，我偏不怕这把火,别给我放“反动”烟雾弹，我偏不怕这把火
+pcr-345#1:01,pcr-345#1,鸡羽,鸡羽,鸡羽,ji yu,机遇,机遇,ji yu,tɕi y,tɕi y,否,,tɕi y,tɕi y,否,,[],拟音,歧义同音词,鸡羽成周,机遇成舟
+pcr-345#1:02,pcr-345#1,周,周,周,zhou,舟,舟,zhou,ʈʂoʊ,ʈʂoʊ,否,,ʈʂoʊ,ʈʂoʊ,否,,[],拟音,歧义同音词,鸡羽成周,机遇成舟
+pcr-246#1:01,pcr-246#1,相思,相思,相思,xiang si,想死,想死,xiang si,ɕiɑŋ sɹ̩,ɕiɑŋ sɹ̩,否,,ɕiɑŋ sɹ̩,ɕiɑŋ sɹ̩,否,,[],拟音,歧义同音词,王维买红豆，相思！,王维买红豆，想死！
+pcr-192#1:01,pcr-192#1,第一次当银,第一次当银,第一次当银,di yi ci dang yin,第一次当人,第一次当人,di yi ci dang ren,ti i tsʰɹ̩ tɑŋ ɻən,ti i tsʰɹ̩ tɑŋ ɻən,否,,ti i tsʰɹ̩ tɑŋ in,ti i tsʰɹ̩ tɑŋ in,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,看的出来你是第一次当银，没什么经验,看的出来你是第一次当人，没什么经验
+pcr-265#1:01,pcr-265#1,鸡不可湿,鸡不可湿,鸡不可湿,ji bu ke shi,机不可失,机不可失,ji bu ke shi,tɕi pu kʰɤ ʂɻ̩,tɕi pu kʰɤ ʂɻ̩,否,,tɕi pu kʰɤ ʂɻ̩,tɕi pu kʰɤ ʂɻ̩,否,,[],拟音,非词汇同音词,鸡不可湿,机不可失
+pcr-220#1:01,pcr-220#1,顽梗,顽梗,顽梗,wan geng,玩梗,玩梗,wan geng,uan kɤŋ,uan kɤŋ,否,,uan kɤŋ,uan kɤŋ,否,,[],拟音,非词汇同音词,顽梗痘肌疤玩不明白,玩梗都鸡巴玩不明白
+pcr-220#1:02,pcr-220#1,痘肌疤,痘肌疤,痘肌疤,dou ji ba,都鸡巴,都鸡巴,dou ji ba,toʊ tɕi pa,toʊ tɕi pa,否,,toʊ tɕi pa,toʊ tɕi pa,否,,[],拟音,非词汇同音词,顽梗痘肌疤玩不明白,玩梗都鸡巴玩不明白
+pcr-357#1:01,pcr-357#1,发言,发言,发言,fa yan,发炎,发炎,fa yan,fa iɛn,fa iɛn,否,,fa iɛn,fa iɛn,否,,[],拟音,歧义同音词,扁桃体永不发言,扁桃体永不发炎
+pcr-225#1:01,pcr-225#1,比亚迪,比亚迪,比亚迪,bi ya di,逼痒的,逼痒的,bi yang de,pi iɑŋ tɤ,pi iɑŋ tɤ,否,,pi ia ti,pi ia ti,否,,[],拟音,歧义同音词,比亚迪再这样给你玛莎拉,逼痒的再这样给你妈杀了
+pcr-225#1:02,pcr-225#1,玛莎拉,玛莎拉,玛莎拉,ma sha la,妈杀了,妈杀了,ma sha le,ma ʂa lɤ,ma ʂa lɤ,否,,ma ʂa la,ma ʂa la,否,,[],拟音,歧义同音词,比亚迪再这样给你玛莎拉,逼痒的再这样给你妈杀了
+pcr-285#1:01,pcr-285#1,回蚁窝,回蚁窝,回蚁窝,hui yi wo,回忆我,回忆我,hui yi wo,xuei i uɔ,xuei i uɔ,否,,xuei i uɔ,xuei i uɔ,否,,[],拟音,歧义同音词,你都如何回蚁窝，带着笑或是沉默,你都如何回忆我，带着笑或是沉默
+pcr-217#1:01,pcr-217#1,王昌龄妈,王昌龄妈,王昌龄妈,wang chang ling ma,我操你妈,我操你妈,wo cao ni ma,uɔ tsʰɑʊ ni ma,uɔ tsʰɑʊ ni ma,否,,uɑŋ ʈʂʰɑŋ liŋ ma,uɑŋ ʈʂʰɑŋ liŋ ma,否,,[],拟音,非词汇同音词,王昌龄妈，敢刷劳资,我操你妈，敢耍老子
+pcr-217#1:02,pcr-217#1,敢刷劳资,敢刷劳资,敢刷劳资,gan shua lao zi,敢耍老子,敢耍老子,gan shua lao zi,kan ʂua lɑʊ tsɹ̩,kan ʂua lɑʊ tsɹ̩,否,,kan ʂua lɑʊ tsɹ̩,kan ʂua lɑʊ tsɹ̩,否,,[],拟音,非词汇同音词,王昌龄妈，敢刷劳资,我操你妈，敢耍老子
+pcr-33#1:01,pcr-33#1,没嘛,没嘛,没嘛,mei ma,没妈,没妈,mei ma,mei ma,mei ma,否,,mei ma,mei ma,否,,[],拟音,歧义同音词,没嘛总得认一个,没妈总得认一个
+pcr-465#1:01,pcr-465#1,can can need,can can need,can can need,can can need,看看你的,看看你的,kan kan ni de,kʰan kʰan ni tɤ,kʰan kʰan ni tɤ,否,,kan kan nˈiːd,kan kan nˈiːd,否,,[],拟音,语音符号替代,能不能给我cancanneed,能不能给我看看你的
+pcr-319#1:01,pcr-319#1,一鹿顺丰,一鹿顺丰,一鹿顺丰,yi lu shun feng,一路顺风,一路顺风,yi lu shun feng,i lu ʂuən fɤŋ,i lu ʂuən fɤŋ,否,,i lu ʂuən fɤŋ,i lu ʂuən fɤŋ,否,,[],拟音,歧义同音词,祝你一鹿顺丰，福到家门,祝你一路顺风，福到家门
+pcr-410#1:01,pcr-410#1,大兄dei,大兄dei,大兄dei,da xiong dei,大兄弟,大兄弟,da xiong di,ta ɕiʊŋ ti,ta ɕiʊŋ ti,否,,ta ɕiʊŋ tei,ta ɕiʊŋ tei,否,,[],拟音,语音符号替代,大兄dei你好呀,大兄弟你好呀
+pcr-343#1:01,pcr-343#1,雪儿不厌,雪儿不厌,雪儿不厌,xue er bu yan,学而不厌,学而不厌,xue er bu yan,ɕyɛ əɻ pu iɛn,ɕyɛ əɻ pu iɛn,否,,ɕyɛ əɻ pu iɛn,ɕyɛ əɻ pu iɛn,否,,[],拟音,歧义同音词,雪儿不厌，学业长进,学而不厌，学业长进
+pcr-25#1:01,pcr-25#1,春竹,春竹,春竹,chun zhu,蠢猪,蠢猪,chun zhu,ʈʂʰuən ʈʂu,ʈʂʰuən ʈʂu,否,,ʈʂʰuən ʈʂu,ʈʂʰuən ʈʂu,否,,[],拟音,歧义同音词,你这个春竹。,你这个蠢猪。
+pcr-389#1:01,pcr-389#1,猕hotel,猕hotel,猕hotel,mi hotel,猕猴桃,猕猴桃,mi hou tao,mi xoʊ tʰɑʊ,mi xoʊ tʰɑʊ,否,,mi həʊtˈɛl,mi həʊtˈɛl,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,想吃猕hotel,想吃猕猴桃
+pcr-250#1:01,pcr-250#1,2 B 5,2 B 5,二 B 五,er B wu,二百五,二百五,er bai wu,əɻ pai u,əɻ pai u,否,,əɻ bˈiː u,əɻ bˈiː u,否,,"[{""surface"": ""2"", ""text"": ""二""}, {""surface"": ""5"", ""text"": ""五""}]",拟音,语音符号替代,这人真2 B 5，自以为了不起,这人真二百五，自以为了不起
+pcr-374#1:01,pcr-374#1,木凳口袋,木凳口袋,木凳口袋,mu deng kou dai,目瞪口呆,目瞪口呆,mu deng kou dai,mu tɤŋ kʰoʊ tai,mu tɤŋ kʰoʊ tai,否,,mu tɤŋ kʰoʊ tai,mu tɤŋ kʰoʊ tai,否,,[],拟音,歧义同音词,木凳口袋,目瞪口呆
+pcr-15#1:01,pcr-15#1,菜4了,菜4了,菜四了,cai si le,菜死了,菜死了,cai si le,tsʰai sɹ̩ lɤ,tsʰai sɹ̩ lɤ,否,,tsʰai sɹ̩ lɤ,tsʰai sɹ̩ lɤ,否,,"[{""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,你的qq农场响了，菜4了,你的qq农场响了，菜死了
+pcr-361#1:01,pcr-361#1,吃堡了,吃堡了,吃堡了,chi bao le,吃饱了,吃饱了,chi bao le,ʈʂʰɻ̩ pɑʊ lɤ,ʈʂʰɻ̩ pɑʊ lɤ,否,,ʈʂʰɻ̩ pɑʊ lɤ,ʈʂʰɻ̩ pɑʊ lɤ,否,,[],拟音,歧义同音词,你是不是吃堡了,你是不是吃饱了
+pcr-308#1:01,pcr-308#1,天鸡,天鸡,天鸡,tian ji,天机,天机,tian ji,tʰiɛn tɕi,tʰiɛn tɕi,否,,tʰiɛn tɕi,tʰiɛn tɕi,否,,[],拟音,非词汇同音词,天鸡不可泄露,天机不可泄露
+pcr-146#1:01,pcr-146#1,tony带水,tony带水,tony带水,tony dai shui,拖泥带水,拖泥带水,tuo ni dai shui,tʰuɔ ni tai ʂuei,tʰuɔ ni tai ʂuei,否,,tˈəʊni tai ʂuei,tˈəʊni tai ʂuei,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,做事情tony带水,做事情拖泥带水
+pcr-122#1:01,pcr-122#1,得姓,得姓,得姓,de xing,德性,德性,de xing,tɤ ɕiŋ,tɤ ɕiŋ,否,,tɤ ɕiŋ,tɤ ɕiŋ,否,,[],拟音,歧义同音词,看你那副得姓，真饿心。,看你那副德性，真恶心。
+pcr-122#1:02,pcr-122#1,饿心,饿心,饿心,e xin,恶心,恶心,e xin,ɤ ɕin,ɤ ɕin,否,,ɤ ɕin,ɤ ɕin,否,,[],拟音,歧义同音词,看你那副得姓，真饿心。,看你那副德性，真恶心。
+pcr-266#1:01,pcr-266#1,轻鹅易举,轻鹅易举,轻鹅易举,qing e yi ju,轻而易举,轻而易举,qing er yi ju,tɕʰiŋ əɻ i tɕy,tɕʰiŋ əɻ i tɕy,否,,tɕʰiŋ ɤ i tɕy,tɕʰiŋ ɤ i tɕy,否,,[],拟音,非词汇同音词,轻鹅易举,轻而易举
+pcr-68#1:01,pcr-68#1,煤负沐,煤负沐,煤负沐,mei fu mu,没父母,没父母,mei fu mu,mei fu mu,mei fu mu,否,,mei fu mu,mei fu mu,否,,[],拟音,非词汇同音词,煤负沐,没父母
+pcr-231#1:01,pcr-231#1,窝日尼m,窝日尼mo,窝日尼mo,wo ri ni mo,我日你妈,我日你妈,wo ri ni ma,uɔ ɻɻ̩ ni ma,uɔ ɻɻ̩ ni ma,否,,uɔ ɻɻ̩ ni muɔ,uɔ ɻɻ̩ ni muɔ,否,,[],拟音,语音符号替代,窝日尼m,我日你妈
+pcr-367#1:01,pcr-367#1,仙走一步,仙走一步,仙走一步,xian zou yi bu,先走一步,先走一步,xian zou yi bu,ɕiɛn tsoʊ i pu,ɕiɛn tsoʊ i pu,否,,ɕiɛn tsoʊ i pu,ɕiɛn tsoʊ i pu,否,,[],拟音,歧义同音词,仙走一步了,先走一步了
+pcr-398#1:01,pcr-398#1,辣好吧,辣好吧,辣好吧,la hao ba,那好吧,那好吧,na hao ba,na xɑʊ pa,na xɑʊ pa,否,,la xɑʊ pa,la xɑʊ pa,否,,[],拟音,非词汇同音词,辣好吧，就这样吧,那好吧，就这样吧
+pcr-219#1:01,pcr-219#1,你这个咋种,你这个咋种,你这个咋种,ni zhe ge za zhong,你这个杂种,你这个杂种,ni zhe ge za zhong,ni ʈʂɤ kɤ tsa ʈʂʊŋ,ni ʈʂɤ kɤ tsa ʈʂʊŋ,否,,ni ʈʂɤ kɤ tsa ʈʂʊŋ,ni ʈʂɤ kɤ tsa ʈʂʊŋ,否,,[],拟音,非词汇同音词,我是种地的你这个咋种,我是种地的，你这个杂种
+pcr-27#1:01,pcr-27#1,珍妮玛士多,珍妮玛士多,珍妮玛士多,zhen ni ma shi duo,真你妈事多,真你妈事多,zhen ni ma shi duo,ʈʂən ni ma ʂɻ̩ tuɔ,ʈʂən ni ma ʂɻ̩ tuɔ,否,,ʈʂən ni ma ʂɻ̩ tuɔ,ʈʂən ni ma ʂɻ̩ tuɔ,否,,[],拟音,歧义同音词,你是亚里士多德的妹妹，珍妮玛士多吗？,你是亚里士多德的妹妹，真你妈事多吗？
+pcr-187#1:01,pcr-187#1,wo c,wo ci,wo ci,wo ci,我操,我操,wo cao,uɔ tsʰɑʊ,uɔ tsʰɑʊ,否,,uɔ tsʰɹ̩,uɔ tsʰɹ̩,否,,[],拟音,语音符号替代,woc！老资有钱，别在评论区粑粑,我操！老子有钱，别在评论区叭叭
+pcr-399#1:01,pcr-399#1,上海,上海,上海,shang hai,伤害,伤害,shang hai,ʂɑŋ xai,ʂɑŋ xai,否,,ʂɑŋ xai,ʂɑŋ xai,否,,[],拟音,歧义同音词,没有买卖就没有上海,没有买卖就没有伤害
+pcr-105#1:01,pcr-105#1,zhuang了,zhuang了,zhuang了,zhuang le,装了,装了,zhuang le,ʈʂuɑŋ lɤ,ʈʂuɑŋ lɤ,否,,ʈʂuɑŋ lɤ,ʈʂuɑŋ lɤ,否,,[],拟音,语音符号替代,别再zhuang了，都知道你那副德行。,别再装了，都知道你那副德行。
+pcr-1#1:01,pcr-1#1,勾史,勾史,勾史,gou shi,狗屎,狗屎,gou shi,koʊ ʂɻ̩,koʊ ʂɻ̩,否,,koʊ ʂɻ̩,koʊ ʂɻ̩,否,,[],拟音,非词汇同音词,希望你在学校好好吃饭不要勾史,希望你在学校好好吃饭不要狗屎
+pcr-216#1:01,pcr-216#1,你比李时珍见啊,你比李时珍见啊,你比李时珍见啊,ni bi li shi zhen jian a,你比李时珍贱啊,你比李时珍贱啊,ni bi li shi zhen jian a,ni pi li ʂɻ̩ ʈʂən tɕiɛn a,ni pi li ʂɻ̩ ʈʂən tɕiɛn a,否,,ni pi li ʂɻ̩ ʈʂən tɕiɛn a,ni pi li ʂɻ̩ ʈʂən tɕiɛn a,否,,[],拟音,非词汇同音词,你比李时珍见啊,你比李时珍贱啊
+pcr-489#1:01,pcr-489#1,gone she,gone she,gone she,gone she,关系,关系,guan xi,kuan ɕi,kuan ɕi,否,,ɡˈɒn ʃiː,ɡˈɒn ʃiː,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,我们之间的gone she，是可以进一步了吗,我们之间的关系，是可以进一步了吗
+pcr-80#1:01,pcr-80#1,皇到家了,皇到家了,皇到家了,huang dao jia le,黄到家了,黄到家了,huang dao jia le,xuɑŋ tɑʊ tɕia lɤ,xuɑŋ tɑʊ tɕia lɤ,否,,xuɑŋ tɑʊ tɕia lɤ,xuɑŋ tɑʊ tɕia lɤ,否,,[],拟音,歧义同音词,你真是嬴政回皇宫，皇到家了,你真是嬴政回皇宫，黄到家了
+pcr-394#1:01,pcr-394#1,椒虑,椒虑,椒虑,jiao lv,焦虑,焦虑,jiao lv,tɕiɑʊ ly,tɕiɑʊ ly,否,,tɕiɑʊ ly,tɕiɑʊ ly,否,,[],拟音,非词汇同音词,大家都不要椒虑,大家都不要焦虑
+pcr-21#1:01,pcr-21#1,全价4万,全价4万,全价四万,quan jia si wan,全家死完,全家死完,quan jia si wan,tɕʰyɛn tɕia sɹ̩ uan,tɕʰyɛn tɕia sɹ̩ uan,否,,tɕʰyɛn tɕia sɹ̩ uan,tɕʰyɛn tɕia sɹ̩ uan,否,,"[{""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,你真是64.5克的黄金，全价4万了。,你真是64.5克的黄金，全家死完了。
+pcr-405#1:01,pcr-405#1,政钱,政钱,政钱,zheng qian,挣钱,挣钱,zheng qian,ʈʂɤŋ tɕʰiɛn,ʈʂɤŋ tɕʰiɛn,否,,ʈʂɤŋ tɕʰiɛn,ʈʂɤŋ tɕʰiɛn,否,,[],拟音,非词汇同音词,懂王在政治和金钱中选择了政钱,懂王在政治和金钱中选择了挣钱
+pcr-354#1:01,pcr-354#1,郑在,郑在,郑在,zheng zai,正在,正在,zheng zai,ʈʂɤŋ tsai,ʈʂɤŋ tsai,否,,ʈʂɤŋ tsai,ʈʂɤŋ tsai,否,,[],拟音,歧义同音词,郑在过年,正在过年
+pcr-427#1:01,pcr-427#1,6神无主,6神无主,六神无主,liu shen wu zhu,六神无主,六神无主,liu shen wu zhu,liou ʂən u ʈʂu,liou ʂən u ʈʂu,否,,liou ʂən u ʈʂu,liou ʂən u ʈʂu,否,,"[{""surface"": ""6"", ""text"": ""六""}]",拟音,语音符号替代,考试时不要6神无主,考试时不要六神无主
+pcr-461#1:01,pcr-461#1,太婉了,太婉了,太婉了,tai wan le,太晚了,太晚了,tai wan le,tʰai uan lɤ,tʰai uan lɤ,否,,tʰai uan lɤ,tʰai uan lɤ,否,,[],拟音,歧义同音词,已经太婉了,已经太晚了
+pcr-137#1:01,pcr-137#1,6,6,六,liu,6,六,liu,liou,liou,否,,liou,liou,否,,"[{""surface"": ""6"", ""text"": ""六""}]",拟音,语音符号替代,你真太6了，6到爆炸,你真太6了，6到爆炸
+pcr-256#1:01,pcr-256#1,你的螂来了,你的螂来了,你的螂来了,ni de lang lai le,你的郎来了,你的郎来了,ni de lang lai le,ni tɤ lɑŋ lai lɤ,ni tɤ lɑŋ lai lɤ,否,,ni tɤ lɑŋ lai lɤ,ni tɤ lɑŋ lai lɤ,否,,[],拟音,歧义同音词,你的螂来了,你的郎来了
+pcr-355#1:01,pcr-355#1,过乔米线,过乔米线,过乔米线,guo qiao mi xian,过桥米线,过桥米线,guo qiao mi xian,kuɔ tɕʰiɑʊ mi ɕiɛn,kuɔ tɕʰiɑʊ mi ɕiɛn,否,,kuɔ tɕʰiɑʊ mi ɕiɛn,kuɔ tɕʰiɑʊ mi ɕiɛn,否,,[],拟音,非词汇同音词,过乔米线,过桥米线
+pcr-111#1:01,pcr-111#1,浮木,浮木,浮木,fu mu,父母,父母,fu mu,fu mu,fu mu,否,,fu mu,fu mu,否,,[],拟音,歧义同音词,你浮木真失败，养出你zh么个祸h。,你父母真失败，养出你这么个祸害。
+pcr-391#1:01,pcr-391#1,脚头烂额,脚头烂额,脚头烂额,jiao tou lan e,焦头烂额,焦头烂额,jiao tou lan e,tɕiɑʊ tʰoʊ lan ɤ,tɕiɑʊ tʰoʊ lan ɤ,否,,tɕiɑʊ tʰoʊ lan ɤ,tɕiɑʊ tʰoʊ lan ɤ,否,,[],拟音,非词汇同音词,现在有点脚头烂额了,现在有点焦头烂额了
+pcr-422#1:01,pcr-422#1,看的我蕉绿,看的我蕉绿,看的我蕉绿,kan de wo jiao lv,看的我焦虑,看的我焦虑,kan de wo jiao lv,kʰan tɤ uɔ tɕiɑʊ ly,kʰan tɤ uɔ tɕiɑʊ ly,否,,kʰan tɤ uɔ tɕiɑʊ ly,kʰan tɤ uɔ tɕiɑʊ ly,否,,[],拟音,非词汇同音词,这个就业率，看的我蕉绿,这个就业率，看的我焦虑
+pcr-139#1:01,pcr-139#1,待批,待批,待批,dai pi,呆逼,呆逼,dai bi,tai pi,tai pi,否,,tai pʰi,tai pʰi,否,,[],拟音,歧义同音词,待批，纯是个待批,呆逼，纯是个呆逼
+pcr-116#1:01,pcr-116#1,一坨10,一坨10,一坨一零,yi tuo yi ling,一坨屎,一坨屎,yi tuo shi,i tʰuɔ ʂɻ̩,i tʰuɔ ʂɻ̩,否,,i tʰuɔ i liŋ,i tʰuɔ i liŋ,否,,"[{""surface"": ""1"", ""text"": ""一""}, {""surface"": ""0"", ""text"": ""零""}]",拟音,语音符号替代,你真是一坨10，不值一提。,你真是一坨屎，不值一提。
+pcr-350#1:01,pcr-350#1,1314,1314,一三一四,yi san yi si,一生一世,一生一世,yi sheng yi shi,i ʂɤŋ i ʂɻ̩,i ʂɤŋ i ʂɻ̩,否,,i san i sɹ̩,i san i sɹ̩,否,,"[{""surface"": ""1"", ""text"": ""一""}, {""surface"": ""3"", ""text"": ""三""}, {""surface"": ""1"", ""text"": ""一""}, {""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,我想和你1314在一起,我想和你一生一世在一起
+pcr-309#1:01,pcr-309#1,回笼教,回笼教,回笼教,hui long jiao,回笼觉,回笼觉,hui long jue,xuei lʊŋ tɕyɛ,xuei lʊŋ tɕyɛ,否,,xuei lʊŋ tɕiɑʊ,xuei lʊŋ tɕiɑʊ,否,,[],拟音,歧义同音词,大家信教吗？我是“回笼教”的，我们的主要任务是睡觉。,大家信教吗？我是“回笼觉”的，我们的主要任务是睡觉。
+pcr-351#1:01,pcr-351#1,汁倒,汁倒,汁倒,zhi dao,知道,知道,zhi dao,ʈʂɻ̩ tɑʊ,ʈʂɻ̩ tɑʊ,否,,ʈʂɻ̩ tɑʊ,ʈʂɻ̩ tɑʊ,否,,[],拟音,非词汇同音词,你汁倒的太多了,你知道的太多了
+pcr-205#1:01,pcr-205#1,烙铁,烙铁,烙铁,lao tie,老铁,老铁,lao tie,lɑʊ tʰiɛ,lɑʊ tʰiɛ,否,,lɑʊ tʰiɛ,lɑʊ tʰiɛ,否,,[],拟音,歧义同音词,烙铁有点想让你噶,老铁有点想让你嘎
+pcr-205#1:02,pcr-205#1,噶,噶,噶,ga,嘎,嘎,ga,ka,ka,否,,ka,ka,否,,[],拟音,歧义同音词,烙铁有点想让你噶,老铁有点想让你嘎
+pcr-30#1:01,pcr-30#1,司马,司马,司马,si ma,死妈,死妈,si ma,sɹ̩ ma,sɹ̩ ma,否,,sɹ̩ ma,sɹ̩ ma,否,,[],拟音,歧义同音词,我叫上官南北，你叫司马东西？,我叫上官南北，你叫死妈东西？
+pcr-83#1:01,pcr-83#1,风了,风了,风了,feng le,疯了,疯了,feng le,fɤŋ lɤ,fɤŋ lɤ,否,,fɤŋ lɤ,fɤŋ lɤ,否,,[],拟音,非词汇同音词,你铁定是风了,你铁定是疯了
+pcr-488#1:01,pcr-488#1,4S点,4S点,四S点,si S dian,4S店,四S店,si S dian,sɹ̩ ˈɛs tiɛn,sɹ̩ ˈɛs tiɛn,否,,sɹ̩ ˈɛs tiɛn,sɹ̩ ˈɛs tiɛn,否,,"[{""surface"": ""4"", ""text"": ""四""}]",拟音,跨语言语音编码（含方言，可称非普通话音近）,笑死了！4S点的car fee不免费,笑死了！4S店的咖啡不免费
+pcr-488#1:02,pcr-488#1,car fee,car fee,car fee,car fee,咖啡,咖啡,ka fei,kʰa fei,kʰa fei,否,,kˈɑː fˈiː,kˈɑː fˈiː,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,笑死了！4S点的car fee不免费,笑死了！4S店的咖啡不免费
+pcr-467#1:01,pcr-467#1,9494,9494,九四九四,jiu si jiu si,就是就是,就是就是,jiu shi jiu shi,tɕiou ʂɻ̩ tɕiou ʂɻ̩,tɕiou ʂɻ̩ tɕiou ʂɻ̩,否,,tɕiou sɹ̩ tɕiou sɹ̩,tɕiou sɹ̩ tɕiou sɹ̩,否,,"[{""surface"": ""9"", ""text"": ""九""}, {""surface"": ""4"", ""text"": ""四""}, {""surface"": ""9"", ""text"": ""九""}, {""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,9494，应该就这样,就是就是，应该就这样
+pcr-482#1:01,pcr-482#1,慌空,慌空,慌空,huang kong,惶恐,惶恐,huang kong,xuɑŋ kʰʊŋ,xuɑŋ kʰʊŋ,否,,xuɑŋ kʰʊŋ,xuɑŋ kʰʊŋ,否,,[],拟音,非词汇同音词,我心里都是慌空,我心里都是惶恐
+pcr-162#1:01,pcr-162#1,笱霹不通,笱霹不通,笱霹不通,gou pi bu tong,狗屁不通,狗屁不通,gou pi bu tong,koʊ pʰi pu tʰʊŋ,koʊ pʰi pu tʰʊŋ,否,,koʊ pʰi pu tʰʊŋ,koʊ pʰi pu tʰʊŋ,否,,[],拟音,非词汇同音词,这篇分享写的笱霹不通,这篇分享写的狗屁不通
+pcr-424#1:01,pcr-424#1,福莉,福莉,福莉,fu li,福利,福利,fu li,fu li,fu li,否,,fu li,fu li,否,,[],拟音,非词汇同音词,深夜福莉,深夜福利
+pcr-306#1:01,pcr-306#1,好酒不见,好酒不见,好酒不见,hao jiu bu jian,好久不见,好久不见,hao jiu bu jian,xɑʊ tɕiou pu tɕiɛn,xɑʊ tɕiou pu tɕiɛn,否,,xɑʊ tɕiou pu tɕiɛn,xɑʊ tɕiou pu tɕiɛn,否,,[],拟音,歧义同音词,好酒不见,好久不见
+pcr-320#1:01,pcr-320#1,饶蛇,饶蛇,饶蛇,rao she,饶舌,饶舌,rao she,ɻɑʊ ʂɤ,ɻɑʊ ʂɤ,否,,ɻɑʊ ʂɤ,ɻɑʊ ʂɤ,否,,[],拟音,非词汇同音词,法海永远都当不了rapper，因为他不会饶蛇,法海永远都当不了rapper，因为他不会饶舌
+pcr-181#1:01,pcr-181#1,二比,二比,二比,er bi,二逼,二逼,er bi,əɻ pi,əɻ pi,否,,əɻ pi,əɻ pi,否,,[],拟音,非词汇同音词,美国B-2上演的那场‘二比走位’，到底是在炫技还是秀肌肉？,美国B-2上演的那场‘二逼走位’，到底是在炫技还是秀肌肉？
+pcr-166#1:01,pcr-166#1,傻杯,傻杯,傻杯,sha bei,傻逼,傻逼,sha bi,ʂa pi,ʂa pi,否,,ʂa pei,ʂa pei,否,,[],拟音,非词汇同音词,哪来的傻杯,哪来的傻逼
+pcr-490#1:01,pcr-490#1,别上,别上,别上,bie shang,边上,边上,bian shang,piɛn ʂɑŋ,piɛn ʂɑŋ,否,,piɛ ʂɑŋ,piɛ ʂɑŋ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,大海别上想吃sea guava,大海边上想吃西瓜
+pcr-490#1:02,pcr-490#1,sea guava,sea guava,sea guava,sea guava,西瓜,西瓜,xi gua,ɕi kua,ɕi kua,否,,sˈiː ɡwˈɑːvə,sˈiː ɡwˈɑːvə,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,大海别上想吃sea guava,大海边上想吃西瓜
+pcr-229#1:01,pcr-229#1,八个压路,八个压路,八个压路,ba ge ya lu,八嘎呀路,八嘎呀路,ba ga ya lu,pa ka ia lu,pa ka ia lu,否,,pa kɤ ia lu,pa kɤ ia lu,否,,[],拟音,非词汇同音词,你就是八个压路,你就是八嘎呀路
+pcr-254#1:01,pcr-254#1,亡牌,亡牌,亡牌,wang pai,王牌,王牌,wang pai,uɑŋ pʰai,uɑŋ pʰai,否,,uɑŋ pʰai,uɑŋ pʰai,否,,[],拟音,非词汇同音词,亡牌飞行员申请出战,王牌飞行员申请出战
+pcr-390#1:01,pcr-390#1,你拔我罐罪,你拔我罐罪,你拔我罐罪,ni ba wo guan zui,你把我灌醉,你把我灌醉,ni ba wo guan zui,ni pa uɔ kuan tsuei,ni pa uɔ kuan tsuei,否,,ni pa uɔ kuan tsuei,ni pa uɔ kuan tsuei,否,,[],拟音,非词汇同音词,你拔我罐罪,你把我灌醉
+pcr-474#1:01,pcr-474#1,煎墙,煎墙,煎墙,jian qiang,坚强,坚强,jian qiang,tɕiɛn tɕʰiɑŋ,tɕiɛn tɕʰiɑŋ,否,,tɕiɛn tɕʰiɑŋ,tɕiɛn tɕʰiɑŋ,否,,[],拟音,非词汇同音词,我的厨艺一定要煎墙起来,我的厨艺一定要坚强起来
+pcr-436#1:01,pcr-436#1,心弦,心弦,心弦,xin xian,新鲜,新鲜,xin xian,ɕin ɕiɛn,ɕin ɕiɛn,否,,ɕin ɕiɛn,ɕin ɕiɛn,否,,[],拟音,歧义同音词,这个创意真是心弦,这个创意真是新鲜
+pcr-498#1:01,pcr-498#1,留字们,留字们,留字们,liu zi men,留子们,留子们,liu zi men,liou tsɹ̩ mən,liou tsɹ̩ mən,否,,liou tsɹ̩ mən,liou tsɹ̩ mən,否,,[],拟音,语音符号替代,留字们的成本又变高了，因为通货P胀，欧洲生活成本上涨明显,留子们的成本又变高了，因为通货膨胀，欧洲生活成本上涨明显
+pcr-498#1:02,pcr-498#1,通货P胀,通货po胀,通货po胀,tong huo po zhang,通货膨胀,通货膨胀,tong huo peng zhang,tʰʊŋ xuɔ pʰɤŋ ʈʂɑŋ,tʰʊŋ xuɔ pʰɤŋ ʈʂɑŋ,否,,tʰʊŋ xuɔ pʰuɔ ʈʂɑŋ,tʰʊŋ xuɔ pʰuɔ ʈʂɑŋ,否,,[],拟音,语音符号替代,留字们的成本又变高了，因为通货P胀，欧洲生活成本上涨明显,留子们的成本又变高了，因为通货膨胀，欧洲生活成本上涨明显
+pcr-426#1:01,pcr-426#1,烹友,烹友,烹友,peng you,朋友,朋友,peng you,pʰɤŋ iou,pʰɤŋ iou,否,,pʰɤŋ iou,pʰɤŋ iou,否,,[],拟音,歧义同音词,烹友之间要互相帮助,朋友之间要互相帮助
+pcr-360#1:01,pcr-360#1,太碗了,太碗了,太碗了,tai wan le,太晚了,太晚了,tai wan le,tʰai uan lɤ,tʰai uan lɤ,否,,tʰai uan lɤ,tʰai uan lɤ,否,,[],拟音,非词汇同音词,已经太碗了,已经太晚了
+pcr-185#1:01,pcr-185#1,去 S,去 si,去 si,qu si,去死,去死,qu si,tɕʰy sɹ̩,tɕʰy sɹ̩,否,,tɕʰy sɹ̩,tɕʰy sɹ̩,否,,[],拟音,语音符号替代,有些人遇事就去 S,有些人遇事就去死
+pcr-431#1:01,pcr-431#1,萧何财路煎煎饺,萧何财路煎煎饺,萧何财路煎煎饺,xiao he cai lu jian jian jiao,小荷才露尖尖角,小荷才露尖尖角,xiao he cai lu jian jian jiao,ɕiɑʊ xɤ tsʰai lu tɕiɛn tɕiɛn tɕiɑʊ,ɕiɑʊ xɤ tsʰai lu tɕiɛn tɕiɛn tɕiɑʊ,否,,ɕiɑʊ xɤ tsʰai lu tɕiɛn tɕiɛn tɕiɑʊ,ɕiɑʊ xɤ tsʰai lu tɕiɛn tɕiɛn tɕiɑʊ,否,,[],拟音,歧义同音词,萧何财路煎煎饺,小荷才露尖尖角
+pcr-58#1:01,pcr-58#1,G8,G8,G八,G ba,鸡巴,鸡巴,ji ba,tɕi pa,tɕi pa,否,,dʒˈiː pa,dʒˈiː pa,否,,"[{""surface"": ""8"", ""text"": ""八""}]",拟音,语音符号替代,说什么G8呢,说什么鸡巴呢
+pcr-24#1:01,pcr-24#1,二笔,二笔,二笔,er bi,二逼,二逼,er bi,əɻ pi,əɻ pi,否,,əɻ pi,əɻ pi,否,,[],拟音,非词汇同音词,你这个二笔。,你这个二逼。
+pcr-152#1:01,pcr-152#1,低能er,低能er,低能er,di neng er,低能儿,低能儿,di neng er,ti nɤŋ əɻ,ti nɤŋ əɻ,否,,ti nɤŋ əɻ,ti nɤŋ əɻ,否,,[],拟音,语音符号替代,低能er一边凉快吧,低能儿一边凉快吧
+pcr-419#1:01,pcr-419#1,加期,加期,加期,jia qi,假期,假期,jia qi,tɕia tɕʰi,tɕia tɕʰi,否,,tɕia tɕʰi,tɕia tɕʰi,否,,[],拟音,歧义同音词,大家加期鱼块,大家假期愉快
+pcr-419#1:02,pcr-419#1,鱼块,鱼块,鱼块,yu kuai,愉快,愉快,yu kuai,y kʰuai,y kʰuai,否,,y kʰuai,y kʰuai,否,,[],拟音,歧义同音词,大家加期鱼块,大家假期愉快
+pcr-402#1:01,pcr-402#1,宁波打的,宁波打的,宁波打的,ning bo da di,您拨打的,您拨打的,nin bo da di,nin puɔ ta ti,nin puɔ ta ti,否,,niŋ puɔ ta ti,niŋ puɔ ta ti,否,,[],拟音,歧义同音词,宁波打的电话已关机,您拨打的电话已关机
+pcr-296#1:01,pcr-296#1,扒拉拉能亮,扒拉拉能亮,扒拉拉能亮,ba la la neng liang,巴啦啦能量,巴啦啦能量,ba la la neng liang,pa la la nɤŋ liɑŋ,pa la la nɤŋ liɑŋ,否,,pa la la nɤŋ liɑŋ,pa la la nɤŋ liɑŋ,否,,[],拟音,非词汇同音词,莫非这就是传说中的扒拉拉能亮,莫非这就是传说中的巴啦啦能量
+pcr-208#1:01,pcr-208#1,玼世鸭梨,玼世鸭梨,玼世鸭梨,ci shi ya li,吃屎呀你,吃屎呀你,chi shi ya ni,ʈʂʰɻ̩ ʂɻ̩ ia ni,ʈʂʰɻ̩ ʂɻ̩ ia ni,否,,tsʰɹ̩ ʂɻ̩ ia li,tsʰɹ̩ ʂɻ̩ ia li,否,,[],拟音,非词汇同音词,玼世鸭梨,吃屎呀你
+pcr-193#1:01,pcr-193#1,吃完shi,吃完shi,吃完shi,chi wan shi,吃完屎,吃完屎,chi wan shi,ʈʂʰɻ̩ uan ʂɻ̩,ʈʂʰɻ̩ uan ʂɻ̩,否,,ʈʂʰɻ̩ uan ʂɻ̩,ʈʂʰɻ̩ uan ʂɻ̩,否,,[],拟音,语音符号替代,说话这么难听，吃完shi没擦嘴吗,说话这么难听，吃完屎没擦嘴吗
+pcr-421#1:01,pcr-421#1,莓道理,莓道理,莓道理,mei dao li,没道理,没道理,mei dao li,mei tɑʊ li,mei tɑʊ li,否,,mei tɑʊ li,mei tɑʊ li,否,,[],拟音,非词汇同音词,莓道理的！这件事没有可争论的点,没道理的！这件事没有可争论的点
+pcr-333#1:01,pcr-333#1,长安,长安,长安,chang an,常按,常按,chang an,ʈʂʰɑŋ an,ʈʂʰɑŋ an,否,,ʈʂʰɑŋ an,ʈʂʰɑŋ an,否,,[],拟音,歧义同音词,长安识别图中二维码,常按识别图中二维码
+pcr-458#1:01,pcr-458#1,笱男人,笱男人,笱男人,gou nan ren,狗男人,狗男人,gou nan ren,koʊ nan ɻən,koʊ nan ɻən,否,,koʊ nan ɻən,koʊ nan ɻən,否,,[],拟音,非词汇同音词,笱男人，再也不要相信了,狗男人，再也不要相信了
+pcr-425#1:01,pcr-425#1,芝士,芝士,芝士,zhi shi,知识,知识,zhi shi,ʈʂɻ̩ ʂɻ̩,ʈʂɻ̩ ʂɻ̩,否,,ʈʂɻ̩ ʂɻ̩,ʈʂɻ̩ ʂɻ̩,否,,[],拟音,歧义同音词,这个芝士很有用。,这个知识很有用。
+pcr-448#1:01,pcr-448#1,滴至伍哲,滴至伍哲,滴至伍哲,di zhi wu zhe,低至五折,低至五折,di zhi wu zhe,ti ʈʂɻ̩ u ʈʂɤ,ti ʈʂɻ̩ u ʈʂɤ,否,,ti ʈʂɻ̩ u ʈʂɤ,ti ʈʂɻ̩ u ʈʂɤ,否,,[],拟音,非词汇同音词,滴至伍哲，省钱又实惠，快点点击购物车,低至五折，省钱又实惠，快点点击购物车
+pcr-161#1:01,pcr-161#1,肺5,肺5,肺五,fei wu,废物,废物,fei wu,fei u,fei u,否,,fei u,fei u,否,,"[{""surface"": ""5"", ""text"": ""五""}]",拟音,语音符号替代,你是什么肺5,你是什么废物
+pcr-335#1:01,pcr-335#1,44944,44944,四四九四四,si si jiu si si,试试就试试,试试就试试,shi shi jiu shi shi,ʂɻ̩ ʂɻ̩ tɕiou ʂɻ̩ ʂɻ̩,ʂɻ̩ ʂɻ̩ tɕiou ʂɻ̩ ʂɻ̩,否,,sɹ̩ sɹ̩ tɕiou sɹ̩ sɹ̩,sɹ̩ sɹ̩ tɕiou sɹ̩ sɹ̩,否,,"[{""surface"": ""4"", ""text"": ""四""}, {""surface"": ""4"", ""text"": ""四""}, {""surface"": ""9"", ""text"": ""九""}, {""surface"": ""4"", ""text"": ""四""}, {""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,我还不信了44944,我还不信了试试就试试
+pcr-303#1:01,pcr-303#1,锁乙呢？,锁乙呢？,锁乙呢？,suo yi ne ？,所以呢？,所以呢？,suo yi ne ？,suɔ i nɤ,suɔ i nɤ,否,,suɔ i nɤ,suɔ i nɤ,否,,[],拟音,非词汇同音词,锁乙呢？,所以呢？
+pcr-387#1:01,pcr-387#1,次,次,次,ci,吃,吃,chi,ʈʂʰɻ̩,ʈʂʰɻ̩,否,,tsʰɹ̩,tsʰɹ̩,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,我今天中午要次黄焖jimmy饭,我今天中午要吃黄焖鸡米饭
+pcr-387#1:02,pcr-387#1,jimmy饭,jimmy饭,jimmy饭,jimmy fan,鸡米饭,鸡米饭,ji mi fan,tɕi mi fan,tɕi mi fan,否,,dʒˈɪmi fan,dʒˈɪmi fan,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,我今天中午要次黄焖jimmy饭,我今天中午要吃黄焖鸡米饭
+pcr-230#1:01,pcr-230#1,撒椒,撒椒,撒椒,sa jiao,傻屌,傻屌,sha diao,ʂa tiɑʊ,ʂa tiɑʊ,否,,sa tɕiɑʊ,sa tɕiɑʊ,否,,[],拟音,歧义同音词,真是邻居门口看撒椒，麻了隔壁,真是邻居门口看傻屌，妈了个逼
+pcr-230#1:02,pcr-230#1,麻了隔壁,麻了隔壁,麻了隔壁,ma le ge bi,妈了个逼,妈了个逼,ma le ge bi,ma lɤ kɤ pi,ma lɤ kɤ pi,否,,ma lɤ kɤ pi,ma lɤ kɤ pi,否,,[],拟音,歧义同音词,真是邻居门口看撒椒，麻了隔壁,真是邻居门口看傻屌，妈了个逼
+pcr-18#1:01,pcr-18#1,大厦避风,大厦避风,大厦避风,da sha bi feng,大傻逼疯,大傻逼疯,da sha bi feng,ta ʂa pi fɤŋ,ta ʂa pi fɤŋ,否,,ta ʂa pi fɤŋ,ta ʂa pi fɤŋ,否,,[],拟音,非词汇同音词,这大厦避风了。,这大傻逼疯了。
+pcr-215#1:01,pcr-215#1,极拔,极拔,极拔,ji ba,鸡巴,鸡巴,ji ba,tɕi pa,tɕi pa,否,,tɕi pa,tɕi pa,否,,[],拟音,非词汇同音词,网吧的溜子太极拔恶薪了,网吧的溜子太鸡巴恶心了
+pcr-215#1:02,pcr-215#1,恶薪,恶薪,恶薪,e xin,恶心,恶心,e xin,ɤ ɕin,ɤ ɕin,否,,ɤ ɕin,ɤ ɕin,否,,[],拟音,非词汇同音词,网吧的溜子太极拔恶薪了,网吧的溜子太鸡巴恶心了
+pcr-14#1:01,pcr-14#1,采九朵莲,采九朵莲,采九朵莲,cai jiu duo lian,菜就多练,菜就多练,cai jiu duo lian,tsʰai tɕiou tuɔ liɛn,tsʰai tɕiou tuɔ liɛn,否,,tsʰai tɕiou tuɔ liɛn,tsʰai tɕiou tuɔ liɛn,否,,[],拟音,歧义同音词,后面荷塘十朵莲花就剩一朵了，采九朵莲啊。,后面荷塘十朵莲花就剩一朵了，菜就多练啊。
+pcr-370#1:01,pcr-370#1,鸡会,鸡会,鸡会,ji hui,机会,机会,ji hui,tɕi xuei,tɕi xuei,否,,tɕi xuei,tɕi xuei,否,,[],拟音,非词汇同音词,能不能给我1个鸡会,能不能给我1个机会
+pcr-445#1:01,pcr-445#1,你没4,你没4,你没四,ni mei si,你没事,你没事,ni mei shi,ni mei ʂɻ̩,ni mei ʂɻ̩,否,,ni mei sɹ̩,ni mei sɹ̩,否,,"[{""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,这事儿你没4，就别多管闲事,这事儿你没事，就别多管闲事
+pcr-39#1:01,pcr-39#1,壁画,壁画,壁画,bi hua,逼话,逼话,bi hua,pi xua,pi xua,否,,pi xua,pi xua,否,,[],拟音,歧义同音词,你家住敦煌吗，壁画这么多,你家住敦煌吗，逼话这么多
+pcr-352#1:01,pcr-352#1,自bee中,自bee中,自bee中,zi bee zhong,自闭中,自闭中,zi bi zhong,tsɹ̩ pi ʈʂʊŋ,tsɹ̩ pi ʈʂʊŋ,否,,tsɹ̩ bˈiː ʈʂʊŋ,tsɹ̩ bˈiː ʈʂʊŋ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,自bee中,自闭中
+pcr-176#1:01,pcr-176#1,沙笔,沙笔,沙笔,sha bi,傻逼,傻逼,sha bi,ʂa pi,ʂa pi,否,,ʂa pi,ʂa pi,否,,[],拟音,非词汇同音词,你这沙笔政客，连基本常识都没刷到脸上,你这傻逼政客，连基本常识都没刷到脸上
+pcr-113#1:01,pcr-113#1,这粽人,这粽人,这粽人,zhe zong ren,这种人,这种人,zhe zhong ren,ʈʂɤ ʈʂʊŋ ɻən,ʈʂɤ ʈʂʊŋ ɻən,否,,ʈʂɤ tsʊŋ ɻən,ʈʂɤ tsʊŋ ɻən,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,像你这粽人也配发言？可肖。,像你这种人也配发言？可笑。
+pcr-113#1:02,pcr-113#1,可肖,可肖,可肖,ke xiao,可笑,可笑,ke xiao,kʰɤ ɕiɑʊ,kʰɤ ɕiɑʊ,否,,kʰɤ ɕiɑʊ,kʰɤ ɕiɑʊ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,像你这粽人也配发言？可肖。,像你这种人也配发言？可笑。
+pcr-189#1:01,pcr-189#1,中输,中输,中输,zhong shu,中枢,中枢,zhong shu,ʈʂʊŋ ʂu,ʈʂʊŋ ʂu,否,,ʈʂʊŋ ʂu,ʈʂʊŋ ʂu,否,,[],拟音,非词汇同音词,中输神经发力了,中枢神经发力了
+pcr-93#1:01,pcr-93#1,肏你麻,肏你麻,肏你麻,cao ni ma,操你妈,操你妈,cao ni ma,tsʰɑʊ ni ma,tsʰɑʊ ni ma,否,,tsʰɑʊ ni ma,tsʰɑʊ ni ma,否,,[],拟音,非词汇同音词,肏你麻,操你妈
+pcr-282#1:01,pcr-282#1,柿柿如意,柿柿如意,柿柿如意,shi shi ru yi,事事如意,事事如意,shi shi ru yi,ʂɻ̩ ʂɻ̩ ɻu i,ʂɻ̩ ʂɻ̩ ɻu i,否,,ʂɻ̩ ʂɻ̩ ɻu i,ʂɻ̩ ʂɻ̩ ɻu i,否,,[],拟音,非词汇同音词,柿柿如意，苹苹安安,事事如意，平平安安
+pcr-282#1:02,pcr-282#1,苹苹安安,苹苹安安,苹苹安安,ping ping an an,平平安安,平平安安,ping ping an an,pʰiŋ pʰiŋ an an,pʰiŋ pʰiŋ an an,否,,pʰiŋ pʰiŋ an an,pʰiŋ pʰiŋ an an,否,,[],拟音,非词汇同音词,柿柿如意，苹苹安安,事事如意，平平安安
+pcr-234#1:01,pcr-234#1,法克油,法克油,法克油,fa ke you,fuck you,fuck you,fuck you,fˈʌk juː,fˈʌk juː,否,,fa kʰɤ iou,fa kʰɤ iou,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,真的是法克油啊,真的是 fuck you 啊
+pcr-227#1:01,pcr-227#1,去你m的,去你mo的,去你mo的,qu ni mo de,去你妈的,去你妈的,qu ni ma de,tɕʰy ni ma tɤ,tɕʰy ni ma tɤ,否,,tɕʰy ni muɔ tɤ,tɕʰy ni muɔ tɤ,否,,[],拟音,语音符号替代,去你m的,去你妈的
+pcr-158#1:01,pcr-158#1,自取其ru,自取其ru,自取其ru,zi qu qi ru,自取其辱,自取其辱,zi qu qi ru,tsɹ̩ tɕʰy tɕʰi ɻu,tsɹ̩ tɕʰy tɕʰi ɻu,否,,tsɹ̩ tɕʰy tɕʰi ɻu,tsɹ̩ tɕʰy tɕʰi ɻu,否,,[],拟音,语音符号替代,你这是自取其ru,你这是自取其辱
+pcr-291#1:01,pcr-291#1,秃然,秃然,秃然,tu ran,突然,突然,tu ran,tʰu ɻan,tʰu ɻan,否,,tʰu ɻan,tʰu ɻan,否,,[],拟音,非词汇同音词,秃然,突然
+pcr-480#1:01,pcr-480#1,踩4了,踩4了,踩四了,cai si le,踩死了,踩死了,cai si le,tsʰai sɹ̩ lɤ,tsʰai sɹ̩ lɤ,否,,tsʰai sɹ̩ lɤ,tsʰai sɹ̩ lɤ,否,,"[{""surface"": ""4"", ""text"": ""四""}]",拟音,语音符号替代,面试官一句话，就把我踩4了,面试官一句话，就把我踩死了
+pcr-336#1:01,pcr-336#1,嬴麻了,嬴麻了,嬴麻了,ying ma le,赢麻了,赢麻了,ying ma le,iŋ ma lɤ,iŋ ma lɤ,否,,iŋ ma lɤ,iŋ ma lɤ,否,,[],拟音,歧义同音词,秦始皇吃花椒，嬴麻了,秦始皇吃花椒，赢麻了
+pcr-313#1:01,pcr-313#1,泰裤辣,泰裤辣,泰裤辣,tai ku la,太酷啦,太酷啦,tai ku la,tʰai kʰu la,tʰai kʰu la,否,,tʰai kʰu la,tʰai kʰu la,否,,[],拟音,歧义同音词,泰裤辣,太酷啦
+pcr-125#1:01,pcr-125#1,别庄了,别庄了,别庄了,bie zhuang le,别装了,别装了,bie zhuang le,piɛ ʈʂuɑŋ lɤ,piɛ ʈʂuɑŋ lɤ,否,,piɛ ʈʂuɑŋ lɤ,piɛ ʈʂuɑŋ lɤ,否,,[],拟音,歧义同音词,别庄了，好额心哦。,别装了，好恶心哦。
+pcr-125#1:02,pcr-125#1,好额心,好额心,好额心,hao e xin,好恶心,好恶心,hao wu xin,xɑʊ u ɕin,xɑʊ u ɕin,否,,xɑʊ ɤ ɕin,xɑʊ ɤ ɕin,否,,[],拟音,歧义同音词,别庄了，好额心哦。,别装了，好恶心哦。
+pcr-210#1:01,pcr-210#1,鲨臂,鲨臂,鲨臂,sha bi,傻逼,傻逼,sha bi,ʂa pi,ʂa pi,否,,ʂa pi,ʂa pi,否,,[],拟音,非词汇同音词,我是鲨鱼，你是鲨臂,我是鲨鱼，你是傻逼
+pcr-170#1:01,pcr-170#1,放霹,放霹,放霹,fang pi,放屁,放屁,fang pi,fɑŋ pʰi,fɑŋ pʰi,否,,fɑŋ pʰi,fɑŋ pʰi,否,,[],拟音,非词汇同音词,放霹别放霹，扰我清寝,放屁别放屁，扰我清静
+pcr-170#1:02,pcr-170#1,清寝,清寝,清寝,qing qin,清静,清静,qing jing,tɕʰiŋ tɕiŋ,tɕʰiŋ tɕiŋ,否,,tɕʰiŋ tɕʰin,tɕʰiŋ tɕʰin,否,,[],拟音,非词汇同音词,放霹别放霹，扰我清寝,放屁别放屁，扰我清静
+pcr-49#1:01,pcr-49#1,出省,出省,出省,chu sheng,畜生,畜生,chu sheng,ʈʂʰu ʂɤŋ,ʈʂʰu ʂɤŋ,否,,ʈʂʰu ʂɤŋ,ʈʂʰu ʂɤŋ,否,,[],拟音,歧义同音词,你跟出省有啥区别？,你跟畜生有啥区别？
+pcr-301#1:01,pcr-301#1,一见粽情,一见粽情,一见粽情,yi jian zong qing,一见钟情,一见钟情,yi jian zhong qing,i tɕiɛn ʈʂʊŋ tɕʰiŋ,i tɕiɛn ʈʂʊŋ tɕʰiŋ,否,,i tɕiɛn tsʊŋ tɕʰiŋ,i tɕiɛn tsʊŋ tɕʰiŋ,否,,[],拟音,歧义同音词,我对你一见粽情,我对你一见钟情
+pcr-104#1:01,pcr-104#1,e xing,e xing,e xing,e xing,恶心,恶心,e xin,ɤ ɕin,ɤ ɕin,否,,ɤ ɕiŋ,ɤ ɕiŋ,否,,[],拟音,语音符号替代,你就是那种最exing的小人，谁都看不起你。,你就是那种最恶心的小人，谁都看不起你。
+pcr-71#1:01,pcr-71#1,邮寄吧,邮寄吧,邮寄吧,you ji ba,又鸡巴,又鸡巴,you ji ba,iou tɕi pa,iou tɕi pa,否,,iou tɕi pa,iou tɕi pa,否,,[],拟音,歧义同音词,邮寄吧咋地了,又鸡巴咋地了
+pcr-353#1:01,pcr-353#1,花生,花生,花生,hua sheng,发生,发生,fa sheng,fa ʂɤŋ,fa ʂɤŋ,否,,xua ʂɤŋ,xua ʂɤŋ,否,,[],拟音,歧义同音词,好事会花生,好事会发生
+pcr-496#1:01,pcr-496#1,0售,0售,零售,ling shou,零售,零售,ling shou,liŋ ʂoʊ,liŋ ʂoʊ,否,,liŋ ʂoʊ,liŋ ʂoʊ,否,,"[{""surface"": ""0"", ""text"": ""零""}]",拟音,语音符号替代,市场份额已超过0售银行,市场份额已超过零售银行
+pcr-112#1:01,pcr-112#1,棍回,棍回,棍回,gun hui,滚回,滚回,gun hui,kuən xuei,kuən xuei,否,,kuən xuei,kuən xuei,否,,[],拟音,歧义同音词,棍回你那颇地儿去吧，别在这碍演了。,滚回你那破地儿去吧，别在这碍眼了。
+pcr-112#1:02,pcr-112#1,颇地儿,颇地儿,颇地儿,po di er,破地儿,破地儿,po di er,pʰuɔ ti əɻ,pʰuɔ ti əɻ,否,,pʰuɔ ti əɻ,pʰuɔ ti əɻ,否,,[],拟音,歧义同音词,棍回你那颇地儿去吧，别在这碍演了。,滚回你那破地儿去吧，别在这碍眼了。
+pcr-112#1:03,pcr-112#1,碍演,碍演,碍演,ai yan,碍眼,碍眼,ai yan,ai iɛn,ai iɛn,否,,ai iɛn,ai iɛn,否,,[],拟音,歧义同音词,棍回你那颇地儿去吧，别在这碍演了。,滚回你那破地儿去吧，别在这碍眼了。
+pcr-475#1:01,pcr-475#1,西脑,西脑,西脑,xi nao,洗脑,洗脑,xi nao,ɕi nɑʊ,ɕi nɑʊ,否,,ɕi nɑʊ,ɕi nɑʊ,否,,[],拟音,非词汇同音词,魔性西脑,魔性洗脑
+pcr-413#1:01,pcr-413#1,桥豆麻袋,桥豆麻袋,桥豆麻袋,qiao dou ma dai,ちょっと待って,ちょっと待って,ち ょ っ と dai っ て,,tai,是,unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit; unresolved_symbol_or_digit,tɕʰiɑʊ toʊ ma tai,tɕʰiɑʊ toʊ ma tai,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,桥豆麻袋！这是啥？,等一下！这是啥？
+pcr-22#1:01,pcr-22#1,是投注,是投注,是投注,shi tou zhu,是头猪,是头猪,shi tou zhu,ʂɻ̩ tʰoʊ ʈʂu,ʂɻ̩ tʰoʊ ʈʂu,否,,ʂɻ̩ tʰoʊ ʈʂu,ʂɻ̩ tʰoʊ ʈʂu,否,,[],拟音,歧义同音词,我是股神，这是投注，不仅没跌，还直涨。,我是股神，这是头猪，不仅没爹，还智障。
+pcr-22#1:02,pcr-22#1,跌,跌,跌,die,爹,爹,die,tiɛ,tiɛ,否,,tiɛ,tiɛ,否,,[],拟音,歧义同音词,我是股神，这是投注，不仅没跌，还直涨。,我是股神，这是头猪，不仅没爹，还智障。
+pcr-22#1:03,pcr-22#1,直涨,直涨,直涨,zhi zhang,智障,智障,zhi zhang,ʈʂɻ̩ ʈʂɑŋ,ʈʂɻ̩ ʈʂɑŋ,否,,ʈʂɻ̩ ʈʂɑŋ,ʈʂɻ̩ ʈʂɑŋ,否,,[],拟音,歧义同音词,我是股神，这是投注，不仅没跌，还直涨。,我是股神，这是头猪，不仅没爹，还智障。
+pcr-140#1:01,pcr-140#1,sales,sales,sales,sales,笑死,笑死,xiao si,ɕiɑʊ sɹ̩,ɕiɑʊ sɹ̩,否,,sˈeɪlz,sˈeɪlz,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,你真是sales我了,你真是笑死我了
+pcr-349#1:01,pcr-349#1,88,88,八八,ba ba,拜拜,拜拜,bai bai,pai pai,pai pai,否,,pa pa,pa pa,否,,"[{""surface"": ""8"", ""text"": ""八""}, {""surface"": ""8"", ""text"": ""八""}]",拟音,语音符号替代,88，下次见,拜拜，下次见
+pcr-43#1:01,pcr-43#1,老闭灯,老闭灯,老闭灯,lao bi deng,老逼登,老逼登,lao bi deng,lɑʊ pi tɤŋ,lɑʊ pi tɤŋ,否,,lɑʊ pi tɤŋ,lɑʊ pi tɤŋ,否,,[],拟音,歧义同音词,我有夜盲症，害怕老闭灯,我有夜盲症，害怕老逼登。
+pcr-238#1:01,pcr-238#1,dior丝,dior丝,dior丝,dior si,屌丝,屌丝,diao si,tiɑʊ sɹ̩,tiɑʊ sɹ̩,否,,dɪˈɔː sɹ̩,dɪˈɔː sɹ̩,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,真的dior丝,真的屌丝
+pcr-55#1:01,pcr-55#1,烷基八氮,烷基八氮,烷基八氮,wan ji ba dan,完鸡巴蛋,完鸡巴蛋,wan ji ba dan,uan tɕi pa tan,uan tɕi pa tan,否,,uan tɕi pa tan,uan tɕi pa tan,否,,[],拟音,歧义同音词,我是化学家，你烷基八氮了,我是化学家，你完鸡巴蛋了
+human-1#1:01,human-1#1,一起do i,一起do i,一起do i,yi qi do i,一起做爱,一起做爱,yi qi zuo ai,i tɕʰi tsuɔ ai,i tɕʰi tsuɔ ai,否,,i tɕʰi to i,i tɕʰi to i,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,想跟你一起do i,想跟你一起做爱
+pcr-108#1:01,pcr-108#1,3子,3子,三子,san zi,傻子,傻子,sha zi,ʂa tsɹ̩,ʂa tsɹ̩,否,,san tsɹ̩,san tsɹ̩,否,,"[{""surface"": ""3"", ""text"": ""三""}]",拟音,语音符号替代,3子真多，你排第几个？,傻子真多，你排第几个？
+human-3#1:01,human-3#1,delay no more,delay no more,delay no more,delay no more,屌你老母,屌你老母,diao ni lao mu,tiɑʊ ni lɑʊ mu,tiɑʊ ni lɑʊ mu,否,,dɪlˈeɪ nˈəʊmˌɔː,dɪlˈeɪ nˈəʊmˌɔː,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,delay no more,屌你老母
+pcr-326#1:01,pcr-326#1,有荔有bee,有荔有bee,有荔有bee,you li you bee,有利有弊,有利有弊,you li you bi,iou li iou pi,iou li iou pi,否,,iou li iou bˈiː,iou li iou bˈiː,否,,[],拟音,语音符号替代,有荔有bee，但荔大于bee,有利有弊，但利大于弊
+pcr-326#1:02,pcr-326#1,荔大于bee,荔大于bee,荔大于bee,li da yu bee,利大于弊,利大于弊,li da yu bi,li ta y pi,li ta y pi,否,,li ta y bˈiː,li ta y bˈiː,否,,[],拟音,语音符号替代,有荔有bee，但荔大于bee,有利有弊，但利大于弊
+pcr-7#1:01,pcr-7#1,开英帕,开英帕,开英帕,kai ying pa,开淫趴,开淫趴,kai yin pa,kʰai in pʰa,kʰai in pʰa,否,,kʰai iŋ pʰa,kʰai iŋ pʰa,否,,[],拟音,非词汇同音词,确定不是在开英帕吗,确定不是在开淫趴吗
+human-2#1:01,human-2#1,作 i,作 i,作 i,zuo i,做爱,做爱,zuo ai,tsuɔ ai,tsuɔ ai,否,,tsuɔ i,tsuɔ i,否,,[],拟音,语音符号替代,想跟你一起作 i,想跟你一起做爱
+human-4#1:01,human-4#1,wash today,wash today,wash today,wash today,我操你爹,我操你爹,wo cao ni die,uɔ tsʰɑʊ ni tiɛ,uɔ tsʰɑʊ ni tiɛ,否,,wˈɒʃ tədˈeɪ,wˈɒʃ tədˈeɪ,否,,[],拟音,跨语言语音编码（含方言，可称非普通话音近）,wash today,我操你爹
+pcr-300#1:01,pcr-300#1,旺旺掀被,旺旺掀被,旺旺掀被,wang wang xian bei,旺旺仙贝,旺旺仙贝,wang wang xian bei,uɑŋ uɑŋ ɕiɛn pei,uɑŋ uɑŋ ɕiɛn pei,否,,uɑŋ uɑŋ ɕiɛn pei,uɑŋ uɑŋ ɕiɛn pei,否,,[],拟音,歧义同音词,旺旺雪饼觉得热了会变成旺旺掀被。,旺旺雪饼觉得热了会变成旺旺仙贝。
+biz_0106#1:01,biz_0106#1,养胃感,养胃感,养胃感,yang wei gan,阳痿感,阳痿感,yang wei gan,iɑŋ uei kan,iɑŋ uei kan,否,,iɑŋ uei kan,iɑŋ uei kan,否,,[],拟音,歧义同音词,中中中就是这种淡淡的养胃感，然后那个手指动的哈哈哈,中中中就是这种淡淡的阳痿感，然后那个手指动的哈哈哈
+human-5#1:01,human-5#1,浙大毕业太美了,浙大毕业太美了,浙大毕业太美了,zhe da bi ye tai mei le,这大逼也太美了,这大逼也太美了,zhe da bi ye tai mei le,ʈʂɤ ta pi iɛ tʰai mei lɤ,ʈʂɤ ta pi iɛ tʰai mei lɤ,否,,ʈʂɤ ta pi iɛ tʰai mei lɤ,ʈʂɤ ta pi iɛ tʰai mei lɤ,否,,[],拟音,歧义同音词,浙大毕业太美了,这大逼也太美了
