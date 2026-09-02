@@ -1,0 +1,13 @@
+{
+  "source": "/Users/dl14/Desktop/CAT/data/variant-restoration/codedlang-v1/fragments.csv",
+  "seed": 42,
+  "raw_unique_dictionary_records": 869,
+  "unique_variant_canonical_pairs": 151,
+  "canonical_count": 127,
+  "split_counts": {
+    "train": 131,
+    "validation": 4,
+    "test_seen_variant": 16
+  },
+  "test_definition": "Seen Canonical + Unseen Variant; no exact variant-canonical pair occurs in train and test."
+}
