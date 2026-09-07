@@ -89,12 +89,26 @@ def main():
 
     tokenized = raw_dataset.map(tokenize, batched=True, remove_columns=raw_dataset["train"].column_names)
 
+    def decode_generated_ids(token_ids):
+        """Decode generated sequences after Trainer's cross-batch padding.
+
+        Trainer pads predictions from differently sized generation batches with
+        -100 before metrics are computed. SentencePiece cannot decode that
+        sentinel value, unlike label decoding where it is conventionally
+        replaced with the tokenizer pad ID.
+        """
+        token_ids = np.asarray(token_ids)
+        token_ids = np.where(token_ids == -100, tokenizer.pad_token_id, token_ids)
+        if token_ids.size and (token_ids.min() < 0 or token_ids.max() >= len(tokenizer)):
+            raise ValueError("Generated token ID is outside the tokenizer vocabulary.")
+        return [value.strip() for value in tokenizer.batch_decode(token_ids, skip_special_tokens=True)]
+
     def compute_metrics(prediction_output):
         predictions, labels = prediction_output
         if isinstance(predictions, tuple):
             predictions = predictions[0]
         labels = np.where(labels == -100, tokenizer.pad_token_id, labels)
-        decoded_predictions = [value.strip() for value in tokenizer.batch_decode(predictions, skip_special_tokens=True)]
+        decoded_predictions = decode_generated_ids(predictions)
         decoded_labels = [value.strip() for value in tokenizer.batch_decode(labels, skip_special_tokens=True)]
         exact = sum(prediction == label for prediction, label in zip(decoded_predictions, decoded_labels))
         char_acc = sum(character_accuracy(label, prediction) for prediction, label in zip(decoded_predictions, decoded_labels))
@@ -146,7 +160,7 @@ def main():
     trainer.save_metrics("test", test_result.metrics)
     trainer.save_state()
 
-    decoded = tokenizer.batch_decode(test_result.predictions, skip_special_tokens=True)
+    decoded = decode_generated_ids(test_result.predictions)
     with (args.output_dir / "test_predictions.jsonl").open("w", encoding="utf-8") as handle:
         for item, prediction in zip(raw_dataset["test"], decoded):
             handle.write(json.dumps({
