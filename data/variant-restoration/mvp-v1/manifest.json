@@ -1,19 +1,29 @@
 {
   "seed": 42,
   "selection": {
-    "local": "needs_manual_review=否 AND canonical_needs_manual_review=否 AND target phonetic category",
+    "local": "needs_manual_review=否 AND canonical_needs_manual_review=否 AND target phonetic category; variant_text uses the raw semantic fragment",
     "codedlang": "extraction_method=official_dictionary_casefold"
   },
-  "source_counts": {
+  "source_counts_before_deduplication": {
     "local": 483,
     "codedlang": 869,
     "total": 1352
   },
+  "deduplication": {
+    "key": [
+      "variant_text",
+      "ipa",
+      "canonical_text"
+    ],
+    "records_after_deduplication": 618,
+    "removed_duplicate_records": 734,
+    "audit_column": "occurrence_count"
+  },
   "unique_variant_canonical_pairs": 618,
   "split_counts": {
-    "train": 1009,
-    "validation": 158,
-    "test_seen_canonical_unseen_variant": 185
+    "train": 423,
+    "validation": 150,
+    "test_seen_canonical_unseen_variant": 45
   },
   "split_definitions": {
     "test_seen_canonical_unseen_variant": "The canonical target occurs in training, but the exact variant-target pair does not.",
@@ -21,25 +31,25 @@
   },
   "training_data_dir": "seq2seq-v1",
   "training_schema": "(variant_text, ipa, canonical_text), with inputs for text/ipa/text_ipa ablations.",
-  "ipa_note": "Local records use generated no-tone IPA. CodedLang records use generated no-tone IPA where available, otherwise its official IPA annotation.",
+  "ipa_note": "Generated Mandarin IPA preserves lexical tone using Chao tone letters (1=˥, 2=˧˥, 3=˨˩˦, 4=˥˩, 5=˧). English remains British espeak-ng IPA. CodedLang falls back to its official IPA only when a generated candidate is unavailable.",
   "variant_type_counts": {
     "train": {
-      "非词汇同音词": 452,
-      "歧义同音词": 320,
-      "语音替代": 201,
-      "跨语言语音编码": 36
+      "非词汇同音词": 160,
+      "歧义同音词": 117,
+      "语音替代": 114,
+      "跨语言语音编码": 32
     },
     "validation": {
-      "语音替代": 35,
-      "非词汇同音词": 44,
-      "歧义同音词": 74,
-      "跨语言语音编码": 5
+      "语音替代": 46,
+      "非词汇同音词": 56,
+      "歧义同音词": 39,
+      "跨语言语音编码": 9
     },
     "test_seen_canonical_unseen_variant": {
-      "非词汇同音词": 14,
-      "歧义同音词": 59,
+      "非词汇同音词": 12,
+      "歧义同音词": 13,
       "跨语言语音编码": 5,
-      "语音替代": 107
+      "语音替代": 15
     }
   }
 }
