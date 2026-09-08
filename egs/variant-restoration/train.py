@@ -26,6 +26,8 @@ def parse_args():
     parser.add_argument("--gradient-accumulation-steps", type=int, default=2)
     parser.add_argument("--generation-num-beams", type=int, default=4)
     parser.add_argument("--logging-steps", type=int, default=10)
+    parser.add_argument("--eval-steps", type=int, default=50)
+    parser.add_argument("--save-steps", type=int, default=50)
     parser.add_argument("--save-total-limit", type=int, default=3)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--resume-from-checkpoint", default=None)
@@ -132,14 +134,20 @@ def main():
         predict_with_generate=True,
         generation_max_length=args.max_target_length,
         generation_num_beams=args.generation_num_beams,
-        eval_strategy="epoch",
-        save_strategy="epoch",
+        # Matching step strategies permit selecting the best checkpoint while
+        # avoiding a multi-gigabyte save after every tiny-data epoch.
+        eval_strategy="steps",
+        eval_steps=args.eval_steps,
+        save_strategy="steps",
+        save_steps=args.save_steps,
         logging_strategy="steps",
         logging_steps=args.logging_steps,
         save_total_limit=args.save_total_limit,
         load_best_model_at_end=True,
-        metric_for_best_model="exact_match",
-        greater_is_better=True,
+        # Exact match is initially often tied at zero; validation loss gives
+        # a meaningful checkpoint ordering until generations become usable.
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
         report_to="none",
         seed=args.seed,
         data_seed=args.seed,

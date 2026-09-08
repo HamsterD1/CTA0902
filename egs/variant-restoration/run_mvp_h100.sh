@@ -3,7 +3,7 @@
 set -euo pipefail
 
 data_dir=${1:-data/variant-restoration/mvp-v1/seq2seq-v1}
-output_root=${2:-exp/variant-restoration/mvp-v1}
+output_root=${2:-/cpt_dlt/variant-restoration/mvp-v1}
 model_name=${MODEL_NAME:-google/mt5-base}
 
 for condition in text ipa text_ipa; do
@@ -21,6 +21,8 @@ for condition in text ipa text_ipa; do
         --weight-decay 0.01 \
         --warmup-ratio 0.1 \
         --generation-num-beams 4 \
+        --eval-steps 50 \
+        --save-steps 50 \
         --seed 42
     python egs/variant-restoration/evaluate.py \
         --references "${data_dir}/test.jsonl" \
