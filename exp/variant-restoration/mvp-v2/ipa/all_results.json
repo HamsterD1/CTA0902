@@ -1,0 +1,8 @@
+{
+    "test_character_accuracy": 0.005555555555555556,
+    "test_exact_match": 0.0,
+    "test_loss": 4.382070541381836,
+    "test_runtime": 0.3332,
+    "test_samples_per_second": 135.073,
+    "test_steps_per_second": 6.003
+}
