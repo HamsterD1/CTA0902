@@ -1,0 +1,45 @@
+{"id": "local:biz_rare_char_000126#1:01", "condition": "text", "input": "[VARIANT] 鰠逼", "ipa": "sɑʊ˥ pi˥", "reference": "骚逼", "prediction": "<extra_id_0> 鰠", "variant_type": "非词汇同音词"}
+{"id": "local:biz_rare_char_000161#1:01", "condition": "text", "input": "[VARIANT] 襙", "ipa": "tsʰɑʊ˥˩", "reference": "操", "prediction": "<extra_id_0>�", "variant_type": "非词汇同音词"}
+{"id": "local:biz_symbol_000140#1:01", "condition": "text", "input": "[VARIANT] 斐济杯", "ipa": "fei˨˩˦ tɕi˥˩ pei˥", "reference": "飞机杯", "prediction": "<extra_id_0> 中国杯", "variant_type": "歧义同音词"}
+{"id": "local:biz_0008#1:01", "condition": "text", "input": "[VARIANT] 这么sao", "ipa": "ʈʂɤ˥˩ mɤ sɑʊ", "reference": "这么骚", "prediction": "<extra_id_0>.", "variant_type": "歧义同音词"}
+{"id": "local:biz_0038#1:01", "condition": "text", "input": "[VARIANT] 筱雪", "ipa": "ɕiɑʊ˨˩˦ ɕyɛ˨˩˦", "reference": "小穴", "prediction": "<extra_id_0>雪子", "variant_type": "歧义同音词"}
+{"id": "local:biz_0023#1:01", "condition": "text", "input": "[VARIANT] 阿美", "ipa": "a˥ mei˨˩˦", "reference": "美国", "prediction": "<extra_id_0>.", "variant_type": "跨语言语音编码"}
+{"id": "local:biz_0057#1:02", "condition": "text", "input": "[VARIANT] 流氵", "ipa": "liou˧˥ ʂuei", "reference": "流水", "prediction": "<extra_id_0>", "variant_type": "语音替代"}
+{"id": "local:biz_0125#1:01", "condition": "text", "input": "[VARIANT] 女童", "ipa": "ny˨˩˦ tʰʊŋ˧˥", "reference": "女同", "prediction": "<extra_id_0>童", "variant_type": "歧义同音词"}
+{"id": "local:biz_0138#1:01", "condition": "text", "input": "[VARIANT] 左哎", "ipa": "tsuɔ˨˩˦ ai˥", "reference": "做爱", "prediction": "<extra_id_0>.", "variant_type": "非词汇同音词"}
+{"id": "local:biz_0216#1:01", "condition": "text", "input": "[VARIANT] wc", "ipa": "u tsʰɹ̩", "reference": "卧槽", "prediction": "<extra_id_0>", "variant_type": "语音替代"}
+{"id": "local:biz_0074#1:01", "condition": "text", "input": "[VARIANT] 脐橙", "ipa": "tɕʰi˧˥ ʈʂʰɤŋ˧˥", "reference": "骑乘", "prediction": "<extra_id_0> 脐橙", "variant_type": "歧义同音词"}
+{"id": "local:biz_0395#1:01", "condition": "text", "input": "[VARIANT] 淦", "ipa": "kan˥˩", "reference": "干", "prediction": "<extra_id_0>  <extra_id_1>  <extra_id_2>  <extra_id_3>  <extra_id_4>  <extra_id_5>  <extra_id_6>", "variant_type": "歧义同音词"}
+{"id": "local:biz_0369#1:01", "condition": "text", "input": "[VARIANT] 酥胡", "ipa": "su˥ xu˧˥", "reference": "舒服", "prediction": "<extra_id_0>胡", "variant_type": "非词汇同音词"}
+{"id": "local:biz_0427#1:02", "condition": "text", "input": "[VARIANT] 敬业", "ipa": "tɕiŋ˥˩ jɛ˥˩", "reference": "精液", "prediction": "<extra_id_0>。", "variant_type": "非词汇同音词"}
+{"id": "local:biz_0337#1:01", "condition": "text", "input": "[VARIANT] 失jin", "ipa": "ʂɻ̩˥ tɕin", "reference": "失禁", "prediction": "<extra_id_0>..", "variant_type": "语音替代"}
+{"id": "local:toxicloakcn_homophone_keyword_001165#1:01", "condition": "text", "input": "[VARIANT] 募购", "ipa": "mu˥˩ koʊ˥˩", "reference": "母狗", "prediction": "<extra_id_0>募投", "variant_type": "歧义同音词"}
+{"id": "local:pcr-13#1:01", "condition": "text", "input": "[VARIANT] 沸物", "ipa": "fei˥˩ u˥˩", "reference": "废物", "prediction": "<extra_id_0>物", "variant_type": "歧义同音词"}
+{"id": "local:pcr-61#1:01", "condition": "text", "input": "[VARIANT] 步行", "ipa": "pu˥˩ ɕiŋ˧˥", "reference": "不行", "prediction": "<extra_id_0>.", "variant_type": "歧义同音词"}
+{"id": "local:pcr-240#1:01", "condition": "text", "input": "[VARIANT] word麻鸭", "ipa": "wˈɜːd ma˧˥ ja˥", "reference": "我的妈呀", "prediction": "<extra_id_0>.com.au", "variant_type": "跨语言语音编码"}
+{"id": "local:pcr-102#1:01", "condition": "text", "input": "[VARIANT] 四麻", "ipa": "sɹ̩˥˩ ma˧˥", "reference": "死妈", "prediction": "<extra_id_0>.", "variant_type": "非词汇同音词"}
+{"id": "local:pcr-187#1:01", "condition": "text", "input": "[VARIANT] wo c", "ipa": "wɔ tsʰɹ̩", "reference": "我操", "prediction": "<extra_id_0>", "variant_type": "语音替代"}
+{"id": "local:pcr-488#1:02", "condition": "text", "input": "[VARIANT] car fee", "ipa": "kˈɑː fˈiː", "reference": "咖啡", "prediction": "<extra_id_0>n", "variant_type": "跨语言语音编码"}
+{"id": "local:pcr-181#1:01", "condition": "text", "input": "[VARIANT] 二比", "ipa": "əɻ˥˩ pi˨˩˦", "reference": "二逼", "prediction": "<extra_id_0>.", "variant_type": "非词汇同音词"}
+{"id": "local:pcr-426#1:01", "condition": "text", "input": "[VARIANT] 烹友", "ipa": "pʰɤŋ˥ joʊ˨˩˦", "reference": "朋友", "prediction": "<extra_id_0>", "variant_type": "歧义同音词"}
+{"id": "local:pcr-360#1:01", "condition": "text", "input": "[VARIANT] 太碗了", "ipa": "tʰai˥˩ wan˨˩˦ lɤ", "reference": "太晚了", "prediction": "<extra_id_0>太碗", "variant_type": "非词汇同音词"}
+{"id": "local:pcr-387#1:01", "condition": "text", "input": "[VARIANT] 次", "ipa": "tsʰɹ̩˥˩", "reference": "吃", "prediction": "<extra_id_0>.", "variant_type": "跨语言语音编码"}
+{"id": "local:pcr-230#1:02", "condition": "text", "input": "[VARIANT] 麻了隔壁", "ipa": "ma˧˥ lɤ kɤ˧˥ pi˥˩", "reference": "妈了个逼", "prediction": "<extra_id_0> 麻", "variant_type": "歧义同音词"}
+{"id": "local:pcr-215#1:02", "condition": "text", "input": "[VARIANT] 恶薪", "ipa": "ɤ˥˩ ɕin˥", "reference": "恶心", "prediction": "<extra_id_0>”", "variant_type": "非词汇同音词"}
+{"id": "local:pcr-93#1:01", "condition": "text", "input": "[VARIANT] 肏你麻", "ipa": "tsʰɑʊ˥˩ ni˨˩˦ ma˧˥", "reference": "操你妈", "prediction": "<extra_id_0>..", "variant_type": "非词汇同音词"}
+{"id": "codedlang:42:01", "condition": "text", "input": "[VARIANT] 好ㄘ", "ipa": "xau̯˧˩˧ tsʰ", "reference": "好吃", "prediction": "<extra_id_0>ㄘ", "variant_type": "语音替代"}
+{"id": "codedlang:46:01", "condition": "text", "input": "[VARIANT] 炒鸡", "ipa": "ʈʂʰɑʊ˨˩˦ tɕi˥", "reference": "超级", "prediction": "<extra_id_0>鸡汤", "variant_type": "歧义同音词"}
+{"id": "codedlang:60:01", "condition": "text", "input": "[VARIANT] tm", "ipa": "tˌiːˈɛm", "reference": "他妈", "prediction": "<extra_id_0>m <extra_id_1>.com <extra_id_2>.com", "variant_type": "语音替代"}
+{"id": "codedlang:60:02", "condition": "text", "input": "[VARIANT] tmd", "ipa": "tˌiːˌɛmdˈiː", "reference": "他妈的", "prediction": "<extra_id_0>d", "variant_type": "语音替代"}
+{"id": "codedlang:157:03", "condition": "text", "input": "[VARIANT] JB", "ipa": "dʒˌeɪbˈiː", "reference": "鸡巴", "prediction": "<extra_id_0>- <extra_id_1>- <extra_id_2>- <extra_id_3>- - <extra_id_4>- - - <extra_id_55> <extra_id_56>- - - - - - - - - - - - - - - - - - - - - - -", "variant_type": "语音替代"}
+{"id": "codedlang:166:02", "condition": "text", "input": "[VARIANT] ㄉ", "ipa": "t", "reference": "的", "prediction": "<extra_id_0>.", "variant_type": "语音替代"}
+{"id": "codedlang:193:02", "condition": "text", "input": "[VARIANT] NMSL", "ipa": "ˌɛnˌɛmˌɛsˈɛl", "reference": "你妈死了", "prediction": "<extra_id_0>.", "variant_type": "语音替代"}
+{"id": "codedlang:205:01", "condition": "text", "input": "[VARIANT] 你玛", "ipa": "ni˨˩˦ ma˨˩˦", "reference": "你妈", "prediction": "<extra_id_0>。", "variant_type": "非词汇同音词"}
+{"id": "codedlang:227:01", "condition": "text", "input": "[VARIANT] 沙雕", "ipa": "ʂa˥ tiɑʊ˥", "reference": "傻屌", "prediction": "<extra_id_0>雕", "variant_type": "歧义同音词"}
+{"id": "codedlang:277:02", "condition": "text", "input": "[VARIANT] nmb", "ipa": "ˌɛnˌɛmbˈiː", "reference": "你妈逼", "prediction": "<extra_id_0>.", "variant_type": "语音替代"}
+{"id": "codedlang:490:01", "condition": "text", "input": "[VARIANT] 腻害", "ipa": "ni˥˩ xai˥˩", "reference": "厉害", "prediction": "<extra_id_0>,", "variant_type": "非词汇同音词"}
+{"id": "codedlang:524:01", "condition": "text", "input": "[VARIANT] mm", "ipa": "ˌɛmˈɛm", "reference": "妹妹", "prediction": "<extra_id_0>s <extra_id_1>m u <extra_id_2>m u <extra_id_3>m u u u u u u u u u u u u u u u u u a z a n a n a  <extra_id_4> i", "variant_type": "语音替代"}
+{"id": "codedlang:646:01", "condition": "text", "input": "[VARIANT] wcnm", "ipa": "dˌʌbəljˌuːsˌiːˌɛnˈɛm", "reference": "我操你妈", "prediction": "<extra_id_0> 0", "variant_type": "语音替代"}
+{"id": "codedlang:758:02", "condition": "text", "input": "[VARIANT] ball ball", "ipa": "bˈɔːl bˈɔːl", "reference": "求求", "prediction": "<extra_id_0>  <extra_id_1>  <extra_id_2>  <extra_id_3>  <extra_id_4>  <extra_id_5>  <extra_id_6>  <extra_id_7> ball ball ball ball ball ball ball ball ball is ball ball is ball ball ball is ball ball ball ball is ball ball ball ball is ball ball ball ball ball ball ball ball ball ball ball l ball  <extra_id_8> ball ball l ball", "variant_type": "跨语言语音编码"}
+{"id": "codedlang:773:03", "condition": "text", "input": "[VARIANT] jizei", "ipa": "dʒˈaɪzaɪ", "reference": "鸡贼", "prediction": "<extra_id_0>.", "variant_type": "语音替代"}
+{"id": "codedlang:881:01", "condition": "text", "input": "[VARIANT] shab", "ipa": "ʃˈab", "reference": "傻逼", "prediction": "<extra_id_0>.", "variant_type": "语音替代"}
