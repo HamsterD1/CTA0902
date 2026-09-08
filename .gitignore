@@ -1,6 +1,5 @@
 # settings
 src/
-test_*
 tmp_*
 egs/**/data/
 # egs/**/exp/
