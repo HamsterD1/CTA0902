@@ -2,6 +2,11 @@
 # Run the Text, IPA, and Text+IPA full-fine-tuning ablations on one H100 80GB GPU.
 set -euo pipefail
 
+# This recipe is deliberately single-H100.  When several GPUs are visible,
+# Transformers falls back to DataParallel, which is both unnecessary here and
+# unstable with this mT5 setup.
+export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
+
 data_dir=${1:-data/variant-restoration/mvp-v1/seq2seq-v1}
 # Keep reports and run metadata in the repository.  The checkpoint archive is
 # placed on the large-volume mount after each condition has completed.
