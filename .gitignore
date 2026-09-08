@@ -151,3 +151,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Model weights and checkpoints
+*.safetensors
+*.pth
+*.bin
+*.pt
+*.h5
+*.keras
+*.pb
+*.onnx
+
+# Checkpoint directories (如果不想提交整个 checkpoint)
+*/checkpoint-*/
