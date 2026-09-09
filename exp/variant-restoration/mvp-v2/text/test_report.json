@@ -1,0 +1,32 @@
+{
+  "all": {
+    "count": 45,
+    "exact_match_accuracy": 0.0,
+    "character_accuracy": 0.0,
+    "cer": 26.07
+  },
+  "非词汇同音词": {
+    "count": 12,
+    "exact_match_accuracy": 0.0,
+    "character_accuracy": 0.0,
+    "cer": 23.0
+  },
+  "歧义同音词": {
+    "count": 13,
+    "exact_match_accuracy": 0.0,
+    "character_accuracy": 0.0,
+    "cer": 43.0
+  },
+  "跨语言语音编码": {
+    "count": 5,
+    "exact_match_accuracy": 0.0,
+    "character_accuracy": 0.0,
+    "cer": 37.54545454545455
+  },
+  "语音替代": {
+    "count": 15,
+    "exact_match_accuracy": 0.0,
+    "character_accuracy": 0.0,
+    "cer": 10.628571428571428
+  }
+}
