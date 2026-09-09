@@ -2,6 +2,7 @@
 """Full fine-tuning entry point for the phonetic variant restoration MVP."""
 import argparse
 import json
+import shutil
 from pathlib import Path
 
 
@@ -12,7 +13,11 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-dir", type=Path, required=True)
     parser.add_argument("--condition", choices=("text", "ipa", "text_ipa"), required=True)
+    # Checkpoints and final model live here.  It should point at the large
+    # remote volume rather than the Git working tree.
     parser.add_argument("--output-dir", type=Path, required=True)
+    # Human-readable experiment artifacts remain in the project directory.
+    parser.add_argument("--artifact-dir", type=Path, default=None)
     parser.add_argument("--model-name", default="google/mt5-base")
     parser.add_argument("--max-source-length", type=int, default=128)
     parser.add_argument("--max-target-length", type=int, default=64)
@@ -45,6 +50,7 @@ def character_accuracy(reference, prediction):
 
 def main():
     args = parse_args()
+    artifact_dir = args.artifact_dir or args.output_dir
     try:
         import numpy as np
         import torch
@@ -118,6 +124,7 @@ def main():
         return {"exact_match": exact / count, "character_accuracy": char_acc / count}
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
+    artifact_dir.mkdir(parents=True, exist_ok=True)
     training_args = Seq2SeqTrainingArguments(
         output_dir=str(args.output_dir),
         learning_rate=args.learning_rate,
@@ -165,11 +172,16 @@ def main():
     trainer.save_model()
     tokenizer.save_pretrained(args.output_dir)
     test_result = trainer.predict(tokenized["test"], metric_key_prefix="test")
-    trainer.save_metrics("test", test_result.metrics)
     trainer.save_state()
 
+    with (artifact_dir / "test_results.json").open("w", encoding="utf-8") as handle:
+        json.dump(test_result.metrics, handle, ensure_ascii=False, indent=2)
+    trainer_state = args.output_dir / "trainer_state.json"
+    if trainer_state.is_file() and trainer_state != artifact_dir / "trainer_state.json":
+        shutil.copy2(trainer_state, artifact_dir / "trainer_state.json")
+
     decoded = decode_generated_ids(test_result.predictions)
-    with (args.output_dir / "test_predictions.jsonl").open("w", encoding="utf-8") as handle:
+    with (artifact_dir / "test_predictions.jsonl").open("w", encoding="utf-8") as handle:
         for item, prediction in zip(raw_dataset["test"], decoded):
             handle.write(json.dumps({
                 "id": item["id"],
