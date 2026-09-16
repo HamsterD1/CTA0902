@@ -50,3 +50,28 @@ checkpointing, batch size 16, and accumulation 2 (effective batch size 32).
 The model selection metric is validation exact-match accuracy. All random seeds
 are fixed to 42. Change only one setting per follow-up run and preserve the
 output directory of the baseline run.
+
+## v3 IPA-to-Text Training
+
+The retained v3 combined export is the input for the current phoneme-to-text
+run. It contains 44,824 `phonetic` records and 6,928 `identity` records.
+`sample_type` is preserved throughout data preparation and evaluation.
+
+```bash
+python -m pip install -r egs/variant-restoration/requirements-h100.txt
+mkdir -p exp/variant-restoration/v3-mt5-ipa
+bash egs/variant-restoration/run_v3_ipa_mt5_h100.sh
+```
+
+The launcher keeps each `canonical_text` in one split only, removes exact
+duplicate triples, and samples the training identity records to 10% by default.
+Override that ratio deliberately, for example:
+
+```bash
+IDENTITY_SAMPLE_RATIO=0.15 CHECKPOINT_ROOT=/cpt_dlt/variant-restoration/v3-mt5-ipa-r15 \
+  bash egs/variant-restoration/run_v3_ipa_mt5_h100.sh
+```
+
+Prepared JSONL splits and checkpoints remain under `CHECKPOINT_ROOT`. Concise
+reports live in `exp/variant-restoration/v3-mt5-ipa/` and are ignored by Git.
+The final report includes `all`, `phonetic`, and `identity` buckets.

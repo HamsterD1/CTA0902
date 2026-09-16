@@ -20,6 +20,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--references", type=Path, required=True)
     parser.add_argument("--predictions", type=Path, required=True)
+    parser.add_argument("--bucket-field", default="variant_type")
     args = parser.parse_args()
     reference_items = [json.loads(line) for line in args.references.read_text(encoding="utf-8").splitlines() if line.strip()]
     prediction_items = [json.loads(line) for line in args.predictions.read_text(encoding="utf-8").splitlines() if line.strip()]
@@ -32,7 +33,10 @@ def main():
     buckets = defaultdict(list)
     for uid, item in references.items():
         buckets["all"].append((item["canonical_text"], predictions[uid]))
-        buckets[item["variant_type"]].append((item["canonical_text"], predictions[uid]))
+        bucket_value = item.get(args.bucket_field)
+        if bucket_value is None:
+            raise ValueError(f"reference {uid} lacks bucket field {args.bucket_field!r}")
+        buckets[bucket_value].append((item["canonical_text"], predictions[uid]))
     report = {}
     for name, pairs in buckets.items():
         total_chars = sum(len(reference) for reference, _ in pairs)
