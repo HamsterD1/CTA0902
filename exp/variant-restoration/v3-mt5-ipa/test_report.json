@@ -1,0 +1,20 @@
+{
+  "all": {
+    "count": 2569,
+    "exact_match_accuracy": 0.006228104320747372,
+    "character_accuracy": 0.0,
+    "cer": 1.1359225297092808
+  },
+  "phonetic": {
+    "count": 2240,
+    "exact_match_accuracy": 0.00625,
+    "character_accuracy": 0.0,
+    "cer": 1.1414919159304073
+  },
+  "identity": {
+    "count": 329,
+    "exact_match_accuracy": 0.0060790273556231,
+    "character_accuracy": 0.0,
+    "cer": 1.0989235483617505
+  }
+}
