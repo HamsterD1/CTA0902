@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fine-tune mT5 for the v3 segmented-IPA to canonical-text task."""
+"""Fine-tune mT5 for the segmented-IPA to canonical-text task."""
 
 from __future__ import annotations
 

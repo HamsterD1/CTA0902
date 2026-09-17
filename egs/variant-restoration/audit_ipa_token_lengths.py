@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Measure actual mT5 token lengths and truncation risk for v3 IPA-to-text."""
+"""Measure actual mT5 token lengths and truncation risk for IPA-to-text."""
 
 from __future__ import annotations
 

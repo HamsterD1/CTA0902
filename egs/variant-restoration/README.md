@@ -51,47 +51,31 @@ The model selection metric is validation exact-match accuracy. All random seeds
 are fixed to 42. Change only one setting per follow-up run and preserve the
 output directory of the baseline run.
 
-## v3 IPA-to-Text Training
+## IPA-to-Text Training
 
 The retained v3 combined export is the input for the current phoneme-to-text
 run. It contains 44,824 `phonetic` records and 6,928 `identity` records.
 `sample_type` is preserved throughout data preparation and evaluation.
 
-```bash
-python -m pip install -r egs/variant-restoration/requirements-h100.txt
-mkdir -p exp/variant-restoration/v3-mt5-ipa
-bash egs/variant-restoration/run_v3_ipa_mt5_h100.sh
-```
-
 The launcher keeps each `canonical_text` in one split only, removes exact
 duplicate triples, and samples the training identity records to 10% by default.
-Override that ratio deliberately, for example:
+It measures untruncated mT5 token lengths before every run and writes
+`token_length_audit.json` alongside the result. Use a descriptive run name;
+this name is the only experiment namespace.
 
 ```bash
-IDENTITY_SAMPLE_RATIO=0.15 CHECKPOINT_ROOT=/cpt_dlt/variant-restoration/v3-mt5-ipa-r15 \
-  bash egs/variant-restoration/run_v3_ipa_mt5_h100.sh
-```
-
-Prepared JSONL splits and checkpoints remain under `CHECKPOINT_ROOT`. Concise
-reports live in `exp/variant-restoration/v3-mt5-ipa/` and are ignored by Git.
-The final report includes `all`, `phonetic`, and `identity` buckets.
-
-### v2 Length-Audited Run
-
-`run_v3_ipa_mt5_v2_h100.sh` preserves the v1 output and checkpoint paths. It
-first measures untruncated mT5 token lengths for the exact IPA-only input and
-target with the selected local model, writing `token_length_audit.json` before
-training. Its defaults are 768/384 source/target tokens, train/eval batches
-12/24, effective batch size 48, and 10 epochs. Override any resource-sensitive
-setting through environment variables:
-
-```bash
+RUN_NAME=long-context-b12 \
 MODEL_NAME=/model_dlt/mt5-base \
-CHECKPOINT_ROOT=/cpt_dlt/variant-restoration/v3-mt5-ipa-v2-b12 \
-bash egs/variant-restoration/run_v3_ipa_mt5_v2_h100.sh
+bash egs/variant-restoration/run_ipa_mt5_h100.sh
 ```
+
+The defaults are 768/384 source/target tokens, train/eval batches 12/24,
+effective batch size 48, and 10 epochs. Override resource-sensitive settings
+through environment variables. Prepared data and checkpoints live under
+`/cpt_dlt/variant-restoration/ipa-mt5/<RUN_NAME>/`; reports live under
+`exp/variant-restoration/ipa-mt5/<RUN_NAME>/` and are ignored by Git.
 
 If the first larger-batch allocation exhausts memory, set
 `PER_DEVICE_TRAIN_BATCH_SIZE=8 PER_DEVICE_EVAL_BATCH_SIZE=16` and retain the
-same gradient accumulation setting. Do not change lengths from the defaults
-until `token_length_audit.json` has been reviewed.
+same gradient accumulation setting. Review `token_length_audit.json` before
+changing the 768/384 defaults.

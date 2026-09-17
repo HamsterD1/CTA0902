@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Audit real mT5 token lengths, then run a larger-batch v3 IPA-only experiment.
+# Audit real mT5 token lengths, then run an IPA-only experiment on one H100.
 set -euo pipefail
 
 export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 
 input=${1:-data/拟音清洗/v3/training/拟音还原_含恒等样本_训练样本.json}
-artifact_dir=${2:-exp/variant-restoration/v3-mt5-ipa-v2-b12}
-checkpoint_root=${CHECKPOINT_ROOT:-/cpt_dlt/variant-restoration/v3-mt5-ipa-v2-b12}
+run_name=${RUN_NAME:?Set RUN_NAME to a descriptive experiment name, for example long-context-b12}
+artifact_dir=${2:-"exp/variant-restoration/ipa-mt5/${run_name}"}
+checkpoint_root=${CHECKPOINT_ROOT:-"/cpt_dlt/variant-restoration/ipa-mt5/${run_name}"}
 data_dir=${DATA_DIR:-"${checkpoint_root}/prepared-data"}
 model_name=${MODEL_NAME:-/model_dlt/mt5-base}
 identity_sample_ratio=${IDENTITY_SAMPLE_RATIO:-0.10}
@@ -18,7 +19,7 @@ gradient_accumulation_steps=${GRADIENT_ACCUMULATION_STEPS:-4}
 epochs=${NUM_TRAIN_EPOCHS:-10}
 
 mkdir -p "${artifact_dir}"
-python egs/variant-restoration/audit_v3_ipa_token_lengths.py \
+python egs/variant-restoration/audit_ipa_token_lengths.py \
     --input "${input}" --model-name "${model_name}" \
     --output "${artifact_dir}/token_length_audit.json" \
     --selected-source-length "${max_source_length}" --selected-target-length "${max_target_length}"
@@ -28,7 +29,7 @@ python egs/variant-restoration/prepare_v3_ipa_data.py \
     --identity-sample-ratio "${identity_sample_ratio}" --seed 42 \
     | tee "${artifact_dir}/data_manifest.json"
 
-python egs/variant-restoration/train_v3_ipa_mt5.py \
+python egs/variant-restoration/train_ipa_mt5.py \
     --data-dir "${data_dir}" --output-dir "${checkpoint_root}/model" \
     --artifact-dir "${artifact_dir}" --model-name "${model_name}" \
     --max-source-length "${max_source_length}" --max-target-length "${max_target_length}" \
