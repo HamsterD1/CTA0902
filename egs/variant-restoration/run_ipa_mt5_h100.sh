@@ -24,6 +24,12 @@ python egs/variant-restoration/audit_ipa_token_lengths.py \
     --output "${artifact_dir}/token_length_audit.json" \
     --selected-source-length "${max_source_length}" --selected-target-length "${max_target_length}"
 
+if [[ "${RUN_TRAINING:-0}" != "1" ]]; then
+    echo "Token audit complete: ${artifact_dir}/token_length_audit.json"
+    echo "Review it, then rerun with RUN_TRAINING=1 to start training."
+    exit 0
+fi
+
 python egs/variant-restoration/prepare_v3_ipa_data.py \
     --input "${input}" --output-dir "${data_dir}" \
     --identity-sample-ratio "${identity_sample_ratio}" --seed 42 \

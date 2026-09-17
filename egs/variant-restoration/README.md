@@ -69,6 +69,16 @@ MODEL_NAME=/model_dlt/mt5-base \
 bash egs/variant-restoration/run_ipa_mt5_h100.sh
 ```
 
+This default command only writes `token_length_audit.json`; it does not train.
+After reviewing token coverage, start the same named run explicitly:
+
+```bash
+RUN_NAME=long-context-b12 \
+MODEL_NAME=/model_dlt/mt5-base \
+RUN_TRAINING=1 \
+bash egs/variant-restoration/run_ipa_mt5_h100.sh
+```
+
 The defaults are 768/384 source/target tokens, train/eval batches 12/24,
 effective batch size 48, and 10 epochs. Override resource-sensitive settings
 through environment variables. Prepared data and checkpoints live under
