@@ -9,7 +9,7 @@ import shutil
 from pathlib import Path
 
 
-SPECIAL_TOKENS = ["[IPA]"]
+SPECIAL_TOKENS = {"ipa": ["[IPA]"], "variant_ipa": ["[VARIANT]", "[IPA]"]}
 
 
 def parse_args() -> argparse.Namespace:
@@ -18,6 +18,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--artifact-dir", type=Path, default=None)
     parser.add_argument("--model-name", default="google/mt5-base")
+    parser.add_argument("--input-mode", choices=("ipa", "variant_ipa"), default="ipa")
     parser.add_argument("--max-source-length", type=int, default=512)
     parser.add_argument("--max-target-length", type=int, default=256)
     parser.add_argument("--learning-rate", type=float, default=3e-5)
@@ -65,7 +66,7 @@ def main() -> None:
     torch.backends.cudnn.allow_tf32 = True
     raw_dataset = load_dataset("json", data_files={name: str(path) for name, path in files.items()})
     tokenizer = AutoTokenizer.from_pretrained(args.model_name, use_fast=False)
-    tokenizer.add_special_tokens({"additional_special_tokens": SPECIAL_TOKENS})
+    tokenizer.add_special_tokens({"additional_special_tokens": SPECIAL_TOKENS[args.input_mode]})
     model = AutoModelForSeq2SeqLM.from_pretrained(args.model_name)
     model.resize_token_embeddings(len(tokenizer))
     if not args.no_gradient_checkpointing:
@@ -101,6 +102,7 @@ def main() -> None:
     with (artifact_dir / "training_config.json").open("w", encoding="utf-8") as handle:
         json.dump({
             "model_name": args.model_name,
+            "input_mode": args.input_mode,
             "data_dir": str(args.data_dir),
             "max_source_length": args.max_source_length,
             "max_target_length": args.max_target_length,

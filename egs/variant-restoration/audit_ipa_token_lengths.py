@@ -10,8 +10,8 @@ from collections import Counter
 from pathlib import Path
 
 
-SPECIAL_TOKENS = ["[IPA]"]
-REQUIRED_FIELDS = ("ipa", "canonical_text", "sample_type")
+SPECIAL_TOKENS = {"ipa": ["[IPA]"], "variant_ipa": ["[VARIANT]", "[IPA]"]}
+REQUIRED_FIELDS = ("variant_text", "ipa", "canonical_text", "sample_type")
 
 
 def parse_args() -> argparse.Namespace:
@@ -20,10 +20,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model-name", required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--batch-size", type=int, default=128)
+    parser.add_argument("--input-mode", choices=("ipa", "variant_ipa"), default="ipa")
     parser.add_argument("--source-limits", type=int, nargs="+", default=[512, 768, 1024])
     parser.add_argument("--target-limits", type=int, nargs="+", default=[256, 384, 512])
     parser.add_argument("--selected-source-length", type=int, default=None)
     parser.add_argument("--selected-target-length", type=int, default=None)
+    parser.add_argument("--fail-on-planned-truncation", action="store_true")
     return parser.parse_args()
 
 
@@ -82,11 +84,15 @@ def main() -> None:
         records.append(row)
 
     tokenizer = AutoTokenizer.from_pretrained(args.model_name, use_fast=False)
-    tokenizer.add_special_tokens({"additional_special_tokens": SPECIAL_TOKENS})
+    tokenizer.add_special_tokens({"additional_special_tokens": SPECIAL_TOKENS[args.input_mode]})
     source_lengths, target_lengths = [], []
     for start in range(0, len(records), args.batch_size):
         batch = records[start:start + args.batch_size]
-        sources = [f"[IPA] {row['ipa'].strip()}" for row in batch]
+        sources = [
+            f"[IPA] {row['ipa'].strip()}" if args.input_mode == "ipa"
+            else f"[VARIANT] {row['variant_text'].strip()} [IPA] {row['ipa'].strip()}"
+            for row in batch
+        ]
         targets = [row["canonical_text"].strip() for row in batch]
         source_ids = tokenizer(sources, add_special_tokens=True, truncation=False, padding=False)["input_ids"]
         target_ids = tokenizer(text_target=targets, add_special_tokens=True, truncation=False, padding=False)["input_ids"]
@@ -100,10 +106,10 @@ def main() -> None:
         "model_name": args.model_name,
         "records": len(records),
         "sample_type_counts": dict(sorted(Counter(row["sample_type"] for row in records).items())),
-        "input_schema": "[IPA] <segmented IPA>",
+        "input_schema": "[IPA] <segmented IPA>" if args.input_mode == "ipa" else "[VARIANT] <variant_text> [IPA] <segmented IPA>",
         "tokenizer": {
             "vocab_size_after_special_tokens": len(tokenizer),
-            "special_tokens_added": SPECIAL_TOKENS,
+            "special_tokens_added": SPECIAL_TOKENS[args.input_mode],
         },
         "source": {
             "token_length": quantiles(source_lengths),
@@ -124,6 +130,17 @@ def main() -> None:
         json.dump(summary, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
+    if args.fail_on_planned_truncation:
+        if args.selected_source_length is None or args.selected_target_length is None:
+            raise SystemExit("Selected source and target lengths are required when enforcing no truncation.")
+        source_excess = summary["source"]["truncation_risk"].get(str(args.selected_source_length))
+        target_excess = summary["target"]["truncation_risk"].get(str(args.selected_target_length))
+        if source_excess is None or target_excess is None:
+            raise SystemExit("Selected lengths must also be included in source-limits and target-limits.")
+        if source_excess["records_exceeding_limit"] or target_excess["records_exceeding_limit"]:
+            raise SystemExit(
+                "Planned limits would truncate records; inspect token_length_audit.json and raise the limits before training."
+            )
 
 
 if __name__ == "__main__":

@@ -89,3 +89,22 @@ If the first larger-batch allocation exhausts memory, set
 `PER_DEVICE_TRAIN_BATCH_SIZE=8 PER_DEVICE_EVAL_BATCH_SIZE=16` and retain the
 same gradient accumulation setting. Review `token_length_audit.json` before
 changing the 768/384 defaults.
+
+### Full-Data Variant+IPA Run
+
+For the joint restoration condition, set `INPUT_MODE=variant_ipa`. The source
+becomes `[VARIANT] <variant_text> [IPA] <segmented IPA>`. Add
+`TRAIN_ALL_RECORDS=1` to retain all 51,752 raw rows in the split process,
+including 363 exact duplicate triples and every training-split identity row.
+Validation and test rows remain held out to preserve evaluation validity.
+
+Run the following command first. It only measures tokenizer coverage for the
+joint input and does not train:
+
+```bash
+RUN_NAME=variant-ipa-all \
+INPUT_MODE=variant_ipa \
+TRAIN_ALL_RECORDS=1 \
+MODEL_NAME=/model_dlt/mt5-base \
+bash egs/variant-restoration/run_ipa_mt5_h100.sh
+```
