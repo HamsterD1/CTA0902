@@ -126,7 +126,7 @@ def main() -> None:
     for split, rows in splits.items():
         write_jsonl(args.output_dir / f"{split}.jsonl", rows)
     manifest = {
-        "version": "v3-ipa-mt5-v1",
+        "schema_version": "full-data-ipa-mt5-split-v1",
         "input": str(args.input),
         "input_sha256": digest(args.input.read_text(encoding="utf-8")),
         "seed": args.seed,

@@ -51,7 +51,7 @@ The model selection metric is validation exact-match accuracy. All random seeds
 are fixed to 42. Change only one setting per follow-up run and preserve the
 output directory of the baseline run.
 
-## IPA-to-Text Training
+## Full-Data IPA-to-Text Fine-Tuning
 
 The retained v3 combined export is the input for the current phoneme-to-text
 run. It contains 44,824 `phonetic` records and 6,928 `identity` records.
@@ -72,8 +72,8 @@ bash egs/variant-restoration/run_ipa_mt5_h100.sh
 The defaults are 768/384 source/target tokens, train/eval batches 12/24,
 effective batch size 48, and 10 epochs. Override resource-sensitive settings
 through environment variables. Prepared data and checkpoints live under
-`/cpt_dlt/variant-restoration/ipa-mt5/<RUN_NAME>/`; reports live under
-`exp/variant-restoration/ipa-mt5/<RUN_NAME>/` and are ignored by Git.
+`/cpt_dlt/variant-restoration/full-data-mt5/<RUN_NAME>/`; reports live under
+`exp/variant-restoration/full-data-mt5/<RUN_NAME>/` and are ignored by Git.
 
 If the first larger-batch allocation exhausts memory, set
 `PER_DEVICE_TRAIN_BATCH_SIZE=8 PER_DEVICE_EVAL_BATCH_SIZE=16` and retain the

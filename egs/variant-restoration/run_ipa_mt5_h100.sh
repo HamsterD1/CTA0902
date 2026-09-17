@@ -6,8 +6,8 @@ export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 
 input=${1:-data/拟音清洗/v3/training/拟音还原_含恒等样本_训练样本.json}
 run_name=${RUN_NAME:?Set RUN_NAME to a descriptive experiment name, for example long-context-b12}
-artifact_dir=${2:-"exp/variant-restoration/ipa-mt5/${run_name}"}
-checkpoint_root=${CHECKPOINT_ROOT:-"/cpt_dlt/variant-restoration/ipa-mt5/${run_name}"}
+artifact_dir=${2:-"exp/variant-restoration/full-data-mt5/${run_name}"}
+checkpoint_root=${CHECKPOINT_ROOT:-"/cpt_dlt/variant-restoration/full-data-mt5/${run_name}"}
 data_dir=${DATA_DIR:-"${checkpoint_root}/prepared-data"}
 model_name=${MODEL_NAME:-/model_dlt/mt5-base}
 identity_sample_ratio=${IDENTITY_SAMPLE_RATIO:-0.10}
