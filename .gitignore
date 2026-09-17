@@ -6,6 +6,7 @@ egs/**/data/
 # egs/**/exp/
 egs/**/sentencepiece
 exp/variant-restoration/v3-mt5-ipa/
+exp/variant-restoration/v3-mt5-ipa-v2-b12/
 .vscode
 *.tknz
 *.fst

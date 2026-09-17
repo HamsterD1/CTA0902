@@ -75,3 +75,23 @@ IDENTITY_SAMPLE_RATIO=0.15 CHECKPOINT_ROOT=/cpt_dlt/variant-restoration/v3-mt5-i
 Prepared JSONL splits and checkpoints remain under `CHECKPOINT_ROOT`. Concise
 reports live in `exp/variant-restoration/v3-mt5-ipa/` and are ignored by Git.
 The final report includes `all`, `phonetic`, and `identity` buckets.
+
+### v2 Length-Audited Run
+
+`run_v3_ipa_mt5_v2_h100.sh` preserves the v1 output and checkpoint paths. It
+first measures untruncated mT5 token lengths for the exact IPA-only input and
+target with the selected local model, writing `token_length_audit.json` before
+training. Its defaults are 768/384 source/target tokens, train/eval batches
+12/24, effective batch size 48, and 10 epochs. Override any resource-sensitive
+setting through environment variables:
+
+```bash
+MODEL_NAME=/model_dlt/mt5-base \
+CHECKPOINT_ROOT=/cpt_dlt/variant-restoration/v3-mt5-ipa-v2-b12 \
+bash egs/variant-restoration/run_v3_ipa_mt5_v2_h100.sh
+```
+
+If the first larger-batch allocation exhausts memory, set
+`PER_DEVICE_TRAIN_BATCH_SIZE=8 PER_DEVICE_EVAL_BATCH_SIZE=16` and retain the
+same gradient accumulation setting. Do not change lengths from the defaults
+until `token_length_audit.json` has been reviewed.

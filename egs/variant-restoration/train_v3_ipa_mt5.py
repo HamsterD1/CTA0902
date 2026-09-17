@@ -98,6 +98,23 @@ def main() -> None:
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     artifact_dir.mkdir(parents=True, exist_ok=True)
+    with (artifact_dir / "training_config.json").open("w", encoding="utf-8") as handle:
+        json.dump({
+            "model_name": args.model_name,
+            "data_dir": str(args.data_dir),
+            "max_source_length": args.max_source_length,
+            "max_target_length": args.max_target_length,
+            "learning_rate": args.learning_rate,
+            "weight_decay": args.weight_decay,
+            "warmup_ratio": args.warmup_ratio,
+            "num_train_epochs": args.num_train_epochs,
+            "per_device_train_batch_size": args.per_device_train_batch_size,
+            "per_device_eval_batch_size": args.per_device_eval_batch_size,
+            "gradient_accumulation_steps": args.gradient_accumulation_steps,
+            "generation_num_beams": args.generation_num_beams,
+            "seed": args.seed,
+        }, handle, ensure_ascii=False, indent=2)
+        handle.write("\n")
     training_args = Seq2SeqTrainingArguments(
         output_dir=str(args.output_dir), learning_rate=args.learning_rate, weight_decay=args.weight_decay,
         warmup_ratio=args.warmup_ratio, num_train_epochs=args.num_train_epochs,
