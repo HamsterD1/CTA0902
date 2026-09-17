@@ -18,6 +18,7 @@ train_batch_size=${PER_DEVICE_TRAIN_BATCH_SIZE:-12}
 eval_batch_size=${PER_DEVICE_EVAL_BATCH_SIZE:-24}
 gradient_accumulation_steps=${GRADIENT_ACCUMULATION_STEPS:-4}
 epochs=${NUM_TRAIN_EPOCHS:-10}
+resume_from_checkpoint=${RESUME_FROM_CHECKPOINT:-}
 
 mkdir -p "${artifact_dir}"
 audit_args=(
@@ -48,7 +49,7 @@ fi
 python egs/variant-restoration/prepare_v3_ipa_data.py "${prepare_args[@]}" \
     | tee "${artifact_dir}/data_manifest.json"
 
-python egs/variant-restoration/train_ipa_mt5.py \
+train_args=(
     --data-dir "${data_dir}" --output-dir "${checkpoint_root}/model" \
     --artifact-dir "${artifact_dir}" --model-name "${model_name}" --input-mode "${input_mode}" \
     --max-source-length "${max_source_length}" --max-target-length "${max_target_length}" \
@@ -57,6 +58,11 @@ python egs/variant-restoration/train_ipa_mt5.py \
     --gradient-accumulation-steps "${gradient_accumulation_steps}" \
     --learning-rate 3e-5 --weight-decay 0.01 --warmup-ratio 0.05 \
     --generation-num-beams 4 --eval-steps 500 --save-steps 500 --seed 42
+)
+if [[ -n "${resume_from_checkpoint}" ]]; then
+    train_args+=(--resume-from-checkpoint "${resume_from_checkpoint}")
+fi
+python egs/variant-restoration/train_ipa_mt5.py "${train_args[@]}"
 
 python egs/variant-restoration/evaluate.py \
     --references "${data_dir}/test.jsonl" --predictions "${artifact_dir}/test_predictions.jsonl" \

@@ -108,3 +108,38 @@ TRAIN_ALL_RECORDS=1 \
 MODEL_NAME=/model_dlt/mt5-base \
 bash egs/variant-restoration/run_ipa_mt5_h100.sh
 ```
+
+Choose source and target limits from the audit report. With `RUN_TRAINING=1`,
+the launcher refuses to train if either selected limit would truncate a row.
+
+### Remote Sessions And Resumption
+
+Run long H100 jobs inside `tmux`. Preserve the full environment-variable
+command in the terminal history and tee its output to the experiment artifact
+directory. Detach with `Ctrl-b d` and reconnect with `tmux attach -t <name>`.
+
+```bash
+tmux new -s variant-ipa-all
+set -o pipefail
+RUN_NAME=variant-ipa-all-full-context \
+INPUT_MODE=variant_ipa TRAIN_ALL_RECORDS=1 MODEL_NAME=/model_dlt/mt5-base \
+MAX_SOURCE_LENGTH=3072 MAX_TARGET_LENGTH=512 \
+PER_DEVICE_TRAIN_BATCH_SIZE=1 PER_DEVICE_EVAL_BATCH_SIZE=1 \
+GRADIENT_ACCUMULATION_STEPS=32 NUM_TRAIN_EPOCHS=10 RUN_TRAINING=1 \
+bash egs/variant-restoration/run_ipa_mt5_h100.sh 2>&1 \
+  | tee exp/variant-restoration/full-data-mt5/variant-ipa-all-full-context/train.log
+```
+
+The Trainer saves checkpoints every 500 update steps. To resume, find the last
+checkpoint and rerun the identical command with `RESUME_FROM_CHECKPOINT`:
+
+```bash
+ls -d /cpt_dlt/variant-restoration/full-data-mt5/variant-ipa-all-full-context/model/checkpoint-* | sort -V | tail -1
+```
+
+```bash
+export RESUME_FROM_CHECKPOINT=/cpt_dlt/variant-restoration/full-data-mt5/variant-ipa-all-full-context/model/checkpoint-<STEP>
+```
+
+Then repeat the same `RUN_NAME`, `INPUT_MODE`, lengths, batches, accumulation,
+epochs, and `RUN_TRAINING=1` command.
