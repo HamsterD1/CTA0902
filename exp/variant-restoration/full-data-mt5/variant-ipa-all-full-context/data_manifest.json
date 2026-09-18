@@ -1,0 +1,57 @@
+{
+  "schema_version": "full-data-ipa-mt5-split-v1",
+  "input": "data/拟音清洗/v3/training/拟音还原_含恒等样本_训练样本.json",
+  "input_sha256": "bf23edcdb8e8f1d25dff8def4e4410996a20a822b4af050b5d7607e9b4c2b06c",
+  "seed": 42,
+  "raw_records": 51752,
+  "unique_records": 51389,
+  "exact_duplicate_records_found": 363,
+  "exact_duplicate_records_removed": 0,
+  "exact_duplicate_records_retained": 363,
+  "unique_canonical_targets": 19195,
+  "split_policy": "canonical_text_grouped",
+  "split_definition": "A canonical_text appears in exactly one split, preventing target and exact-triple leakage.",
+  "validation_ratio": 0.05,
+  "test_ratio": 0.05,
+  "identity_sample_ratio_requested": 0.1,
+  "input_mode": "variant_ipa",
+  "use_all_training_records": true,
+  "train_before_identity_sampling": {
+    "records": 46572,
+    "sample_type_counts": {
+      "identity": 6214,
+      "phonetic": 40358
+    }
+  },
+  "splits": {
+    "train": {
+      "records": 46572,
+      "sample_type_counts": {
+        "identity": 6214,
+        "phonetic": 40358
+      },
+      "canonical_targets": 17284
+    },
+    "validation": {
+      "records": 2590,
+      "sample_type_counts": {
+        "identity": 369,
+        "phonetic": 2221
+      },
+      "canonical_targets": 952
+    },
+    "test": {
+      "records": 2590,
+      "sample_type_counts": {
+        "identity": 345,
+        "phonetic": 2245
+      },
+      "canonical_targets": 959
+    }
+  },
+  "schema": {
+    "input": "[VARIANT] <variant_text> [IPA] <segmented IPA>",
+    "target": "canonical_text",
+    "audit_field": "sample_type"
+  }
+}

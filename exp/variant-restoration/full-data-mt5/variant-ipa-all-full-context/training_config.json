@@ -1,0 +1,16 @@
+{
+  "model_name": "/model_dlt/mt5-base",
+  "input_mode": "variant_ipa",
+  "data_dir": "/cpt_dlt/variant-restoration/full-data-mt5/variant-ipa-all-full-context/prepared-data",
+  "max_source_length": 3072,
+  "max_target_length": 512,
+  "learning_rate": 3e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.05,
+  "num_train_epochs": 10.0,
+  "per_device_train_batch_size": 1,
+  "per_device_eval_batch_size": 1,
+  "gradient_accumulation_steps": 32,
+  "generation_num_beams": 4,
+  "seed": 42
+}

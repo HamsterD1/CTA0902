@@ -1,0 +1,92 @@
+{
+  "schema_version": "v3-ipa-token-length-audit-v1",
+  "input": "data/拟音清洗/v3/training/拟音还原_含恒等样本_训练样本.json",
+  "input_sha256": "bf23edcdb8e8f1d25dff8def4e4410996a20a822b4af050b5d7607e9b4c2b06c",
+  "model_name": "/model_dlt/mt5-base",
+  "records": 51752,
+  "sample_type_counts": {
+    "identity": 6928,
+    "phonetic": 44824
+  },
+  "input_schema": "[VARIANT] <variant_text> [IPA] <segmented IPA>",
+  "tokenizer": {
+    "vocab_size_after_special_tokens": 250102,
+    "special_tokens_added": [
+      "[VARIANT]",
+      "[IPA]"
+    ]
+  },
+  "source": {
+    "token_length": {
+      "min": 6,
+      "p50": 117,
+      "p90": 423,
+      "p95": 540,
+      "p99": 1032,
+      "max": 2537
+    },
+    "truncation_risk": {
+      "512": {
+        "records_exceeding_limit": 3170,
+        "fraction_exceeding_limit": 0.0612536713556964
+      },
+      "768": {
+        "records_exceeding_limit": 889,
+        "fraction_exceeding_limit": 0.01717808007420003
+      },
+      "1024": {
+        "records_exceeding_limit": 526,
+        "fraction_exceeding_limit": 0.010163858401607667
+      },
+      "2048": {
+        "records_exceeding_limit": 84,
+        "fraction_exceeding_limit": 0.001623125676302365
+      },
+      "3072": {
+        "records_exceeding_limit": 0,
+        "fraction_exceeding_limit": 0.0
+      },
+      "4096": {
+        "records_exceeding_limit": 0,
+        "fraction_exceeding_limit": 0.0
+      }
+    }
+  },
+  "target": {
+    "token_length": {
+      "min": 2,
+      "p50": 20,
+      "p90": 64,
+      "p95": 82,
+      "p99": 153,
+      "max": 390
+    },
+    "truncation_risk": {
+      "256": {
+        "records_exceeding_limit": 154,
+        "fraction_exceeding_limit": 0.002975730406554336
+      },
+      "384": {
+        "records_exceeding_limit": 8,
+        "fraction_exceeding_limit": 0.0001545833977430824
+      },
+      "512": {
+        "records_exceeding_limit": 0,
+        "fraction_exceeding_limit": 0.0
+      },
+      "768": {
+        "records_exceeding_limit": 0,
+        "fraction_exceeding_limit": 0.0
+      },
+      "1024": {
+        "records_exceeding_limit": 0,
+        "fraction_exceeding_limit": 0.0
+      }
+    }
+  },
+  "planned_training_limits": {
+    "source": 3072,
+    "target": 512
+  },
+  "note": "Lengths include tokenizer special tokens and are measured without truncation."
+}
