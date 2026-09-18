@@ -43,6 +43,14 @@ export BASE_REVISION="$(python -c "import json; print(json.load(open('experiment
 bash egs/variant-restoration/xphonebert/run_text_sft_h100.sh
 ```
 
+When the v3 inputs only exist in another worktree, pass their absolute paths;
+Git worktrees do not share untracked dataset files:
+
+```bash
+export TRAINING_EXPORT=/data/dlt/CTA0902-ipa-mt5/data/拟音清洗/v3/training/拟音还原_含恒等样本_多语种统一IPA_训练样本.json
+export COVERAGE_FILE=/data/dlt/CTA0902-ipa-mt5/data/拟音清洗/v3/training/xphonebert_多语种统一IPA_coverage.json
+```
+
 The launcher creates the split, validates full prompt-plus-target lengths,
 runs the required 256-record / 2,000-step overfit gate (requiring at least an
 80% training-loss reduction), then runs 5-epoch full SFT with ZeRO-2 CPU

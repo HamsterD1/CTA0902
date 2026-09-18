@@ -7,14 +7,17 @@ artifact_root=${ARTIFACT_ROOT:-experiments/xphonebert}
 checkpoint_root=${CHECKPOINT_ROOT:-/cpt_dlt/variant-restoration/xphonebert}
 base_model=${BASE_MODEL:-/data/models/Qwen3.5-9B}
 base_revision=${BASE_REVISION:?Set BASE_REVISION to fingerprint_model.py output}
+training_export=${TRAINING_EXPORT:-data/拟音清洗/v3/training/拟音还原_含恒等样本_多语种统一IPA_训练样本.json}
+coverage_file=${COVERAGE_FILE:-data/拟音清洗/v3/training/xphonebert_多语种统一IPA_coverage.json}
 seed=${SEED:-42}
 micro_batch=${MICRO_BATCH_SIZE:-1}
 grad_accum=${GRADIENT_ACCUMULATION_STEPS:-32}
 
 mkdir -p "$artifact_root" "$checkpoint_root"
+test -f "$training_export" || { echo "Missing TRAINING_EXPORT: $training_export" >&2; exit 1; }
+test -f "$coverage_file" || { echo "Missing COVERAGE_FILE: $coverage_file" >&2; exit 1; }
 python egs/variant-restoration/xphonebert/prepare_data.py \
-  --input data/拟音清洗/v3/training/拟音还原_含恒等样本_多语种统一IPA_训练样本.json \
-  --coverage data/拟音清洗/v3/training/xphonebert_多语种统一IPA_coverage.json \
+  --input "$training_export" --coverage "$coverage_file" \
   --output-dir "$data_dir" --seed "$seed"
 python egs/variant-restoration/xphonebert/inspect_model.py \
   --model-path-or-repo "$base_model" --revision "$base_revision" \
