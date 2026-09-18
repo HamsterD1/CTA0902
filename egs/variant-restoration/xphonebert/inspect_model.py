@@ -31,8 +31,17 @@ def main() -> None:
     except ImportError as error:
         raise SystemExit("Install the H100 requirements before inspecting the model") from error
     options = {"revision": args.revision, "trust_remote_code": False, "local_files_only": args.local_files_only}
-    config = AutoConfig.from_pretrained(args.model_path_or_repo, **options)
-    tokenizer = AutoTokenizer.from_pretrained(args.model_path_or_repo, **options)
+    try:
+        config = AutoConfig.from_pretrained(args.model_path_or_repo, **options)
+        tokenizer = AutoTokenizer.from_pretrained(args.model_path_or_repo, **options)
+    except ValueError as error:
+        if "does not recognize this architecture" in str(error):
+            raise SystemExit(
+                "Installed Transformers does not support this checkpoint architecture. "
+                "Install the XPhoneBERT recipe requirements in a separate environment, "
+                "then retry; do not downgrade the checkpoint or alter its config."
+            ) from error
+        raise
     hidden_size = getattr(config, "hidden_size", None)
     if hidden_size != 5120:
         raise SystemExit(f"Expected Qwen hidden_size=5120, got {hidden_size!r}")

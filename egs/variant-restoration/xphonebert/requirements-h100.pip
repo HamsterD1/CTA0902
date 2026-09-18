@@ -1,0 +1,11 @@
+# Keep separate from the legacy mT5 recipe, which intentionally pins Transformers 4.45.
+torch>=2.4
+transformers>=5.17,<6
+accelerate>=1.0,<2
+datasets>=2.20,<4
+deepspeed>=0.15,<1
+# Transformers 5.x requires Hugging Face Hub 1.x. This environment is isolated
+# from the legacy mT5 environment, which intentionally requires Hub <1.
+huggingface_hub>=1.5,<2
+safetensors>=0.4
+numpy>=1.26

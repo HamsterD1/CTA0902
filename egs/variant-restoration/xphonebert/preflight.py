@@ -54,7 +54,7 @@ def main() -> None:
     qwen_options = {"revision": descriptor["immutable_revision"], "trust_remote_code": False, "local_files_only": args.local_files_only}
     xpb_options = {"revision": args.xphonebert_revision, "trust_remote_code": False, "local_files_only": args.local_files_only}
     qwen_config = AutoConfig.from_pretrained(descriptor["model_path_or_repo"], **qwen_options)
-    qwen_tokenizer = AutoTokenizer.from_pretrained(descriptor["model_path_or_repo"], **qwen_options)
+    qwen_tokenizer = AutoTokenizer.from_pretrained(descriptor.get("tokenizer_path_or_repo", descriptor["model_path_or_repo"]), **qwen_options)
     xpb_config = AutoConfig.from_pretrained(args.xphonebert_model, **xpb_options)
     xpb_tokenizer = AutoTokenizer.from_pretrained(args.xphonebert_model, **xpb_options)
     if getattr(qwen_config, "hidden_size", None) != 5120:

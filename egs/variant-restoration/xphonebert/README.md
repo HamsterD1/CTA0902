@@ -17,11 +17,38 @@ python egs/variant-restoration/xphonebert/prepare_data.py \
 The generated manifest records the input hash, exact deduplication, and a
 canonical-text-disjoint 80/10/10 split. It keeps every identity record.
 
-## H100 Model Descriptor
+## Stage 0: Text-Only SFT
 
-On the H100 host, inspect the supplied text-SFT checkpoint before downloading
-or training anything. The model path provided for this experiment is
-`/data/models/Qwen3.5-9B`; substitute its immutable internal artifact revision.
+The supplied `/data/models/Qwen3.5-9B` checkpoint is an untrained base model.
+Text-only full-parameter SFT creates the shared frozen checkpoint for all
+subsequent comparisons.
+
+The legacy mT5 environment pins `transformers==4.45.0`, which cannot load a
+checkpoint declaring `model_type: qwen3_5`. Create a separate XPhoneBERT
+environment rather than upgrading that existing environment in place:
+
+```bash
+conda create -n cta-xphonebert python=3.12 -y
+conda activate cta-xphonebert
+python -m pip install -r egs/variant-restoration/xphonebert/requirements-h100.pip
+```
+
+Fingerprint the complete local base artifact and run Text SFT:
+
+```bash
+python egs/variant-restoration/xphonebert/fingerprint_model.py \
+  --model-dir /data/models/Qwen3.5-9B \
+  --output experiments/xphonebert/base-model-fingerprint.json
+export BASE_REVISION="$(python -c "import json; print(json.load(open('experiments/xphonebert/base-model-fingerprint.json'))['immutable_revision'])")"
+bash egs/variant-restoration/xphonebert/run_text_sft_h100.sh
+```
+
+The launcher creates the split, validates full prompt-plus-target lengths,
+runs the required 256-record / 2,000-step overfit gate (requiring at least an
+80% training-loss reduction), then runs 5-epoch full SFT with ZeRO-2 CPU
+optimizer offload. It evaluates each epoch with deterministic beam-3 on
+validation, and only then evaluates the selected checkpoint once on test. The selected checkpoint descriptor is written to
+`experiments/xphonebert/text-sft-descriptor.json`.
 
 ```bash
 python egs/variant-restoration/xphonebert/inspect_model.py \
@@ -38,7 +65,7 @@ python egs/variant-restoration/xphonebert/inspect_model.py \
 one exists. The command verifies the 5,120-dimensional Qwen contract and
 writes tokenizer/chat-template hashes.
 
-## Preflight
+## Stage 1: Frozen IPA Adapters
 
 The audited XPhoneBERT tokenizer revision is
 `cf2bc63858dec1c03880fa8f764fe2195accb1ab`. Run preflight before every new
@@ -71,3 +98,16 @@ atomic IPA token map required by the Explicit IPA condition and the fixed
 
 Before starting a GPU run, archive `model-descriptor.json`, `preflight.json`,
 `ipa_token_map.json`, and the prepared split manifest inside the run directory.
+
+Run both IPA adapter conditions after the Text SFT launcher completes:
+
+```bash
+export XPHONEBERT_MODEL=/data/models/xphonebert-base
+bash egs/variant-restoration/xphonebert/run_adapters_h100.sh
+```
+
+The launcher first calibrates the largest Fusion micro-batch on a P100-length
+sample, derives gradient accumulation for an effective batch of 32, then uses
+those identical values for Explicit IPA and Fusion. It trains only the agreed
+adapter parameters, evaluates every epoch with deterministic beam-3, and
+selects checkpoints from validation only.
