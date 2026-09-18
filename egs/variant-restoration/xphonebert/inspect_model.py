@@ -8,6 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from model_contract import text_hidden_size
+
 
 def digest(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
@@ -42,14 +44,16 @@ def main() -> None:
                 "then retry; do not downgrade the checkpoint or alter its config."
             ) from error
         raise
-    hidden_size = getattr(config, "hidden_size", None)
-    if hidden_size != 5120:
-        raise SystemExit(f"Expected Qwen hidden_size=5120, got {hidden_size!r}")
+    hidden_size = text_hidden_size(config)
+    if hidden_size != 4096:
+        raise SystemExit(f"Expected Qwen3.5 text_config.hidden_size=4096, got {hidden_size!r}")
     descriptor = {
         "model_path_or_repo": args.model_path_or_repo,
         "immutable_revision": args.revision,
         "model_type": config.model_type,
         "hidden_size": hidden_size,
+        "text_hidden_size": hidden_size,
+        "text_config_class": type(getattr(config, "text_config", config)).__name__,
         "tokenizer_class": tokenizer.__class__.__name__,
         "tokenizer_vocab_size": len(tokenizer),
         "chat_template_sha256": digest(tokenizer.chat_template or ""),

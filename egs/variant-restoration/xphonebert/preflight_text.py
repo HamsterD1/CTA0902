@@ -9,6 +9,7 @@ from pathlib import Path
 
 from data import encode_supervised, load_descriptor, load_jsonl
 from preflight import digest, round_up
+from model_contract import context_limit
 
 
 def main() -> None:
@@ -34,7 +35,7 @@ def main() -> None:
             maximum = max(maximum, len(item["input_ids"]))
             target_max = max(target_max, sum(token != -100 for token in item["labels"]))
             count += 1
-    limit = getattr(config, "max_position_embeddings", None)
+    limit = context_limit(config)
     if limit and maximum > limit:
         raise SystemExit(f"Text prompt plus target exceeds Qwen context: {maximum} > {limit}")
     result = {

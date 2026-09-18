@@ -9,6 +9,7 @@ import torch
 from torch import nn
 
 from modeling import ExplicitIpaAdapter, PhonemeResampler, PhoneticProjector, ResidualFusion
+from model_contract import text_hidden_size
 
 
 def freeze(module: nn.Module) -> None:
@@ -34,7 +35,7 @@ class AdapterBase(nn.Module):
 class ExplicitIpaModel(AdapterBase):
     def __init__(self, qwen: nn.Module, token_ids: list[int], fallback_token_id: int):
         super().__init__(qwen, "explicit_ipa")
-        self.adapter = ExplicitIpaAdapter(token_ids, qwen.config.hidden_size)
+        self.adapter = ExplicitIpaAdapter(token_ids, text_hidden_size(qwen.config))
         self.fallback_token_id = fallback_token_id
 
     def forward(self, input_ids, attention_mask, labels=None, **_):
@@ -54,8 +55,9 @@ class FusionModel(AdapterBase):
         super().__init__(qwen, "fusion")
         self.xphonebert = xphonebert
         freeze(xphonebert)
-        self.resampler = PhonemeResampler(qwen.config.hidden_size, xphonebert.config.hidden_size)
-        self.projector = PhoneticProjector(xphonebert.config.hidden_size, qwen.config.hidden_size)
+        qwen_hidden_size = text_hidden_size(qwen.config)
+        self.resampler = PhonemeResampler(qwen_hidden_size, xphonebert.config.hidden_size)
+        self.projector = PhoneticProjector(xphonebert.config.hidden_size, qwen_hidden_size)
         self.fusion = ResidualFusion()
 
     def embeddings(self, input_ids, ipa_input_ids, ipa_attention_mask, variant_mask):

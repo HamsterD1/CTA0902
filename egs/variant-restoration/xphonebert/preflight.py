@@ -8,6 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from model_contract import context_limit, text_hidden_size
+
 
 def digest(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
@@ -41,12 +43,12 @@ def main() -> None:
     parser.add_argument("--local-files-only", action="store_true")
     args = parser.parse_args()
     descriptor = json.loads(args.model_descriptor.read_text(encoding="utf-8"))
-    required = {"model_path_or_repo", "immutable_revision", "hidden_size", "prompt_contract", "prompt_contract_sha256"}
+    required = {"model_path_or_repo", "immutable_revision", "text_hidden_size", "prompt_contract", "prompt_contract_sha256"}
     missing = required - descriptor.keys()
     if missing:
         raise SystemExit(f"Invalid model descriptor; missing {sorted(missing)}")
-    if descriptor["hidden_size"] != 5120:
-        raise SystemExit("The Qwen descriptor must declare hidden_size=5120")
+    if descriptor["text_hidden_size"] != 4096:
+        raise SystemExit("The Qwen descriptor must declare text_hidden_size=4096")
     try:
         from transformers import AutoConfig, AutoTokenizer
     except ImportError as error:
@@ -57,8 +59,8 @@ def main() -> None:
     qwen_tokenizer = AutoTokenizer.from_pretrained(descriptor.get("tokenizer_path_or_repo", descriptor["model_path_or_repo"]), **qwen_options)
     xpb_config = AutoConfig.from_pretrained(args.xphonebert_model, **xpb_options)
     xpb_tokenizer = AutoTokenizer.from_pretrained(args.xphonebert_model, **xpb_options)
-    if getattr(qwen_config, "hidden_size", None) != 5120:
-        raise SystemExit("Loaded Qwen config does not have hidden_size=5120")
+    if text_hidden_size(qwen_config) != descriptor["text_hidden_size"]:
+        raise SystemExit("Loaded Qwen text hidden size does not match the descriptor")
     if getattr(xpb_config, "hidden_size", None) != 768:
         raise SystemExit("Loaded XPhoneBERT config does not have hidden_size=768")
     rows = []
@@ -94,16 +96,16 @@ def main() -> None:
             length = len(chat_ids(qwen_tokenizer, descriptor, row["variant_text"], section))
             prompt_max[condition] = max(prompt_max[condition], length)
             total_max[condition] = max(total_max[condition], length + len(target_ids) + 1)
-    context_limit = getattr(qwen_config, "max_position_embeddings", None)
-    if context_limit and max(total_max.values()) > context_limit:
-        raise SystemExit(f"Prompt plus target exceeds Qwen context: {max(total_max.values())} > {context_limit}")
+    qwen_context_limit = context_limit(qwen_config)
+    if qwen_context_limit and max(total_max.values()) > qwen_context_limit:
+        raise SystemExit(f"Prompt plus target exceeds Qwen context: {max(total_max.values())} > {qwen_context_limit}")
     args.output_dir.mkdir(parents=True, exist_ok=True)
     (args.output_dir / "ipa_token_map.json").write_text(json.dumps(mapping, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     result = {
         "data_dir": str(args.data_dir),
         "model_descriptor_sha256": digest(args.model_descriptor.read_text(encoding="utf-8")),
         "xphonebert": {"model": args.xphonebert_model, "revision": args.xphonebert_revision, "hidden_size": xpb_config.hidden_size},
-        "qwen": {"model": descriptor["model_path_or_repo"], "revision": descriptor["immutable_revision"], "hidden_size": qwen_config.hidden_size, "context_limit": context_limit},
+        "qwen": {"model": descriptor["model_path_or_repo"], "revision": descriptor["immutable_revision"], "text_hidden_size": text_hidden_size(qwen_config), "context_limit": qwen_context_limit},
         "ipa_units": len(units),
         "xphonebert_unk_records": 0,
         "prompt_token_max": prompt_max,

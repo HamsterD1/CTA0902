@@ -99,7 +99,8 @@ atomic IPA token map required by the Explicit IPA condition and the fixed
 
 - Frozen XPhoneBERT (768d) is cross-attended by a 5,120d-to-768d Query
   projection with pre-LayerNorm, 12 heads, and no dropout.
-- The projector is `768 -> 2048 -> GELU -> 5120`.
+- The projector is `768 -> 2048 -> GELU -> 4096`, matching the supplied
+  Qwen3.5 checkpoint's `text_config.hidden_size`.
 - `tanh(alpha_raw)` starts at zero and only changes variant prompt positions.
 - Explicit IPA uses standalone embedding rows for the 120 new atomic tokens;
   Qwen's original embedding matrix and all Qwen parameters remain frozen.

@@ -9,7 +9,7 @@ from pathlib import Path
 
 def load_descriptor(path: Path) -> dict:
     descriptor = json.loads(path.read_text(encoding="utf-8"))
-    required = {"model_path_or_repo", "immutable_revision", "prompt_contract", "hidden_size"}
+    required = {"model_path_or_repo", "immutable_revision", "prompt_contract", "text_hidden_size"}
     missing = required - descriptor.keys()
     if missing:
         raise ValueError(f"Descriptor is missing {sorted(missing)}")

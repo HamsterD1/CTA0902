@@ -9,7 +9,7 @@ from torch import nn
 class PhonemeResampler(nn.Module):
     """Cross-attend Qwen token embeddings to frozen XPhoneBERT states."""
 
-    def __init__(self, qwen_hidden_size: int = 5120, phoneme_hidden_size: int = 768) -> None:
+    def __init__(self, qwen_hidden_size: int = 4096, phoneme_hidden_size: int = 768) -> None:
         super().__init__()
         self.query_norm = nn.LayerNorm(qwen_hidden_size)
         self.query_projection = nn.Linear(qwen_hidden_size, phoneme_hidden_size, bias=False)
@@ -27,7 +27,7 @@ class PhonemeResampler(nn.Module):
 
 
 class PhoneticProjector(nn.Module):
-    def __init__(self, input_size: int = 768, output_size: int = 5120) -> None:
+    def __init__(self, input_size: int = 768, output_size: int = 4096) -> None:
         super().__init__()
         self.layers = nn.Sequential(nn.Linear(input_size, 2048), nn.GELU(), nn.Linear(2048, output_size))
 
@@ -53,7 +53,7 @@ class ResidualFusion(nn.Module):
 class ExplicitIpaAdapter(nn.Module):
     """Train only the newly-added atomic IPA token embeddings, not Qwen."""
 
-    def __init__(self, special_token_ids: list[int], hidden_size: int = 5120) -> None:
+    def __init__(self, special_token_ids: list[int], hidden_size: int = 4096) -> None:
         super().__init__()
         self.register_buffer("special_token_ids", torch.tensor(special_token_ids, dtype=torch.long), persistent=True)
         self.embeddings = nn.Embedding(len(special_token_ids), hidden_size)
