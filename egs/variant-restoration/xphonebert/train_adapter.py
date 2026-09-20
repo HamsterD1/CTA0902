@@ -5,11 +5,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 
 from adapter_data import AdapterCollator, AdapterDataset
 from adapter_model import ExplicitIpaModel, FusionModel
 from data import load_descriptor, load_jsonl
+
+
+def warmup_steps(records: int, micro_batch_size: int, gradient_accumulation_steps: int, epochs: int) -> int:
+    batches_per_epoch = math.ceil(records / micro_batch_size)
+    updates_per_epoch = math.ceil(batches_per_epoch / gradient_accumulation_steps)
+    return math.ceil(updates_per_epoch * epochs * 0.03)
 
 
 def main() -> None:
@@ -61,15 +68,25 @@ def main() -> None:
     max_length = preflight["required_max_length"]
     train = AdapterDataset(load_jsonl(args.data_dir / "train.jsonl"), tokenizer, descriptor, args.condition, ipa_map, max_length)
     validation = AdapterDataset(load_jsonl(args.data_dir / "validation.jsonl"), tokenizer, descriptor, args.condition, ipa_map, max_length)
+    calculated_warmup_steps = warmup_steps(
+        len(train), args.micro_batch_size, args.gradient_accumulation_steps, args.epochs
+    )
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    config = vars(args) | {"max_length": max_length, "preflight": preflight, "train_records": len(train), "validation_records": len(validation)}
+    config = vars(args) | {
+        "max_length": max_length,
+        "preflight": preflight,
+        "train_records": len(train),
+        "validation_records": len(validation),
+        "warmup_ratio": 0.03,
+        "warmup_steps": calculated_warmup_steps,
+    }
     (args.output_dir / "run_config.json").write_text(json.dumps(config, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     set_seed(args.seed)
     training = TrainingArguments(
         output_dir=str(args.output_dir), learning_rate=args.learning_rate, num_train_epochs=args.epochs,
         per_device_train_batch_size=args.micro_batch_size, per_device_eval_batch_size=1,
         gradient_accumulation_steps=args.gradient_accumulation_steps, bf16=True, tf32=True,
-        warmup_ratio=0.03, weight_decay=0.01, max_grad_norm=1.0, logging_steps=10,
+        warmup_steps=calculated_warmup_steps, weight_decay=0.01, max_grad_norm=1.0, logging_steps=10,
         eval_strategy="epoch", save_strategy="epoch", save_total_limit=None, report_to="none",
         seed=args.seed, data_seed=args.seed, remove_unused_columns=False,
     )

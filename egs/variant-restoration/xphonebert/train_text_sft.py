@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import random
 from pathlib import Path
 
@@ -84,6 +85,16 @@ def stratified_subset(rows: list[dict], limit: int | None, seed: int) -> list[di
     return chosen
 
 
+def warmup_steps(records: int, micro_batch_size: int, gradient_accumulation_steps: int, epochs: int, max_steps: int) -> int:
+    if max_steps > 0:
+        total_steps = max_steps
+    else:
+        batches_per_epoch = math.ceil(records / micro_batch_size)
+        updates_per_epoch = math.ceil(batches_per_epoch / gradient_accumulation_steps)
+        total_steps = updates_per_epoch * epochs
+    return math.ceil(total_steps * 0.03)
+
+
 def main() -> None:
     args = parse_args()
     try:
@@ -106,6 +117,9 @@ def main() -> None:
     train_rows = stratified_subset(load_jsonl(args.data_dir / "train.jsonl"), args.train_limit, args.seed)
     train = RestorationDataset(train_rows, tokenizer, descriptor, args.max_length)
     validation = RestorationDataset(load_jsonl(args.data_dir / "validation.jsonl"), tokenizer, descriptor, args.max_length)
+    calculated_warmup_steps = warmup_steps(
+        len(train), args.micro_batch_size, args.gradient_accumulation_steps, args.epochs, args.max_steps
+    )
     args.output_dir.mkdir(parents=True, exist_ok=True)
     run_config = vars(args) | {
         "condition": "text_baseline_full_sft",
@@ -115,6 +129,8 @@ def main() -> None:
         "validation_records": len(validation),
         "full_parameter_sft": True,
         "max_steps": args.max_steps,
+        "warmup_ratio": 0.03,
+        "warmup_steps": calculated_warmup_steps,
     }
     (args.output_dir / "run_config.json").write_text(json.dumps(run_config, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     set_seed(args.seed)
@@ -128,7 +144,7 @@ def main() -> None:
         bf16=True,
         tf32=True,
         gradient_checkpointing=True,
-        warmup_ratio=0.03,
+        warmup_steps=calculated_warmup_steps,
         weight_decay=0.01,
         max_grad_norm=1.0,
         logging_steps=10,
