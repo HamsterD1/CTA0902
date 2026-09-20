@@ -2,6 +2,9 @@
 set -euo pipefail
 
 # Requires the selected Text SFT checkpoint and a locally transferred XPhoneBERT.
+# Keep the frozen-Qwen adapter recipes on one H100; do not trigger DataParallel.
+export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
+
 data_dir=${DATA_DIR:-experiments/xphonebert/data-split-v1}
 artifact_root=${ARTIFACT_ROOT:-experiments/xphonebert}
 checkpoint_root=${CHECKPOINT_ROOT:-/newdata/dlt/checkpoints/variant-restoration/xphonebert}

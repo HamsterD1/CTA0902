@@ -2,6 +2,10 @@
 set -euo pipefail
 
 # Run from the dedicated CTA0902-xphonebert worktree with cta-xphonebert active.
+# This recipe is deliberately single-H100.  Multiple visible GPUs make
+# Transformers select DataParallel before DeepSpeed initializes the model.
+export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
+
 data_dir=${DATA_DIR:-experiments/xphonebert/data-split-v1}
 artifact_root=${ARTIFACT_ROOT:-experiments/xphonebert}
 checkpoint_root=${CHECKPOINT_ROOT:-/newdata/dlt/checkpoints/variant-restoration/xphonebert}
