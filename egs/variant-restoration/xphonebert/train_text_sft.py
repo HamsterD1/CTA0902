@@ -99,7 +99,7 @@ def main() -> None:
     args = parse_args()
     try:
         import torch
-        from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, set_seed
+        from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainerCallback, TrainingArguments, set_seed
     except ImportError as error:
         raise SystemExit("Install requirements-h100.pip in cta-xphonebert") from error
     if not torch.cuda.is_available():
@@ -116,7 +116,10 @@ def main() -> None:
     model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
     train_rows = stratified_subset(load_jsonl(args.data_dir / "train.jsonl"), args.train_limit, args.seed)
     train = RestorationDataset(train_rows, tokenizer, descriptor, args.max_length)
-    validation = RestorationDataset(load_jsonl(args.data_dir / "validation.jsonl"), tokenizer, descriptor, args.max_length)
+    is_overfit_gate = args.train_limit is not None
+    validation = None
+    if not is_overfit_gate:
+        validation = RestorationDataset(load_jsonl(args.data_dir / "validation.jsonl"), tokenizer, descriptor, args.max_length)
     calculated_warmup_steps = warmup_steps(
         len(train), args.micro_batch_size, args.gradient_accumulation_steps, args.epochs, args.max_steps
     )
@@ -126,14 +129,31 @@ def main() -> None:
         "base_descriptor": str(args.base_descriptor),
         "base_descriptor_contents": descriptor,
         "train_records": len(train),
-        "validation_records": len(validation),
+        "validation_records": len(validation) if validation is not None else 0,
         "full_parameter_sft": True,
+        "run_kind": "overfit_gate" if is_overfit_gate else "formal_text_sft",
         "max_steps": args.max_steps,
         "warmup_ratio": 0.03,
         "warmup_steps": calculated_warmup_steps,
     }
     (args.output_dir / "run_config.json").write_text(json.dumps(run_config, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     set_seed(args.seed)
+
+    class StopOnOverfitSuccess(TrainerCallback):
+        def __init__(self, required_reduction: float = 0.80):
+            self.required_reduction = required_reduction
+            self.first_loss: float | None = None
+
+        def on_log(self, args, state, control, logs=None, **kwargs):
+            loss = (logs or {}).get("loss")
+            if loss is None or loss <= 0:
+                return control
+            if self.first_loss is None:
+                self.first_loss = loss
+            elif 1 - loss / self.first_loss >= self.required_reduction:
+                control.should_training_stop = True
+            return control
+
     training = TrainingArguments(
         output_dir=str(args.output_dir),
         learning_rate=args.learning_rate,
@@ -148,8 +168,8 @@ def main() -> None:
         weight_decay=0.01,
         max_grad_norm=1.0,
         logging_steps=10,
-        eval_strategy="epoch",
-        save_strategy="epoch",
+        eval_strategy="no" if is_overfit_gate else "epoch",
+        save_strategy="no" if is_overfit_gate else "epoch",
         save_total_limit=None,
         report_to="none",
         seed=args.seed,
@@ -158,7 +178,15 @@ def main() -> None:
         remove_unused_columns=False,
         max_steps=args.max_steps,
     )
-    trainer = Trainer(model=model, args=training, train_dataset=train, eval_dataset=validation, data_collator=CausalCollator(tokenizer))
+    callbacks = [StopOnOverfitSuccess()] if is_overfit_gate else None
+    trainer = Trainer(
+        model=model,
+        args=training,
+        train_dataset=train,
+        eval_dataset=validation,
+        data_collator=CausalCollator(tokenizer),
+        callbacks=callbacks,
+    )
     trainer.train()
     trainer.save_state()
     tokenizer.save_pretrained(args.output_dir / "tokenizer")
