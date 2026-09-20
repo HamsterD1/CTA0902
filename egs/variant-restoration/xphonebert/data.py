@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import unicodedata
+from collections.abc import Mapping
 from pathlib import Path
 
 
@@ -35,13 +36,31 @@ def messages(descriptor: dict, row: dict, ipa_section: str = "") -> list[dict]:
     return result
 
 
+def token_ids(encoded) -> list[int]:
+    """Extract one unbatched token-id sequence from tokenizer output."""
+    if isinstance(encoded, Mapping):
+        encoded = encoded["input_ids"]
+    if hasattr(encoded, "tolist"):
+        encoded = encoded.tolist()
+    if isinstance(encoded, tuple):
+        encoded = list(encoded)
+    if len(encoded) == 1 and isinstance(encoded[0], (list, tuple)):
+        encoded = encoded[0]
+    if not isinstance(encoded, list) or any(not isinstance(token, int) for token in encoded):
+        raise TypeError(f"Expected one list of token ids, got {type(encoded).__name__}")
+    return encoded
+
+
 def prompt_ids(tokenizer, descriptor: dict, row: dict, ipa_section: str = "") -> list[int]:
-    return tokenizer.apply_chat_template(messages(descriptor, row, ipa_section), tokenize=True, add_generation_prompt=True)
+    encoded = tokenizer.apply_chat_template(
+        messages(descriptor, row, ipa_section), tokenize=True, add_generation_prompt=True
+    )
+    return token_ids(encoded)
 
 
 def encode_supervised(tokenizer, descriptor: dict, row: dict, ipa_section: str = "") -> dict:
     prompt = prompt_ids(tokenizer, descriptor, row, ipa_section)
-    target = tokenizer(row["canonical_text"], add_special_tokens=False)["input_ids"]
+    target = token_ids(tokenizer(row["canonical_text"], add_special_tokens=False))
     if tokenizer.eos_token_id is not None and (not target or target[-1] != tokenizer.eos_token_id):
         target.append(tokenizer.eos_token_id)
     return {"input_ids": prompt + target, "labels": [-100] * len(prompt) + target, "prompt_length": len(prompt)}

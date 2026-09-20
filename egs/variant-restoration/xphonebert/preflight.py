@@ -8,6 +8,7 @@ import hashlib
 import json
 from pathlib import Path
 
+from data import token_ids
 from model_contract import context_limit, text_hidden_size
 
 
@@ -30,7 +31,7 @@ def chat_ids(tokenizer, descriptor: dict, variant_text: str, ipa_section: str) -
     if contract["system_prompt"]:
         messages.append({"role": "system", "content": contract["system_prompt"]})
     messages.append({"role": "user", "content": user})
-    return tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True)
+    return token_ids(tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True))
 
 
 def main() -> None:
@@ -75,7 +76,7 @@ def main() -> None:
     unk_id = xpb_tokenizer.unk_token_id
     bad_unk = []
     for row in rows:
-        ids = xpb_tokenizer(row["ipa"], add_special_tokens=True)["input_ids"]
+        ids = token_ids(xpb_tokenizer(row["ipa"], add_special_tokens=True))
         if unk_id in ids:
             bad_unk.append(row["id"])
             if len(bad_unk) >= 10:
@@ -90,7 +91,7 @@ def main() -> None:
     total_max = {"text": 0, "explicit_ipa": 0, "fusion": 0}
     for row in rows:
         explicit = "\n分段 IPA：" + " ".join(mapping[unit] for unit in row["ipa"].split())
-        target_ids = qwen_tokenizer(row["canonical_text"], add_special_tokens=False)["input_ids"]
+        target_ids = token_ids(qwen_tokenizer(row["canonical_text"], add_special_tokens=False))
         target_max = max(target_max, len(target_ids))
         for condition, section in (("text", ""), ("explicit_ipa", explicit), ("fusion", "")):
             length = len(chat_ids(qwen_tokenizer, descriptor, row["variant_text"], section))
