@@ -4,7 +4,7 @@ set -euo pipefail
 # Run from the dedicated CTA0902-xphonebert worktree with cta-xphonebert active.
 data_dir=${DATA_DIR:-experiments/xphonebert/data-split-v1}
 artifact_root=${ARTIFACT_ROOT:-experiments/xphonebert}
-checkpoint_root=${CHECKPOINT_ROOT:-/cpt_dlt/variant-restoration/xphonebert}
+checkpoint_root=${CHECKPOINT_ROOT:-/newdata/dlt/checkpoints/variant-restoration/xphonebert}
 base_model=${BASE_MODEL:-/data/models/Qwen3.5-9B}
 base_revision=${BASE_REVISION:?Set BASE_REVISION to fingerprint_model.py output}
 training_export=${TRAINING_EXPORT:-data/拟音清洗/v3/training/拟音还原_含恒等样本_多语种统一IPA_训练样本.json}
