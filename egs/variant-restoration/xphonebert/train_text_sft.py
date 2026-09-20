@@ -7,6 +7,7 @@ import argparse
 import json
 import math
 import random
+import re
 from pathlib import Path
 
 from data import encode_supervised, load_descriptor, load_jsonl
@@ -26,6 +27,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--train-limit", type=int, default=None, help="Deterministic stratified subset for the required overfit gate")
     parser.add_argument("--max-steps", type=int, default=-1)
+    parser.add_argument("--overfit-save-steps", type=int, default=25, help="Full resumable checkpoint interval for the overfit gate")
     return parser.parse_args()
 
 
@@ -95,6 +97,15 @@ def warmup_steps(records: int, micro_batch_size: int, gradient_accumulation_step
     return math.ceil(total_steps * 0.03)
 
 
+def last_complete_checkpoint(output_dir: Path) -> Path | None:
+    candidates = []
+    for path in output_dir.glob("checkpoint-*"):
+        match = re.fullmatch(r"checkpoint-(\d+)", path.name)
+        if match and (path / "trainer_state.json").is_file():
+            candidates.append((int(match.group(1)), path))
+    return max(candidates, default=(None, None))[1]
+
+
 def main() -> None:
     args = parse_args()
     try:
@@ -135,6 +146,7 @@ def main() -> None:
         "max_steps": args.max_steps,
         "warmup_ratio": 0.03,
         "warmup_steps": calculated_warmup_steps,
+        "overfit_save_steps": args.overfit_save_steps if is_overfit_gate else None,
     }
     (args.output_dir / "run_config.json").write_text(json.dumps(run_config, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     set_seed(args.seed)
@@ -143,6 +155,12 @@ def main() -> None:
         def __init__(self, required_reduction: float = 0.80):
             self.required_reduction = required_reduction
             self.first_loss: float | None = None
+
+        def on_train_begin(self, args, state, control, **kwargs):
+            losses = [entry["loss"] for entry in state.log_history if entry.get("loss", 0) > 0]
+            if losses:
+                self.first_loss = losses[0]
+            return control
 
         def on_log(self, args, state, control, logs=None, **kwargs):
             loss = (logs or {}).get("loss")
@@ -169,8 +187,9 @@ def main() -> None:
         max_grad_norm=1.0,
         logging_steps=10,
         eval_strategy="no" if is_overfit_gate else "epoch",
-        save_strategy="no" if is_overfit_gate else "epoch",
-        save_total_limit=None,
+        save_strategy="steps" if is_overfit_gate else "epoch",
+        save_steps=args.overfit_save_steps,
+        save_total_limit=2 if is_overfit_gate else None,
         report_to="none",
         seed=args.seed,
         data_seed=args.seed,
@@ -187,7 +206,10 @@ def main() -> None:
         data_collator=CausalCollator(tokenizer),
         callbacks=callbacks,
     )
-    trainer.train()
+    resume_checkpoint = last_complete_checkpoint(args.output_dir)
+    if resume_checkpoint is not None:
+        print(f"Resuming from complete checkpoint: {resume_checkpoint}")
+    trainer.train(resume_from_checkpoint=str(resume_checkpoint) if resume_checkpoint else None)
     trainer.save_state()
     tokenizer.save_pretrained(args.output_dir / "tokenizer")
 
