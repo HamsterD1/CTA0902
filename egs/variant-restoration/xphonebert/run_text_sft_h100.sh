@@ -34,14 +34,14 @@ python egs/variant-restoration/xphonebert/preflight_text.py \
 max_length=$(python -c "import json; print(json.load(open('$artifact_root/text-preflight.json'))['required_max_length'])")
 run_dir="$checkpoint_root/text-baseline/seed-$seed"
 overfit_dir="$checkpoint_root/text-baseline/overfit-seed-$seed"
-python egs/variant-restoration/xphonebert/train_text_sft.py \
+torchrun --standalone --nproc_per_node=1 egs/variant-restoration/xphonebert/train_text_sft.py \
   --data-dir "$data_dir" --base-descriptor "$artifact_root/base-model-descriptor.json" \
   --output-dir "$overfit_dir" --deepspeed egs/variant-restoration/xphonebert/deepspeed-zero2-cpu-offload.json \
   --max-length "$max_length" --micro-batch-size "$micro_batch" --gradient-accumulation-steps "$grad_accum" \
   --train-limit 256 --max-steps 2000 --seed "$seed"
 python egs/variant-restoration/xphonebert/overfit_gate.py \
   --trainer-state "$overfit_dir/trainer_state.json" --output "$overfit_dir/overfit_gate.json"
-python egs/variant-restoration/xphonebert/train_text_sft.py \
+torchrun --standalone --nproc_per_node=1 egs/variant-restoration/xphonebert/train_text_sft.py \
   --data-dir "$data_dir" --base-descriptor "$artifact_root/base-model-descriptor.json" \
   --output-dir "$run_dir" --deepspeed egs/variant-restoration/xphonebert/deepspeed-zero2-cpu-offload.json \
   --max-length "$max_length" --micro-batch-size "$micro_batch" --gradient-accumulation-steps "$grad_accum" --seed "$seed"
