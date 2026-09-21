@@ -7,7 +7,7 @@ export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 
 data_dir=${DATA_DIR:-experiments/xphonebert/data-split-v1}
 artifact_root=${ARTIFACT_ROOT:-experiments/xphonebert}
-checkpoint_root=${CHECKPOINT_ROOT:-/newdata/dlt/checkpoints/variant-restoration/xphonebert}
+checkpoint_root=${CHECKPOINT_ROOT:-/cpt_dlt/variant-restoration/xphonebert}
 xphonebert_model=${XPHONEBERT_MODEL:-/data/models/xphonebert-base}
 xphonebert_revision=${XPHONEBERT_REVISION:-cf2bc63858dec1c03880fa8f764fe2195accb1ab}
 effective_batch=${EFFECTIVE_BATCH_SIZE:-32}
