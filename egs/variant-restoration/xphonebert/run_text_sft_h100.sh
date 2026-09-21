@@ -16,6 +16,7 @@ coverage_file=${COVERAGE_FILE:-data/拟音清洗/v3/training/xphonebert_多语�
 seed=${SEED:-42}
 micro_batch=${MICRO_BATCH_SIZE:-1}
 grad_accum=${GRADIENT_ACCUMULATION_STEPS:-32}
+overfit_save_steps=${OVERFIT_SAVE_STEPS:-25}
 
 mkdir -p "$artifact_root" "$checkpoint_root"
 test -f "$training_export" || { echo "Missing TRAINING_EXPORT: $training_export" >&2; exit 1; }
@@ -38,7 +39,7 @@ torchrun --standalone --nproc_per_node=1 egs/variant-restoration/xphonebert/trai
   --data-dir "$data_dir" --base-descriptor "$artifact_root/base-model-descriptor.json" \
   --output-dir "$overfit_dir" --deepspeed egs/variant-restoration/xphonebert/deepspeed-zero2-cpu-offload.json \
   --max-length "$max_length" --micro-batch-size "$micro_batch" --gradient-accumulation-steps "$grad_accum" \
-  --train-limit 256 --max-steps 2000 --seed "$seed"
+  --train-limit 256 --max-steps 2000 --overfit-save-steps "$overfit_save_steps" --seed "$seed"
 python egs/variant-restoration/xphonebert/overfit_gate.py \
   --trainer-state "$overfit_dir/trainer_state.json" --output "$overfit_dir/overfit_gate.json"
 torchrun --standalone --nproc_per_node=1 egs/variant-restoration/xphonebert/train_text_sft.py \

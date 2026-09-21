@@ -97,13 +97,21 @@ def warmup_steps(records: int, micro_batch_size: int, gradient_accumulation_step
     return math.ceil(total_steps * 0.03)
 
 
-def last_complete_checkpoint(output_dir: Path) -> Path | None:
+def last_complete_model_checkpoint(output_dir: Path) -> Path | None:
     candidates = []
     for path in output_dir.glob("checkpoint-*"):
         match = re.fullmatch(r"checkpoint-(\d+)", path.name)
-        if match and (path / "trainer_state.json").is_file():
+        has_weights = any(path.glob("*.safetensors")) or (path / "pytorch_model.bin").is_file()
+        if match and has_weights and (path / "config.json").is_file() and (path / "trainer_state.json").is_file():
             candidates.append((int(match.group(1)), path))
     return max(candidates, default=(None, None))[1]
+
+
+def checkpoint_progress(checkpoint: Path | None) -> tuple[int, float]:
+    if checkpoint is None:
+        return 0, 0.0
+    state = json.loads((checkpoint / "trainer_state.json").read_text(encoding="utf-8"))
+    return int(state.get("global_step", 0)), float(state.get("epoch", 0.0))
 
 
 def main() -> None:
@@ -116,12 +124,17 @@ def main() -> None:
     if not torch.cuda.is_available():
         raise SystemExit("Text SFT requires CUDA")
     descriptor = load_descriptor(args.base_descriptor)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    resume_checkpoint = last_complete_model_checkpoint(args.output_dir)
+    recovered_steps, recovered_epochs = checkpoint_progress(resume_checkpoint)
     options = {"revision": descriptor["immutable_revision"], "local_files_only": True, "trust_remote_code": False}
     tokenizer = AutoTokenizer.from_pretrained(descriptor["model_path_or_repo"], **options)
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
+    model_source = resume_checkpoint or descriptor["model_path_or_repo"]
+    model_options = options if resume_checkpoint is None else {"local_files_only": True, "trust_remote_code": False}
     model = AutoModelForCausalLM.from_pretrained(
-        descriptor["model_path_or_repo"], torch_dtype=torch.bfloat16, attn_implementation="sdpa", **options
+        model_source, torch_dtype=torch.bfloat16, attn_implementation="sdpa", **model_options
     )
     model.config.use_cache = False
     model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
@@ -131,10 +144,15 @@ def main() -> None:
     validation = None
     if not is_overfit_gate:
         validation = RestorationDataset(load_jsonl(args.data_dir / "validation.jsonl"), tokenizer, descriptor, args.max_length)
+    effective_max_steps = args.max_steps - recovered_steps if args.max_steps > 0 else -1
+    effective_epochs = max(0.0, args.epochs - recovered_epochs) if args.max_steps <= 0 else args.epochs
+    if args.max_steps > 0 and effective_max_steps <= 0:
+        raise SystemExit("The complete recovery checkpoint has already reached --max-steps")
+    if args.max_steps <= 0 and effective_epochs <= 0:
+        raise SystemExit("The complete recovery checkpoint has already reached --epochs")
     calculated_warmup_steps = warmup_steps(
-        len(train), args.micro_batch_size, args.gradient_accumulation_steps, args.epochs, args.max_steps
+        len(train), args.micro_batch_size, args.gradient_accumulation_steps, effective_epochs, effective_max_steps
     )
-    args.output_dir.mkdir(parents=True, exist_ok=True)
     run_config = vars(args) | {
         "condition": "text_baseline_full_sft",
         "base_descriptor": str(args.base_descriptor),
@@ -147,6 +165,13 @@ def main() -> None:
         "warmup_ratio": 0.03,
         "warmup_steps": calculated_warmup_steps,
         "overfit_save_steps": args.overfit_save_steps if is_overfit_gate else None,
+        "checkpoint_mode": "model_only",
+        "recovery_checkpoint": str(resume_checkpoint) if resume_checkpoint else None,
+        "recovery_resets_optimizer_scheduler": resume_checkpoint is not None,
+        "recovered_steps": recovered_steps,
+        "recovered_epochs": recovered_epochs,
+        "effective_max_steps": effective_max_steps,
+        "effective_epochs": effective_epochs,
     }
     (args.output_dir / "run_config.json").write_text(json.dumps(run_config, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     set_seed(args.seed)
@@ -175,7 +200,7 @@ def main() -> None:
     training = TrainingArguments(
         output_dir=str(args.output_dir),
         learning_rate=args.learning_rate,
-        num_train_epochs=args.epochs,
+        num_train_epochs=effective_epochs,
         per_device_train_batch_size=args.micro_batch_size,
         per_device_eval_batch_size=1,
         gradient_accumulation_steps=args.gradient_accumulation_steps,
@@ -190,12 +215,13 @@ def main() -> None:
         save_strategy="steps" if is_overfit_gate else "epoch",
         save_steps=args.overfit_save_steps,
         save_total_limit=2 if is_overfit_gate else None,
+        save_only_model=True,
         report_to="none",
         seed=args.seed,
         data_seed=args.seed,
         deepspeed=str(args.deepspeed),
         remove_unused_columns=False,
-        max_steps=args.max_steps,
+        max_steps=effective_max_steps,
     )
     callbacks = [StopOnOverfitSuccess()] if is_overfit_gate else None
     trainer = Trainer(
@@ -206,10 +232,10 @@ def main() -> None:
         data_collator=CausalCollator(tokenizer),
         callbacks=callbacks,
     )
-    resume_checkpoint = last_complete_checkpoint(args.output_dir)
     if resume_checkpoint is not None:
-        print(f"Resuming from complete checkpoint: {resume_checkpoint}")
-    trainer.train(resume_from_checkpoint=str(resume_checkpoint) if resume_checkpoint else None)
+        print(f"Restarting from model-only checkpoint: {resume_checkpoint}")
+        print("Optimizer and scheduler state are intentionally reset.")
+    trainer.train()
     trainer.save_state()
     tokenizer.save_pretrained(args.output_dir / "tokenizer")
 
