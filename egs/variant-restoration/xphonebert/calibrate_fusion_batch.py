@@ -22,12 +22,17 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--max-micro-batch", type=int, default=32)
     parser.add_argument("--effective-batch-size", type=int, default=32)
+    parser.add_argument("--world-size", type=int, default=1)
     args = parser.parse_args()
     import torch
     from transformers import AutoModel, AutoModelForCausalLM, AutoTokenizer
 
     if not torch.cuda.is_available():
         raise SystemExit("Fusion batch calibration requires CUDA")
+    if args.world_size < 1:
+        raise SystemExit("--world-size must be positive")
+    if args.effective_batch_size % args.world_size:
+        raise SystemExit("--effective-batch-size must be divisible by --world-size")
     descriptor = load_descriptor(args.text_sft_descriptor)
     preflight = json.loads((args.preflight_dir / "preflight.json").read_text(encoding="utf-8"))
     ipa_map = json.loads((args.preflight_dir / "ipa_token_map.json").read_text(encoding="utf-8"))
@@ -48,6 +53,9 @@ def main() -> None:
     attempts = []
     size = 1
     while size <= args.max_micro_batch:
+        if args.effective_batch_size % (size * args.world_size):
+            size *= 2
+            continue
         torch.cuda.empty_cache()
         try:
             batch = {name: value.cuda() for name, value in collator([example] * size).items()}
@@ -70,7 +78,8 @@ def main() -> None:
         "p100_sequence_tokens": len(example["input_ids"]),
         "micro_batch_size": best,
         "effective_batch_size": args.effective_batch_size,
-        "gradient_accumulation_steps": math.ceil(args.effective_batch_size / best),
+        "world_size": args.world_size,
+        "gradient_accumulation_steps": args.effective_batch_size // (best * args.world_size),
         "attempts": attempts,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

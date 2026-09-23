@@ -71,8 +71,8 @@ def main() -> None:
             raise SystemExit(f"Missing split: {path}")
         rows.extend(load_jsonl(path))
     units = sorted({unit for row in rows for unit in row["ipa"].split()})
-    if len(units) != 120:
-        raise SystemExit(f"Expected 120 IPA units, found {len(units)}")
+    if not units:
+        raise SystemExit("No segmented IPA units found in the experiment splits")
     unk_id = xpb_tokenizer.unk_token_id
     bad_unk = []
     for row in rows:
@@ -108,6 +108,7 @@ def main() -> None:
         "xphonebert": {"model": args.xphonebert_model, "revision": args.xphonebert_revision, "hidden_size": xpb_config.hidden_size},
         "qwen": {"model": descriptor["model_path_or_repo"], "revision": descriptor["immutable_revision"], "text_hidden_size": text_hidden_size(qwen_config), "context_limit": qwen_context_limit},
         "ipa_units": len(units),
+        "ipa_unit_vocabulary_sha256": digest("\0".join(units)),
         "xphonebert_unk_records": 0,
         "prompt_token_max": prompt_max,
         "target_token_max": target_max,

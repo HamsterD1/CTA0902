@@ -37,7 +37,8 @@ max_new=$(python -c "import json; print(json.load(open('$artifact_root/preflight
 python egs/variant-restoration/xphonebert/calibrate_fusion_batch.py \
   --data-dir "$data_dir" --text-sft-descriptor "$artifact_root/text-sft-descriptor.json" \
   --preflight-dir "$artifact_root/preflight" --xphonebert-model "$xphonebert_model" \
-  --effective-batch-size "$effective_batch" --output "$artifact_root/fusion-batch-calibration.json"
+  --effective-batch-size "$effective_batch" --world-size "$nproc_per_node" \
+  --output "$artifact_root/fusion-batch-calibration.json"
 micro_batch=$(python -c "import json; print(json.load(open('$artifact_root/fusion-batch-calibration.json'))['micro_batch_size'])")
 grad_accum=$(python -c "import json; print(json.load(open('$artifact_root/fusion-batch-calibration.json'))['gradient_accumulation_steps'])")
 for condition in explicit_ipa fusion; do
