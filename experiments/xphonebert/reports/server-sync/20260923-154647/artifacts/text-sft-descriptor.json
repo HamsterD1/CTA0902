@@ -1,0 +1,25 @@
+{
+  "model_path_or_repo": "/cpt_dlt/variant-restoration/xphonebert/text-baseline/seed-42/checkpoint-5140",
+  "immutable_revision": "text-sft:ae9d4903ac277bda22de1aa62579308f0c0026aa1af87b894beae9e312f1cbfd",
+  "model_type": "qwen3_5",
+  "hidden_size": 4096,
+  "text_hidden_size": 4096,
+  "text_config_class": "Qwen3_5TextConfig",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "tokenizer_vocab_size": 248077,
+  "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+  "prompt_contract": {
+    "system_prompt": "你是中文拟音文本还原助手。仅输出规范还原文本。",
+    "user_template": "拟音文本：{variant_text}{ipa_section}"
+  },
+  "prompt_contract_sha256": "2b565ae2c025fd5ce15945aaa103f3c2b1f8900fc3420a363381923a9890d36d",
+  "tokenizer_path_or_repo": "/data/models/Qwen3.5-9B",
+  "checkpoint_kind": "text_sft_full_parameter",
+  "base_model_descriptor_sha256": "59b253372c3bb4fb6b1e1333005c0ebaf14019e26499a55eef015dd19641632b",
+  "training_run_config_sha256": "ae9d4903ac277bda22de1aa62579308f0c0026aa1af87b894beae9e312f1cbfd",
+  "checkpoint_json_sha256": {
+    "config.json": "624f3d4fe549eecedc6bb8300a302fb6303e87cf2b477d6d0ed798c117556ef2",
+    "generation_config.json": "62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73",
+    "trainer_state.json": "40929a1c24027904f5e9c594fb7c11a4283016348d8d3235dca1a9c91ac473f9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "version": "xphonebert-v1",
+  "input": "data/拟音清洗/v3/training/拟音还原_含恒等样本_多语种统一IPA_训练样本.json",
+  "input_sha256": "eb72decaa3aa330f7d980ccfe03a7a9f7f50eb28b0773f72813ee89e0351017e",
+  "seed": 42,
+  "raw_records": 51752,
+  "unique_records": 51389,
+  "exact_duplicate_records_removed": 363,
+  "split_policy": "canonical_text_grouped_80_10_10",
+  "split_definition": "Each canonical_text belongs to exactly one split.",
+  "splits": {
+    "train": {
+      "records": 41107,
+      "canonical_targets": 15341,
+      "sample_type_counts": {
+        "identity": 5273,
+        "phonetic": 35834
+      },
+      "multilingual_records": 82
+    },
+    "validation": {
+      "records": 5140,
+      "canonical_targets": 1922,
+      "sample_type_counts": {
+        "identity": 639,
+        "phonetic": 4501
+      },
+      "multilingual_records": 17
+    },
+    "test": {
+      "records": 5142,
+      "canonical_targets": 1932,
+      "sample_type_counts": {
+        "identity": 671,
+        "phonetic": 4471
+      },
+      "multilingual_records": 9
+    }
+  }
+}
