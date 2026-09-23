@@ -66,7 +66,11 @@ only for that selected checkpoint.
 the same deterministic beam-3 contract as single-sample evaluation. Start with
 `--batch-size 4` on an otherwise idle 80 GB H100, reduce it after an OOM, and
 use the same batch size for every checkpoint comparison. The launcher exposes
-this as `EVAL_BATCH_SIZE` (default 1).
+this as `EVAL_BATCH_SIZE` (default 1). It emits progress every 10 batches and
+writes `progress.json` plus `predictions.partial.jsonl` after every batch;
+these partial artifacts remain available for diagnosis after interruption but
+are not valid evaluation results. A completed run renames the predictions file
+and writes `metrics.json`.
 
 ## Stage 0: Text Baseline
 
