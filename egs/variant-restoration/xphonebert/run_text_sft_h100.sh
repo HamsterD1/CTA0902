@@ -17,6 +17,7 @@ seed=${SEED:-42}
 micro_batch=${MICRO_BATCH_SIZE:-1}
 grad_accum=${GRADIENT_ACCUMULATION_STEPS:-32}
 overfit_save_steps=${OVERFIT_SAVE_STEPS:-25}
+eval_batch=${EVAL_BATCH_SIZE:-1}
 
 mkdir -p "$artifact_root" "$checkpoint_root"
 test -f "$training_export" || { echo "Missing TRAINING_EXPORT: $training_export" >&2; exit 1; }
@@ -51,6 +52,7 @@ for checkpoint in "$run_dir"/checkpoint-*; do
   python egs/variant-restoration/xphonebert/evaluate_text.py \
     --data-dir "$data_dir" --descriptor "$artifact_root/base-model-descriptor.json" --checkpoint "$checkpoint" \
     --split validation --max-new-tokens "$(python -c "import json; print(json.load(open('$artifact_root/text-preflight.json'))['max_new_tokens'])")" \
+    --batch-size "$eval_batch" \
     --output-dir "$run_dir/validation/$(basename "$checkpoint")"
 done
 python egs/variant-restoration/xphonebert/select_checkpoint.py --run-dir "$run_dir" --output "$run_dir/best_validation_checkpoint.json"
@@ -61,4 +63,5 @@ python egs/variant-restoration/xphonebert/create_checkpoint_descriptor.py \
 python egs/variant-restoration/xphonebert/evaluate_text.py \
   --data-dir "$data_dir" --descriptor "$artifact_root/text-sft-descriptor.json" --checkpoint "$best_checkpoint" --split test \
   --max-new-tokens "$(python -c "import json; print(json.load(open('$artifact_root/text-preflight.json'))['max_new_tokens'])")" \
+  --batch-size "$eval_batch" \
   --output-dir "$run_dir/test"
