@@ -1,0 +1,31 @@
+{
+  "checkpoint": "checkpoint-5140",
+  "file_count": 5,
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 1982,
+      "sha256": "624f3d4fe549eecedc6bb8300a302fb6303e87cf2b477d6d0ed798c117556ef2"
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 116,
+      "sha256": "62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 17907663008,
+      "sha256": "4726ac3e1ef87f034c34fdda3953cf4a65c0ac2c334df3841e7086d96a7da222"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 97998,
+      "sha256": "40929a1c24027904f5e9c594fb7c11a4283016348d8d3235dca1a9c91ac473f9"
+    },
+    {
+      "path": "training_args.bin",
+      "bytes": 6136,
+      "sha256": "c6bf13a4c5e4b9635d46d21e8c71eee3911b1e943cea77da8cbae81815771803"
+    }
+  ]
+}
