@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Requires the selected Text SFT checkpoint and a locally transferred XPhoneBERT.
-# Keep the frozen-Qwen adapter recipes on one H100; do not trigger DataParallel.
+# Use torchrun DDP for multi-GPU training. Evaluation stays single-process.
 export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 
 data_dir=${DATA_DIR:-experiments/xphonebert/data-split-v1}
@@ -12,8 +12,22 @@ xphonebert_model=${XPHONEBERT_MODEL:-/data/models/xphonebert-base}
 xphonebert_revision=${XPHONEBERT_REVISION:-cf2bc63858dec1c03880fa8f764fe2195accb1ab}
 effective_batch=${EFFECTIVE_BATCH_SIZE:-32}
 seed=${SEED:-42}
+text_sft_checkpoint=${TEXT_SFT_CHECKPOINT:-$checkpoint_root/text-baseline/seed-$seed/checkpoint-5140}
+nproc_per_node=${NPROC_PER_NODE:-1}
 
-test -f "$artifact_root/text-sft-descriptor.json"
+[[ "$nproc_per_node" =~ ^[1-9][0-9]*$ ]] || { echo "NPROC_PER_NODE must be a positive integer" >&2; exit 1; }
+train_launcher=(python)
+if (( nproc_per_node > 1 )); then
+  train_launcher=(torchrun --standalone --nproc_per_node="$nproc_per_node")
+fi
+
+test -d "$text_sft_checkpoint"
+test -f "$artifact_root/base-model-descriptor.json"
+test -f "$checkpoint_root/text-baseline/seed-$seed/run_config.json"
+python egs/variant-restoration/xphonebert/create_checkpoint_descriptor.py \
+  --checkpoint "$text_sft_checkpoint" --base-descriptor "$artifact_root/base-model-descriptor.json" \
+  --training-run-config "$checkpoint_root/text-baseline/seed-$seed/run_config.json" \
+  --output "$artifact_root/text-sft-descriptor.json"
 test -f "$artifact_root/text-preflight.json"
 python egs/variant-restoration/xphonebert/preflight.py \
   --data-dir "$data_dir" --model-descriptor "$artifact_root/text-sft-descriptor.json" \
@@ -37,12 +51,10 @@ for condition in explicit_ipa fusion; do
     smoke_options+=(--xphonebert-model "$xphonebert_model")
   fi
   python egs/variant-restoration/xphonebert/smoke_adapter.py "${smoke_options[@]}" --output "$run_dir/diagnostics/smoke.json"
-  python egs/variant-restoration/xphonebert/train_adapter.py "${options[@]}"
+  "${train_launcher[@]}" egs/variant-restoration/xphonebert/train_adapter.py "${options[@]}"
   for checkpoint in "$run_dir"/checkpoint-*; do
     test -d "$checkpoint" || continue
     python egs/variant-restoration/xphonebert/evaluate_adapter.py "${eval_options[@]}" --checkpoint "$checkpoint" --split validation --output-dir "$run_dir/validation/$(basename "$checkpoint")"
   done
   python egs/variant-restoration/xphonebert/select_checkpoint.py --run-dir "$run_dir" --output "$run_dir/best_validation_checkpoint.json"
-  best_checkpoint=$(python -c "import json; print(json.load(open('$run_dir/best_validation_checkpoint.json'))['checkpoint'])")
-  python egs/variant-restoration/xphonebert/evaluate_adapter.py "${eval_options[@]}" --checkpoint "$best_checkpoint" --split test --output-dir "$run_dir/test"
 done

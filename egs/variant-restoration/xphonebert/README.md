@@ -142,7 +142,8 @@ latter two reduce performance but do not invalidate results.
 
 Run Stage 1 only after Stage 0 selects a Text SFT checkpoint. Both conditions
 reuse that exact selected checkpoint, the canonical split, prompt contract,
-and beam-3 evaluator.
+and beam-3 evaluator. The planned shared base is epoch 4 at
+`/cpt_dlt/variant-restoration/xphonebert/text-baseline/seed-42/checkpoint-5140`.
 
 | Condition | Text input | Trainable components |
 | --- | --- | --- |
@@ -165,6 +166,27 @@ seeds 43/44 only if validation top-3 improves by at least 1.0 percentage point
 over both Baseline and Explicit IPA without lowering top-1. Final claims need
 positive mean test top-3 improvement with a paired-bootstrap 95% CI excluding
 zero.
+
+### Stage 1 H100 Launch
+
+Adapter training uses native `torchrun` DDP, not DeepSpeed: Qwen (and
+XPhoneBERT for Fusion) are frozen, so only compact adapter gradients are
+synchronized. The launcher runs preflight, smoke, training, and beam-3
+validation; it deliberately does not run test. Use the same effective batch
+size of 32 across four GPUs with micro-batch 1 and accumulation 8:
+
+```bash
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+export NPROC_PER_NODE=4
+export CHECKPOINT_ROOT=/cpt_dlt/variant-restoration/xphonebert
+export XPHONEBERT_MODEL=/data/models/xphonebert-base
+SEED=42 EFFECTIVE_BATCH_SIZE=32 bash egs/variant-restoration/xphonebert/run_adapters_h100.sh
+```
+
+The launcher binds `text-sft-descriptor.json` to checkpoint 5140 before its
+preflight. It trains Explicit IPA first, then Fusion, and writes validation
+metrics plus `best_validation_checkpoint.json` for each condition. Do not run
+test until the user explicitly settles the final checkpoint selection.
 
 ## Verification Checklist
 

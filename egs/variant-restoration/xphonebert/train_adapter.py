@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 from pathlib import Path
 
 from adapter_data import AdapterCollator, AdapterDataset
@@ -40,6 +41,9 @@ def main() -> None:
         raise SystemExit("Install requirements-h100.pip in cta-xphonebert") from error
     if not torch.cuda.is_available():
         raise SystemExit("Adapter training requires CUDA")
+    local_rank = int(os.environ.get("LOCAL_RANK", "0"))
+    torch.cuda.set_device(local_rank)
+    device = torch.device("cuda", local_rank)
     descriptor = load_descriptor(args.text_sft_descriptor)
     preflight = json.loads((args.preflight_dir / "preflight.json").read_text(encoding="utf-8"))
     ipa_map = json.loads((args.preflight_dir / "ipa_token_map.json").read_text(encoding="utf-8"))
@@ -64,7 +68,7 @@ def main() -> None:
         xpb_tokenizer = AutoTokenizer.from_pretrained(args.xphonebert_model, local_files_only=True, trust_remote_code=False)
         xpb = AutoModel.from_pretrained(args.xphonebert_model, torch_dtype=torch.bfloat16, local_files_only=True, trust_remote_code=False)
         model = FusionModel(qwen, xpb)
-    model.cuda()
+    model.to(device)
     max_length = preflight["required_max_length"]
     train = AdapterDataset(load_jsonl(args.data_dir / "train.jsonl"), tokenizer, descriptor, args.condition, ipa_map, max_length)
     validation = AdapterDataset(load_jsonl(args.data_dir / "validation.jsonl"), tokenizer, descriptor, args.condition, ipa_map, max_length)
@@ -79,6 +83,7 @@ def main() -> None:
         "validation_records": len(validation),
         "warmup_ratio": 0.03,
         "warmup_steps": calculated_warmup_steps,
+        "world_size": int(os.environ.get("WORLD_SIZE", "1")),
     }
     (args.output_dir / "run_config.json").write_text(json.dumps(config, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     set_seed(args.seed)
@@ -89,6 +94,7 @@ def main() -> None:
         warmup_steps=calculated_warmup_steps, weight_decay=0.01, max_grad_norm=1.0, logging_steps=10,
         eval_strategy="epoch", save_strategy="epoch", save_total_limit=None, report_to="none",
         seed=args.seed, data_seed=args.seed, remove_unused_columns=False,
+        ddp_find_unused_parameters=False,
     )
     trainer = Trainer(
         model=model, args=training, train_dataset=train, eval_dataset=validation,
@@ -96,8 +102,11 @@ def main() -> None:
     )
     trainer.train()
     trainer.save_state()
-    model.save_pretrained(args.output_dir)
-    tokenizer.save_pretrained(args.output_dir / "tokenizer")
+    trainer.accelerator.wait_for_everyone()
+    if trainer.is_world_process_zero():
+        model.save_pretrained(args.output_dir)
+        tokenizer.save_pretrained(args.output_dir / "tokenizer")
+    trainer.accelerator.wait_for_everyone()
 
 
 if __name__ == "__main__":
