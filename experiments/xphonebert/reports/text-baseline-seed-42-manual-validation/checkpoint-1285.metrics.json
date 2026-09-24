@@ -1,0 +1,30 @@
+{
+  "all": {
+    "count": 5140,
+    "top1_exact_match": 0.5914396887159533,
+    "top3_recall": 0.7130350194552529,
+    "normalized_top1_exact_match": 0.5914396887159533,
+    "character_accuracy": 0.936900353906266
+  },
+  "phonetic": {
+    "count": 4501,
+    "top1_exact_match": 0.555432126194179,
+    "top3_recall": 0.6809597867140635,
+    "normalized_top1_exact_match": 0.555432126194179,
+    "character_accuracy": 0.9340330788804071
+  },
+  "identity": {
+    "count": 639,
+    "top1_exact_match": 0.8450704225352113,
+    "top3_recall": 0.9389671361502347,
+    "normalized_top1_exact_match": 0.8450704225352113,
+    "character_accuracy": 0.9588271714134088
+  },
+  "multilingual": {
+    "count": 17,
+    "top1_exact_match": 0.17647058823529413,
+    "top3_recall": 0.35294117647058826,
+    "normalized_top1_exact_match": 0.17647058823529413,
+    "character_accuracy": 0.9641054402692092
+  }
+}

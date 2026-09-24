@@ -1,0 +1,10 @@
+{
+  "records": 51389,
+  "base_descriptor_sha256": "59b253372c3bb4fb6b1e1333005c0ebaf14019e26499a55eef015dd19641632b",
+  "prompt_contract_sha256": "2b565ae2c025fd5ce15945aaa103f3c2b1f8900fc3420a363381923a9890d36d",
+  "context_limit": 262144,
+  "max_sequence_tokens": 700,
+  "required_max_length": 768,
+  "target_token_max": 322,
+  "max_new_tokens": 384
+}

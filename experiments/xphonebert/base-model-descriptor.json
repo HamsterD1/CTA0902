@@ -1,0 +1,16 @@
+{
+  "model_path_or_repo": "/data/models/Qwen3.5-9B",
+  "immutable_revision": "sha256:df3a5598099b4cd3c4e42bcb97ebcf9d2430682957fb699dbab9022bdf846db4",
+  "model_type": "qwen3_5",
+  "hidden_size": 4096,
+  "text_hidden_size": 4096,
+  "text_config_class": "Qwen3_5TextConfig",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "tokenizer_vocab_size": 248077,
+  "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+  "prompt_contract": {
+    "system_prompt": "你是中文拟音文本还原助手。仅输出规范还原文本。",
+    "user_template": "拟音文本：{variant_text}{ipa_section}"
+  },
+  "prompt_contract_sha256": "2b565ae2c025fd5ce15945aaa103f3c2b1f8900fc3420a363381923a9890d36d"
+}

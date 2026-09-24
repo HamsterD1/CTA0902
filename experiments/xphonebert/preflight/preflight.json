@@ -1,0 +1,31 @@
+{
+  "data_dir": "experiments/xphonebert/data-split-v1",
+  "model_descriptor_sha256": "e053a4bdf4592459310e67b42c685d0e748095049da8df64880a68c5b18c1203",
+  "xphonebert": {
+    "model": "/data/models/xphonebert-base",
+    "revision": "cf2bc63858dec1c03880fa8f764fe2195accb1ab",
+    "hidden_size": 768
+  },
+  "qwen": {
+    "model": "/cpt_dlt/variant-restoration/xphonebert/text-baseline/seed-42/checkpoint-5140",
+    "revision": "text-sft:ae9d4903ac277bda22de1aa62579308f0c0026aa1af87b894beae9e312f1cbfd",
+    "text_hidden_size": 4096,
+    "context_limit": 262144
+  },
+  "ipa_units": 2020,
+  "ipa_unit_vocabulary_sha256": "7ff90cab42dad77f1270ae5906cda5fc7bd1f8aaac54e2f21dd934f2d93dbdba",
+  "xphonebert_unk_records": 0,
+  "prompt_token_max": {
+    "text": 378,
+    "explicit_ipa": 1258,
+    "fusion": 378
+  },
+  "target_token_max": 321,
+  "max_new_tokens": 384,
+  "required_max_length": 1664,
+  "conditions": [
+    "baseline",
+    "explicit_ipa",
+    "fusion"
+  ]
+}
