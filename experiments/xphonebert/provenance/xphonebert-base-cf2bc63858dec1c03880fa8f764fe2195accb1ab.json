@@ -1,0 +1,14 @@
+{
+  "repo_id": "vinai/xphonebert-base",
+  "revision": "cf2bc63858dec1c03880fa8f764fe2195accb1ab",
+  "revision_metadata_file": "REVISION",
+  "verification_method": "local_revision_file_and_sha256_manifest",
+  "files": {
+    ".gitattributes": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+    "README.md": "a9f78fc7f0de9f8bcb5b2966fb4bd3ee4d9864e7c208b0c254137dafbd06618b",
+    "REVISION": "4c0c0f3ae7d7dd357833d82b6e45c8b3d18684ce6f935ac105333e2adf44756a",
+    "config.json": "afe941f5c081c7b940cdac3458d7caba32c12b14d394834c236c62dcfa5c0a34",
+    "pytorch_model.bin": "3fd746d1348ceff1f7155ae12f06b841bc28f5d83fd6b6eeee640e7177555463",
+    "tokenizer.json": "15d43733d44b25d9b3637647c7b790b3ff7346515656d894c8ba7904f5ca33fe"
+  }
+}

@@ -53,10 +53,11 @@ class ResidualFusion(nn.Module):
 class ExplicitIpaAdapter(nn.Module):
     """Train only the newly-added atomic IPA token embeddings, not Qwen."""
 
-    def __init__(self, special_token_ids: list[int], hidden_size: int = 4096) -> None:
+    def __init__(self, special_token_ids: list[int], hidden_size: int = 4096, initializer_range: float = 0.02) -> None:
         super().__init__()
         self.register_buffer("special_token_ids", torch.tensor(special_token_ids, dtype=torch.long), persistent=True)
         self.embeddings = nn.Embedding(len(special_token_ids), hidden_size)
+        nn.init.normal_(self.embeddings.weight, mean=0.0, std=initializer_range)
 
     def apply(self, input_ids: torch.Tensor, input_embedding: nn.Module, fallback_token_id: int) -> torch.Tensor:
         """Replace special token ids before base lookup and overlay standalone embeddings."""
@@ -67,5 +68,6 @@ class ExplicitIpaAdapter(nn.Module):
         safe_ids = input_ids.masked_fill(selected, fallback_token_id)
         result = input_embedding(safe_ids).clone()
         if selected.any():
-            result[selected] = self.embeddings(positions[selected])
+            overlay = self.embeddings(positions[selected]).to(dtype=result.dtype, device=result.device)
+            result[selected] = overlay
         return result

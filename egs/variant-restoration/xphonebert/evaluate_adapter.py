@@ -7,7 +7,7 @@ import argparse
 import json
 from pathlib import Path
 
-from adapter_data import AdapterDataset
+from adapter_data import AdapterCollator, AdapterDataset
 from adapter_model import ExplicitIpaModel, FusionModel
 from data import decode_continuations, load_descriptor, load_jsonl, metric_report
 
@@ -49,17 +49,22 @@ def main() -> None:
     model.load_adapter(args.checkpoint)
     model.cuda().eval()
     dataset = AdapterDataset(load_jsonl(args.data_dir / f"{args.split}.jsonl"), tokenizer, descriptor, args.condition, ipa_map, preflight["required_max_length"])
+    collator = AdapterCollator(tokenizer, xpb_tokenizer, args.condition)
     records = []
     with torch.inference_mode():
         for item, row in zip(dataset.examples, dataset.rows, strict=True):
-            input_ids = torch.tensor([item["input_ids"][:item["prompt_length"]]], device="cuda")
-            mask = torch.ones_like(input_ids)
-            variant = torch.tensor([item["variant_mask"][:item["prompt_length"]]], device="cuda")
+            batch = {name: value.cuda() for name, value in collator([item]).items()}
+            prompt_length = item["prompt_length"]
+            input_ids = batch["input_ids"][:, :prompt_length]
+            mask = batch["attention_mask"][:, :prompt_length]
+            variant = batch["variant_mask"][:, :prompt_length]
             if args.condition == "explicit_ipa":
                 embeddings = model.adapter.apply(input_ids, model.qwen.get_input_embeddings(), model.fallback_token_id)
             else:
-                ipa = xpb_tokenizer([row["ipa"]], return_tensors="pt")
-                embeddings = model.embeddings(input_ids, ipa["input_ids"].cuda(), ipa["attention_mask"].cuda(), variant)
+                embeddings = model.embeddings(
+                    input_ids, batch["ipa_input_ids"], batch["ipa_attention_mask"], batch["ipa_window_token_index"],
+                    batch["ipa_window_example_index"], batch["ipa_sequence_lengths"], variant
+                )
             generated = model.qwen.generate(inputs_embeds=embeddings, attention_mask=mask, num_beams=3, num_return_sequences=3,
                 do_sample=False, max_new_tokens=args.max_new_tokens, pad_token_id=tokenizer.pad_token_id, eos_token_id=tokenizer.eos_token_id)
             predictions = decode_continuations(tokenizer, generated, input_ids.shape[1])

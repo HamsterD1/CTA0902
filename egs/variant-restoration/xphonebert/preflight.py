@@ -83,6 +83,16 @@ def main() -> None:
                 break
     if bad_unk:
         raise SystemExit(f"XPhoneBERT tokenizer produced UNK for records: {bad_unk}")
+    max_position_embeddings = int(getattr(xpb_config, "max_position_embeddings", 0) or 0)
+    padding_idx = xpb_tokenizer.pad_token_id
+    if max_position_embeddings < 1 or padding_idx is None:
+        raise SystemExit("XPhoneBERT must expose max_position_embeddings and a pad token")
+    # RoBERTa positions start at padding_idx + 1, so 514 embeddings accept 512 real tokens.
+    max_input_tokens = max_position_embeddings - padding_idx - 1
+    if max_input_tokens < 2:
+        raise SystemExit("XPhoneBERT position table cannot hold BOS/EOS")
+    max_content_tokens = max_input_tokens - 2
+    ipa_token_lengths = [len(token_ids(xpb_tokenizer(row["ipa"], add_special_tokens=True))) for row in rows]
     special_tokens = [f"<xpb_ipa_{index:03d}>" for index in range(len(units))]
     mapping = dict(zip(units, special_tokens, strict=True))
     qwen_tokenizer.add_special_tokens({"additional_special_tokens": special_tokens + ["<xpb_ipa>"]})
@@ -105,7 +115,17 @@ def main() -> None:
     result = {
         "data_dir": str(args.data_dir),
         "model_descriptor_sha256": digest(args.model_descriptor.read_text(encoding="utf-8")),
-        "xphonebert": {"model": args.xphonebert_model, "revision": args.xphonebert_revision, "hidden_size": xpb_config.hidden_size},
+        "xphonebert": {
+            "model": args.xphonebert_model,
+            "revision": args.xphonebert_revision,
+            "hidden_size": xpb_config.hidden_size,
+            "max_position_embeddings": max_position_embeddings,
+            "position_safe_max_input_tokens": max_input_tokens,
+            "position_safe_max_content_tokens": max_content_tokens,
+            "overlong_ipa_records": sum(length > max_input_tokens for length in ipa_token_lengths),
+            "max_ipa_tokens": max(ipa_token_lengths),
+            "chunking": {"overlap_tokens": 128, "aggregation": "coverage_mean", "preserves_bos_eos": True},
+        },
         "qwen": {"model": descriptor["model_path_or_repo"], "revision": descriptor["immutable_revision"], "text_hidden_size": text_hidden_size(qwen_config), "context_limit": qwen_context_limit},
         "ipa_units": len(units),
         "ipa_unit_vocabulary_sha256": digest("\0".join(units)),

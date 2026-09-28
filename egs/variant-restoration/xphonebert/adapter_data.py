@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from data import encode_supervised, messages, prompt_ids
+from xphonebert_chunks import chunk_ipa
 
 
 def variant_mask(tokenizer, descriptor: dict, row: dict, ipa_section: str, prompt: list[int]) -> list[int]:
@@ -48,6 +49,40 @@ class AdapterCollator:
         self.xphonebert_tokenizer = xphonebert_tokenizer
         self.condition = condition
 
+    def _chunked_ipa(self, features):
+        import torch
+
+        chunks = []
+        sequence_lengths = []
+        for example_index, row in enumerate(features):
+            plan = chunk_ipa(self.xphonebert_tokenizer, row["ipa"])
+            sequence_lengths.append(plan.sequence_token_count)
+            for window in plan.windows:
+                chunks.append((example_index, window))
+        if not chunks:
+            raise ValueError("Fusion batch contains no IPA windows")
+        maximum = max(len(window.input_ids) for _, window in chunks)
+        pad_id = self.xphonebert_tokenizer.pad_token_id
+        if pad_id is None:
+            raise ValueError("XPhoneBERT tokenizer requires a pad token")
+        ipa_input_ids, ipa_attention_mask, ipa_window_token_index, ipa_window_example_index = [], [], [], []
+        for example_index, window in chunks:
+            padding = maximum - len(window.input_ids)
+            original_indices = [-1] * maximum
+            for position, original_index in zip(window.content_positions, window.original_token_indices, strict=True):
+                original_indices[position] = original_index
+            ipa_input_ids.append(window.input_ids + [pad_id] * padding)
+            ipa_attention_mask.append([1] * len(window.input_ids) + [0] * padding)
+            ipa_window_token_index.append(original_indices)
+            ipa_window_example_index.append(example_index)
+        return {
+            "ipa_input_ids": torch.tensor(ipa_input_ids, dtype=torch.long),
+            "ipa_attention_mask": torch.tensor(ipa_attention_mask, dtype=torch.long),
+            "ipa_window_token_index": torch.tensor(ipa_window_token_index, dtype=torch.long),
+            "ipa_window_example_index": torch.tensor(ipa_window_example_index, dtype=torch.long),
+            "ipa_sequence_lengths": torch.tensor(sequence_lengths, dtype=torch.long),
+        }
+
     def __call__(self, features):
         import torch
 
@@ -61,7 +96,5 @@ class AdapterCollator:
             result["variant_mask"].append(row["variant_mask"] + [0] * padding)
         result = {name: torch.tensor(value, dtype=torch.long) for name, value in result.items()}
         if self.condition == "fusion":
-            ipa = self.xphonebert_tokenizer([row["ipa"] for row in features], padding=True, return_tensors="pt")
-            result["ipa_input_ids"] = ipa["input_ids"]
-            result["ipa_attention_mask"] = ipa["attention_mask"]
+            result.update(self._chunked_ipa(features))
         return result
