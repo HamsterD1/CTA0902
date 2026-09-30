@@ -30,24 +30,29 @@ class PhoneticProjector(nn.Module):
     def __init__(self, input_size: int = 768, output_size: int = 4096) -> None:
         super().__init__()
         self.layers = nn.Sequential(nn.Linear(input_size, 2048), nn.GELU(), nn.Linear(2048, output_size))
+        # A zero residual output preserves the frozen text-only forward pass at initialization.
+        nn.init.zeros_(self.layers[-1].weight)
+        nn.init.zeros_(self.layers[-1].bias)
 
     def forward(self, values: torch.Tensor) -> torch.Tensor:
         return self.layers(values)
 
 
 class ResidualFusion(nn.Module):
-    """A bounded scalar starts at exactly the text-only model."""
+    """A bounded nonzero gate lets the zero-initialized residual branch learn."""
 
     def __init__(self) -> None:
         super().__init__()
-        self.alpha_raw = nn.Parameter(torch.zeros(()))
+        # tanh(atanh(0.5)) = 0.5. A zero gate blocks gradients to every IPA module.
+        self.alpha_raw = nn.Parameter(torch.tensor(0.5493061443340549))
 
     @property
     def alpha(self) -> torch.Tensor:
         return torch.tanh(self.alpha_raw)
 
     def forward(self, text_embeddings: torch.Tensor, phonetic_embeddings: torch.Tensor, variant_mask: torch.Tensor) -> torch.Tensor:
-        return text_embeddings + self.alpha * phonetic_embeddings * variant_mask.unsqueeze(-1).to(phonetic_embeddings.dtype)
+        alpha = self.alpha.to(dtype=phonetic_embeddings.dtype)
+        return text_embeddings + alpha * phonetic_embeddings * variant_mask.unsqueeze(-1).to(phonetic_embeddings.dtype)
 
 
 class ExplicitIpaAdapter(nn.Module):

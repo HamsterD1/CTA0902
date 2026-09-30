@@ -6,17 +6,14 @@ do not overwrite their environments, worktrees, data, or results.
 
 ## Current Status
 
-As of 2026-09-23, Stage 0 Text Baseline full-parameter SFT has completed three
-epochs on the H100. Training loss decreased stably to roughly 0.01--0.03 with
-no reported NaN or gradient instability, while reported validation loss rose
-across epochs. This is not a restoration-quality conclusion: beam-3 validation
-of the base and epoch-3 checkpoints remains pending. No checkpoint has yet
-been selected, and Explicit IPA and Fusion have not started.
+As of 2026-09-30, Text-SFT epoch 4 is the frozen shared base. Fusion
+warm-start seed 42 completed five epochs and full validation for every saved
+checkpoint. It is learnable but does not beat the Text-SFT base, so it does
+not advance to test evaluation or seeds 43/44.
 
-The official Stage 0 output root is
-`/cpt_dlt/variant-restoration/xphonebert`. `experiments/xphonebert/` stores
-splits, descriptors, preflight reports, and final reports only; it must not
-store model checkpoints.
+The current evidence and reproduction details are in
+docs/xphonebert-fusion-warmstart-seed42.md. Checkpoints and large artifacts
+remain outside Git under the configured checkpoint root.
 
 ## Immutable Contract
 
@@ -62,15 +59,11 @@ The normalized variant applies NFC and line-ending normalization only. Select a
 checkpoint by validation top-3, then validation top-1 on ties. Run test once,
 only for that selected checkpoint.
 
-`evaluate_text.py` supports batched validation with left padding. It preserves
-the same deterministic beam-3 contract as single-sample evaluation. Start with
-`--batch-size 4` on an otherwise idle 80 GB H100, reduce it after an OOM, and
-use the same batch size for every checkpoint comparison. The launcher exposes
-this as `EVAL_BATCH_SIZE` (default 1). It emits progress every 10 batches and
-writes `progress.json` plus `predictions.partial.jsonl` after every batch;
-these partial artifacts remain available for diagnosis after interruption but
-are not valid evaluation results. A completed run renames the predictions file
-and writes `metrics.json`.
+The archived Text-SFT baseline used batch size 10. Batch size is part of the
+comparison protocol because Fusion smoke runs showed that changing it can
+reorder deterministic beams and change Top-1. Use batch size 10 for candidate
+validation and compare only completed metrics files. The detailed protocol and
+observed results are in docs/xphonebert-fusion-warmstart-seed42.md.
 
 ## Stage 0: Text Baseline
 
@@ -153,12 +146,14 @@ and beam-3 evaluator. The planned shared base is epoch 4 at
 Fusion freezes both Text-SFT Qwen and XPhoneBERT. Its contract is one pre-LN
 cross-attention layer with text queries `4096 -> 768`, XPhoneBERT Key/Value
 width 768, 12 heads, projector `768 -> 2048 -> GELU -> 4096`, and a residual
-coefficient `tanh(alpha_raw)` initialized at zero. Only prompt-token positions
-are enhanced. Explicit IPA must have fewer trainable parameters than Fusion.
+coefficient tanh(alpha_raw). The projector final layer is zero-initialized
+while the FP32 gate starts at 0.5, preserving exact Text-SFT output at step zero
+without blocking gradients. Only variant-text token positions are enhanced.
+Explicit IPA must have fewer trainable parameters than Fusion.
 
-XPhoneBERT has not yet been fully transferred to the H100 host because that
-host cannot currently fetch it from Hugging Face. This blocks Stage 1 but not
-Text Baseline.
+XPhoneBERT is available locally at its fixed revision. The Fusion warm-start
+reachability check passed, but full seed 42 validation did not improve the
+Text-SFT base. See docs/xphonebert-fusion-warmstart-seed42.md.
 
 Stage 1 uses adapter learning rate 1e-4, the same 3% warmup, weight decay
 0.01, clipping 1.0, and at most five epochs. Fusion seed 42 may advance to

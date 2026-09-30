@@ -73,7 +73,6 @@ class FusionModel(AdapterBase):
         qwen_dtype = next(qwen.parameters()).dtype
         self.resampler.to(dtype=qwen_dtype)
         self.projector.to(dtype=qwen_dtype)
-        self.fusion.to(dtype=qwen_dtype)
 
     def train(self, mode: bool = True):
         super().train(mode)

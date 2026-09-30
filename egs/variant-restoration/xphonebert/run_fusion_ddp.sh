@@ -7,19 +7,22 @@ descriptor=${TEXT_SFT_DESCRIPTOR:-/root/autodl-tmp/autodl-local/text-sft-descrip
 preflight_dir=${PREFLIGHT_DIR:-experiments/xphonebert/preflight}
 xphonebert_model=${XPHONEBERT_MODEL:-/root/autodl-tmp/models/xphonebert-base}
 checkpoint_root=${CHECKPOINT_ROOT:-/root/autodl-tmp/variant-restoration/xphonebert}
+run_name=${RUN_NAME:-fusion}
 seed=${SEED:-42}
 nproc_per_node=${NPROC_PER_NODE:-2}
 effective_batch_size=${EFFECTIVE_BATCH_SIZE:-32}
+evaluation_batch_size=${EVAL_BATCH_SIZE:-10}
 micro_batch_size=1
 
 [[ "$nproc_per_node" =~ ^[1-9][0-9]*$ ]] || { echo "NPROC_PER_NODE must be positive" >&2; exit 1; }
 [[ "$effective_batch_size" =~ ^[1-9][0-9]*$ ]] || { echo "EFFECTIVE_BATCH_SIZE must be positive" >&2; exit 1; }
+[[ "$evaluation_batch_size" =~ ^[1-9][0-9]*$ ]] || { echo "EVAL_BATCH_SIZE must be positive" >&2; exit 1; }
 (( effective_batch_size % (micro_batch_size * nproc_per_node) == 0 )) || {
   echo "effective batch must be divisible by micro batch times world size" >&2
   exit 1
 }
 gradient_accumulation_steps=$((effective_batch_size / (micro_batch_size * nproc_per_node)))
-run_dir="$checkpoint_root/fusion/seed-$seed"
+run_dir="$checkpoint_root/$run_name/seed-$seed"
 
 test -f "$descriptor"
 test -f "$preflight_dir/preflight.json"
@@ -63,5 +66,6 @@ for checkpoint in "$run_dir"/checkpoint-*; do
     --checkpoint "$checkpoint" \
     --split validation \
     --max-new-tokens "$max_new_tokens" \
+    --batch-size "$evaluation_batch_size" \
     --output-dir "$run_dir/validation/$(basename "$checkpoint")"
 done
