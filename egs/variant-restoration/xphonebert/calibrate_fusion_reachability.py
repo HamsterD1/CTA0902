@@ -63,6 +63,7 @@ def main() -> None:
     parser.add_argument("--records", type=int, default=256)
     parser.add_argument("--learning-rate", type=float, default=1e-4)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--fusion-alpha-cap", type=float, default=1.0)
     args = parser.parse_args()
     if args.records < 1:
         raise SystemExit("--records must be positive")
@@ -86,7 +87,7 @@ def main() -> None:
         descriptor["model_path_or_repo"], torch_dtype=torch.bfloat16, local_files_only=True, trust_remote_code=False, attn_implementation="sdpa"
     )
     xpb = AutoModel.from_pretrained(args.xphonebert_model, torch_dtype=torch.bfloat16, local_files_only=True, trust_remote_code=False)
-    model = FusionModel(qwen, xpb).cuda()
+    model = FusionModel(qwen, xpb, fusion_alpha_cap=args.fusion_alpha_cap).cuda()
     rows = stratified_rows(load_jsonl(args.data_dir / "train.jsonl"), args.records, args.seed)
     dataset = AdapterDataset(rows, tokenizer, descriptor, "fusion", ipa_map, preflight["required_max_length"])
     collator = AdapterCollator(tokenizer, xpb_tokenizer, "fusion")

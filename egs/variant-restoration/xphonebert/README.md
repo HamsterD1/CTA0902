@@ -9,11 +9,17 @@ do not overwrite their environments, worktrees, data, or results.
 As of 2026-09-30, Text-SFT epoch 4 is the frozen shared base. Fusion
 warm-start seed 42 completed five epochs and full validation for every saved
 checkpoint. It is learnable but does not beat the Text-SFT base, so it does
-not advance to test evaluation or seeds 43/44.
+not advance to test evaluation or seeds 43/44. The paired diagnosis motivated
+one bounded weak-residual follow-up (`alpha_cap=0.1`), now validation-only.
+Its epoch-1 result and mixed-batch continuation provenance are recorded
+separately; it has not selected a checkpoint or authorized test.
 
-The current evidence and reproduction details are in
-docs/xphonebert-fusion-warmstart-seed42.md. Checkpoints and large artifacts
-remain outside Git under the configured checkpoint root.
+Read the documents in this order: the historical warm-start result
+(`docs/xphonebert-fusion-warmstart-seed42.md`), its paired diagnosis
+(`docs/xphonebert-fusion-paired-diagnosis-seed42.md`), then the active
+weak-residual follow-up
+(`docs/xphonebert-fusion-weak-residual-cap01-seed42.md`). Checkpoints and
+large artifacts remain outside Git under the configured checkpoint root.
 
 ## Immutable Contract
 

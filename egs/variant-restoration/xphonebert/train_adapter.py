@@ -33,6 +33,8 @@ def main() -> None:
     parser.add_argument("--micro-batch-size", type=int, required=True)
     parser.add_argument("--gradient-accumulation-steps", type=int, required=True)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--fusion-alpha-cap", type=float, default=1.0)
+    parser.add_argument("--resume-from-checkpoint", type=Path)
     args = parser.parse_args()
     try:
         import torch
@@ -67,7 +69,7 @@ def main() -> None:
             raise SystemExit("--xphonebert-model is required for fusion")
         xpb_tokenizer = AutoTokenizer.from_pretrained(args.xphonebert_model, local_files_only=True, trust_remote_code=False)
         xpb = AutoModel.from_pretrained(args.xphonebert_model, torch_dtype=torch.bfloat16, local_files_only=True, trust_remote_code=False)
-        model = FusionModel(qwen, xpb)
+        model = FusionModel(qwen, xpb, fusion_alpha_cap=args.fusion_alpha_cap)
     model.to(device)
     max_length = preflight["required_max_length"]
     train = AdapterDataset(load_jsonl(args.data_dir / "train.jsonl"), tokenizer, descriptor, args.condition, ipa_map, max_length)
@@ -100,7 +102,7 @@ def main() -> None:
         model=model, args=training, train_dataset=train, eval_dataset=validation,
         data_collator=AdapterCollator(tokenizer, xpb_tokenizer, args.condition),
     )
-    trainer.train()
+    trainer.train(resume_from_checkpoint=str(args.resume_from_checkpoint) if args.resume_from_checkpoint else None)
     trainer.save_state()
     trainer.accelerator.wait_for_everyone()
     if trainer.is_world_process_zero():

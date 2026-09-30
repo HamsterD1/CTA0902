@@ -20,6 +20,8 @@ def freeze(module: nn.Module) -> None:
 class AdapterBase(nn.Module):
     def __init__(self, qwen: nn.Module, condition: str):
         super().__init__()
+        # Trainer probes this PreTrainedModel convention when loading checkpoints.
+        self._keys_to_ignore_on_save = None
         self.qwen = qwen
         self.condition = condition
         self.config = qwen.config
@@ -62,14 +64,14 @@ class ExplicitIpaModel(AdapterBase):
 
 
 class FusionModel(AdapterBase):
-    def __init__(self, qwen: nn.Module, xphonebert: nn.Module):
+    def __init__(self, qwen: nn.Module, xphonebert: nn.Module, fusion_alpha_cap: float = 1.0):
         super().__init__(qwen, "fusion")
         self.xphonebert = xphonebert
         freeze(xphonebert)
         qwen_hidden_size = text_hidden_size(qwen.config)
         self.resampler = PhonemeResampler(qwen_hidden_size, xphonebert.config.hidden_size)
         self.projector = PhoneticProjector(xphonebert.config.hidden_size, qwen_hidden_size)
-        self.fusion = ResidualFusion()
+        self.fusion = ResidualFusion(alpha_cap=fusion_alpha_cap)
         qwen_dtype = next(qwen.parameters()).dtype
         self.resampler.to(dtype=qwen_dtype)
         self.projector.to(dtype=qwen_dtype)

@@ -41,14 +41,17 @@ class PhoneticProjector(nn.Module):
 class ResidualFusion(nn.Module):
     """A bounded nonzero gate lets the zero-initialized residual branch learn."""
 
-    def __init__(self) -> None:
+    def __init__(self, alpha_cap: float = 1.0, initial_fraction: float = 0.5) -> None:
         super().__init__()
-        # tanh(atanh(0.5)) = 0.5. A zero gate blocks gradients to every IPA module.
-        self.alpha_raw = nn.Parameter(torch.tensor(0.5493061443340549))
+        if not 0.0 < alpha_cap <= 1.0 or not 0.0 < initial_fraction < 1.0:
+            raise ValueError("alpha_cap must be in (0, 1] and initial_fraction in (0, 1)")
+        self.alpha_cap = float(alpha_cap)
+        # A zero gate blocks gradients to every IPA module.
+        self.alpha_raw = nn.Parameter(torch.atanh(torch.tensor(initial_fraction)))
 
     @property
     def alpha(self) -> torch.Tensor:
-        return torch.tanh(self.alpha_raw)
+        return self.alpha_cap * torch.tanh(self.alpha_raw)
 
     def forward(self, text_embeddings: torch.Tensor, phonetic_embeddings: torch.Tensor, variant_mask: torch.Tensor) -> torch.Tensor:
         alpha = self.alpha.to(dtype=phonetic_embeddings.dtype)

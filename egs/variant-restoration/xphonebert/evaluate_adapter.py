@@ -26,6 +26,7 @@ def main() -> None:
     parser.add_argument("--xphonebert-model", type=Path)
     parser.add_argument("--batch-size", type=int, default=10)
     parser.add_argument("--max-examples", type=int)
+    parser.add_argument("--fusion-alpha-cap", type=float, default=1.0)
     args = parser.parse_args()
     if args.batch_size < 1:
         raise SystemExit("--batch-size must be positive")
@@ -50,7 +51,7 @@ def main() -> None:
         if args.xphonebert_model is None:
             raise SystemExit("--xphonebert-model is required for fusion")
         xpb_tokenizer = AutoTokenizer.from_pretrained(args.xphonebert_model, local_files_only=True, trust_remote_code=False)
-        model = FusionModel(qwen, AutoModel.from_pretrained(args.xphonebert_model, torch_dtype=torch.bfloat16, local_files_only=True, trust_remote_code=False))
+        model = FusionModel(qwen, AutoModel.from_pretrained(args.xphonebert_model, torch_dtype=torch.bfloat16, local_files_only=True, trust_remote_code=False), fusion_alpha_cap=args.fusion_alpha_cap)
     model.load_adapter(args.checkpoint)
     model.cuda().eval()
     dataset = AdapterDataset(load_jsonl(args.data_dir / f"{args.split}.jsonl"), tokenizer, descriptor, args.condition, ipa_map, preflight["required_max_length"])

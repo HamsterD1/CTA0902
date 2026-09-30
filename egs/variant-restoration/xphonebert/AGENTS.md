@@ -14,6 +14,9 @@ Scope: egs/variant-restoration/xphonebert.
   Do not start seeds 43/44 unless seed 42 satisfies the documented stage gate.
 - Store checkpoints, predictions, and logs outside Git. Do not stage weights,
   data, secrets, or local patch backups. Preserve unrelated dirty files.
-- Read README.md and docs/xphonebert-fusion-warmstart-seed42.md before
-  modifying this recipe. Current conclusion: Fusion warm-start is learnable
-  but did not beat the frozen Text-SFT base in seed 42 validation.
+- Read README.md, docs/xphonebert-fusion-warmstart-seed42.md, and the current
+  follow-up record docs/xphonebert-fusion-weak-residual-cap01-seed42.md before
+  modifying this recipe. The historical Fusion warm-start is learnable but did
+  not beat the frozen Text-SFT base. A single bounded weak-residual follow-up
+  is validation-only and uses a documented mixed-batch continuation; do not
+  treat it as an interchangeable five-epoch replication.
